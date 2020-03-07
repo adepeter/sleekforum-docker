@@ -205,11 +205,24 @@
       <workItem from="1583448397651" duration="457000" />
       <workItem from="1583448871055" duration="17663000" />
       <workItem from="1583585347947" duration="3680000" />
+      <workItem from="1583590617011" duration="173000" />
     </task>
+    <task id="LOCAL-00001" summary="Gitignore added">
+      <created>1583590747455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583590747455</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Gitignore added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gitignore added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583448836342">
@@ -220,6 +233,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583585467176" />
+    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1583590743676">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583590743676" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1579458788687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -252,10 +269,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583590596908" />
-    <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583590657158">
+    <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583590808118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="337" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583590657158" />
+    <state x="337" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583590808118" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583540535174">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
