@@ -1,5 +1,4 @@
 from .post import Post
-from .tag import ThreadTag
 from .thread import Thread
 from .thread_edit import ThreadEdit
 from .thread_view import ThreadView
