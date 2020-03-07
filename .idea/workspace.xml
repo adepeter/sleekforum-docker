@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="9de9bd79-b557-49fd-af5a-84d76098c77c" />
+  <component name="ProjectId" id="1WXgXx2B3pt3jJmxqcdwb8iiwV9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\adepeter\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\threads\thread" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.pekpage">
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pekpage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pekpage" type="Python.DjangoServer" factoryName="Django server">
+      <module name="pekpage" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="flyforum.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.scratch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
+      <created>1579301396403</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579301396403</updated>
+      <workItem from="1579301400406" duration="3778000" />
+      <workItem from="1579340892364" duration="15881000" />
+      <workItem from="1579369539106" duration="331000" />
+      <workItem from="1579370713592" duration="13272000" />
+      <workItem from="1579419473885" duration="5848000" />
+      <workItem from="1579425633987" duration="133000" />
+      <workItem from="1579425857084" duration="15942000" />
+      <workItem from="1579453162626" duration="2189000" />
+      <workItem from="1579458369262" duration="12163000" />
+      <workItem from="1579540533699" duration="630000" />
+      <workItem from="1579551350383" duration="11477000" />
+      <workItem from="1579620406669" duration="146000" />
+      <workItem from="1579622416711" duration="2298000" />
+      <workItem from="1579636698492" duration="1819000" />
+      <workItem from="1579727090455" duration="6319000" />
+      <workItem from="1579810564028" duration="2979000" />
+      <workItem from="1579973626592" duration="4958000" />
+      <workItem from="1579986019499" duration="4987000" />
+      <workItem from="1580031042265" duration="11417000" />
+      <workItem from="1580045814422" duration="300000" />
+      <workItem from="1580056267535" duration="2625000" />
+      <workItem from="1580163085185" duration="665000" />
+      <workItem from="1580250843595" duration="4381000" />
+      <workItem from="1580398024274" duration="614000" />
+      <workItem from="1580588001533" duration="5940000" />
+      <workItem from="1580611106617" duration="179000" />
+      <workItem from="1580681090231" duration="636000" />
+      <workItem from="1580758431495" duration="4051000" />
+      <workItem from="1580820925535" duration="9577000" />
+      <workItem from="1580932688583" duration="8501000" />
+      <workItem from="1581033366936" duration="21315000" />
+      <workItem from="1581207270613" duration="46548000" />
+      <workItem from="1581466200573" duration="101000" />
+      <workItem from="1581530947842" duration="7088000" />
+      <workItem from="1581542555750" duration="379000" />
+      <workItem from="1581543360939" duration="25000" />
+      <workItem from="1581543414718" duration="31000" />
+      <workItem from="1581543475059" duration="8000" />
+      <workItem from="1581544319821" duration="177000" />
+      <workItem from="1581544521740" duration="59000" />
+      <workItem from="1581544600198" duration="199000" />
+      <workItem from="1581544828545" duration="12000" />
+      <workItem from="1581545101011" duration="59000" />
+      <workItem from="1581546314956" duration="289000" />
+      <workItem from="1581546621818" duration="404000" />
+      <workItem from="1581547046486" duration="110000" />
+      <workItem from="1581547173175" duration="1346000" />
+      <workItem from="1581548982354" duration="22000" />
+      <workItem from="1581554337446" duration="1533000" />
+      <workItem from="1581708042430" duration="15162000" />
+      <workItem from="1581792979152" duration="15166000" />
+      <workItem from="1581979363063" duration="31000" />
+      <workItem from="1582065209833" duration="1293000" />
+      <workItem from="1582068587547" duration="1511000" />
+      <workItem from="1582389044846" duration="395000" />
+      <workItem from="1582401466260" duration="5174000" />
+      <workItem from="1582446393915" duration="4612000" />
+      <workItem from="1582458631842" duration="91000" />
+      <workItem from="1582458935529" duration="1373000" />
+      <workItem from="1583013286232" duration="851000" />
+      <workItem from="1583087139538" duration="22627000" />
+      <workItem from="1583194802153" duration="247000" />
+      <workItem from="1583440808145" duration="7296000" />
+      <workItem from="1583448397651" duration="457000" />
+      <workItem from="1583448871055" duration="17663000" />
+      <workItem from="1583585347947" duration="3236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583448836342">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1583448836342" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583585467176">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583585467176" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1579458788687">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579458788687" />
+    <state width="1492" height="190" key="GridCell.Tab.0.bottom" timestamp="1583586485096">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1492" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
+    <state width="1492" height="190" key="GridCell.Tab.0.center" timestamp="1583586485096">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1492" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
+    <state width="1492" height="190" key="GridCell.Tab.0.left" timestamp="1583586485095">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1492" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583586485095" />
+    <state width="1492" height="190" key="GridCell.Tab.0.right" timestamp="1583586485096">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1492" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
+    <state width="189" height="498" key="HiddenNamespacesPopup" timestamp="1580041814281">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="189" height="498" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1580041814281" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1582065274713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1582065274713" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1581547157187">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581547157187" />
+    <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583585350203">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="337" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583585350203" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583540535174">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583540535174" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pekpage$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1581235276355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+  </component>
+</project>

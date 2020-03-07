@@ -1,0 +1,13 @@
+{% if page.has_previous %}
+    <a href="?page=1">First</a>
+    <a href="?page={{ page.previous_page_number }}">Back</a>
+{% else %}
+    <a disabled="true">First</a>
+{% endif %}
+{{ page.number }} of {{ page.paginator.num_pages }}
+{% if page.has_next %}
+    <a href="?page={{ page.next_page_number }}">Next</a>
+    <a href="?page={{ page.paginator.num_pages }}">Last</a>
+{% else %}
+    <a disabled="true">Last</a>
+{% endif %}
