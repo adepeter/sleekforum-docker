@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/tag.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0006_auto_20200307_1534.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +48,16 @@
   </component>
   <component name="JupyterTrust" id="9de9bd79-b557-49fd-af5a-84d76098c77c" />
   <component name="ProjectId" id="1WXgXx2B3pt3jJmxqcdwb8iiwV9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -209,7 +215,7 @@
       <workItem from="1583448871055" duration="17663000" />
       <workItem from="1583585347947" duration="3680000" />
       <workItem from="1583590617011" duration="173000" />
-      <workItem from="1583590806827" duration="293000" />
+      <workItem from="1583590806827" duration="1055000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
@@ -232,6 +238,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Gitignore added" />
     <option name="LAST_COMMIT_MESSAGE" value="Gitignore added" />
   </component>

@@ -12,7 +12,6 @@ class Post(models.Model):
     is_hidden = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    edits = models.PositiveSmallIntegerField(default=0)
     parent = models.ForeignKey('self', on_delete=models.DO_NOTHING, related_name='+', null=True, blank=True)
 
     objects = PostManager()

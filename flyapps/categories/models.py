@@ -6,7 +6,7 @@ from mptt.fields import TreeForeignKey
 
 
 class Category(MPTTModel):
-    name = models.CharField(verbose_name=_('name'), max_length=25, unique=True)
+    name = models.CharField(verbose_name=_('name'), max_length=25)
     slug = models.SlugField(verbose_name=_('slug'), blank=True, db_index=True)
     description = models.TextField(verbose_name=_('description'), blank=True)
     is_lock = models.BooleanField(verbose_name=_('lock category'), default=False)

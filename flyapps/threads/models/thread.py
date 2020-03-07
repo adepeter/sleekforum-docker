@@ -1,6 +1,3 @@
-import math
-from datetime import datetime
-
 from django.conf import settings
 from django.db import models
 from django.urls import reverse
@@ -45,8 +42,7 @@ class Thread(models.Model):
     modified = models.DateTimeField(auto_now=True)
     is_locked = models.BooleanField(verbose_name=_('lock thread'), default=False)
     is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
-    edits = models.PositiveSmallIntegerField(default=0)
-    viewer = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='+')
+    shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
     tags = TaggableManager(blank=True)
 
     def save(self, *args, **kwargs):
@@ -81,23 +77,3 @@ class Thread(models.Model):
 
     def get_delete_url(self):
         return reverse('flyapps:threads:delete_thread', kwargs=self.get_kwargs())
-
-    def timesince(self):
-        now = datetime.now()
-        diff = now - self.created
-        if diff.day == 0 and diff.seconds > 0 and diff.seconds < 60:
-            seconds = diff.seconds
-            result = ngettext(_('(seconds)%d second ago'), _('(seconds)%d seconds ago') % {'seconds': seconds})
-        elif diff.days == 0 and diff.seconds >= 60 and diff.seconds < 3600:
-            minutes = math.floor(diff.seconds / 60)
-            result = ngettext(_('(minutes)%d minute ago'), _('(minutes)%d minutes ago') % {'minutes': minutes})
-        elif diff.days == 0 and diff.seconds >= 3600 and diff.seconds < 86400:
-            hours = math.floor(diff.seconds / 3600)
-            result = ngettext(_('(minutes)%d hour ago'), _('(minutes)%d hours ago') % {'hours': hours})
-        elif diff.days >= 30 and (diff.days <= 365 or diff.days <= 366):
-            months = math.floor(diff.days / 30)
-            result = ngettext(_('(months)%d month ago'), _('(months)%d months ago') % {'months': months})
-        else:
-            years = math.floor(diff.days / 365)
-            result = ngettext(_('(years)%d year ago'), _('(years)%d years ago') % {'years': years})
-        return result
