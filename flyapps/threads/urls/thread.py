@@ -4,8 +4,15 @@ from ..views.thread import (
     CreateThread,
     ReadThread,
     EditThread,
-    DeleteThread,
+    DeleteThread
+)
+from ..views.thread_misc import (
+    HideThread,
+    LockThread,
     ShareThread,
+    ReportThread,
+    UnhideThread,
+    UnlockThread
 )
 
 urlpatterns = [
@@ -19,12 +26,21 @@ urlpatterns += [
     path('<int:pk>/<slug:slug>/delete', DeleteThread.as_view(), name='delete_thread'),
 ]
 
-# Dirty hack for Posts URL inclusion
+# Admin actions
 urlpatterns += [
-    path('', include('flyapps.threads.urls.post', namespace='post')),
+    path('<int:pk>/<slug:slug>/hide/', HideThread.as_view(), name='hide_thread'),
+    path('<int:pk>/<slug:slug>/lock/', LockThread.as_view(), name='lock_thread'),
+    path('<int:pk>/<slug:slug>/unhide/', UnhideThread.as_view(), name='unhide_thread'),
+    path('<int:pk>/<slug:slug>/unlock/', UnlockThread.as_view(), name='unlock_thread'),
 ]
 
+# Misc actions
 urlpatterns += [
     path('<int:pk>/<slug:slug>/share/', ShareThread.as_view(), name='share_thread'),
+    path('<int:pk>/<slug:slug>/report/', ReportThread.as_view(), name='report_thread'),
+]
 
+# Dirty hack for Posts (IE comments) URL inclusion
+urlpatterns += [
+    path('', include('flyapps.threads.urls.post', namespace='post')),
 ]

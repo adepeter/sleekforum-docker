@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
@@ -98,6 +98,9 @@ class EditThread(UpdateView):
         qs = super().get_queryset()
         return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        return kwargs
 
 class DeleteThread(DeleteView):
     model = Thread
@@ -107,33 +110,3 @@ class DeleteThread(DeleteView):
             'category': self.kwargs['category_slug']
         }
         return reverse('flyapps:threads:list_threads', kwargs=kwargs)
-
-
-class ShareThread(SingleObjectMixin, FormView):
-    model = Thread
-    form_class = ThreadShareForm
-    template_name = f'{TEMPLATE_URL}/share_thread.html'
-    query_pk_and_slug = True
-
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        return super().get(request, *args, **kwargs)
-
-    def get_queryset(self):
-        return self.model.objects.filter(category__slug__iexact=self.kwargs['category_slug'])
-
-    def post(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        return super().post(request, *args, **kwargs)
-
-    def form_valid(self, form):
-        form.send_email()
-        return super().form_valid(form)
-
-    def get_success_url(self):
-        kwargs = {
-            'category_slug': self.object.category.slug,
-            'pk': self.object.id,
-            'slug': self.object.slug
-        }
-        return reverse('flyapps:threads:read_thread', kwargs=kwargs)

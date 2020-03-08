@@ -14,7 +14,7 @@ class BaseThreadForm(forms.ModelForm):
 
     class Meta:
         model = Thread
-        fields = ['title', 'content']
+        fields = ['title', 'prefix', 'content', 'tags']
         widgets = {
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
@@ -40,7 +40,6 @@ class ThreadCreationForm(BaseThreadForm):
 class ThreadEditForm(BaseThreadForm):
 
     def __init__(self, *args, **kwargs):
-        self.request = kwargs.pop('request')
         super().__init__(*args, **kwargs)
 
     def save(self, commit=True):

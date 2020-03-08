@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # FlyForum apps
     'flyapps.categories',
     'flyapps.threads',
+    'flyapps.templatetags',
 
 ]
 
