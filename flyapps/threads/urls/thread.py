@@ -33,8 +33,3 @@ urlpatterns += [
         path('unlock/', UnlockThread.as_view(), name='unlock_thread'),
     ])),
 ]
-
-# Dirty hack for Posts (IE comments) URL inclusion
-urlpatterns += [
-    path('', include('flyapps.threads.urls.post', namespace='post')),
-]

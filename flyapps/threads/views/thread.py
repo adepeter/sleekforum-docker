@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
@@ -8,7 +8,6 @@ from django.views.generic.list import MultipleObjectMixin
 from ...categories.models import Category
 from ..forms.post import PostForm
 from ..forms.thread import ThreadCreationForm, ThreadEditForm
-from ..forms.thread_share import ThreadShareForm
 from ..models import Thread
 
 TEMPLATE_URL = 'flyapps/threads/thread'
@@ -100,7 +99,15 @@ class EditThread(UpdateView):
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
+        kwargs['thread'] = self.object
+        kwargs['request'] = self.request
         return kwargs
+
+    def dispatch(self, request, *args, **kwargs):
+        thread = self.get_object()
+        if thread.starter != self.request.user:
+            return render(request, 'flyapps/threads/auth/unauthorised_edit,html')
+        return super().dispatch(request, *args, **kwargs)
 
 class DeleteThread(DeleteView):
     model = Thread

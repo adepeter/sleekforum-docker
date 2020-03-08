@@ -2,7 +2,10 @@ from django import forms
 from ..models import Post
 
 
-class PostForm(forms.ModelForm):
+class BasePostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['content']
+
+class PostForm(BasePostForm):
+    pass

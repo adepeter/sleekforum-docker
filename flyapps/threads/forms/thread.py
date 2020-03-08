@@ -40,7 +40,13 @@ class ThreadCreationForm(BaseThreadForm):
 class ThreadEditForm(BaseThreadForm):
 
     def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request')
+        self.thread = kwargs.pop('thread')
         super().__init__(*args, **kwargs)
+        if self.request.user != self.thread.starter or not self.request.user.is_staff:
+            fields = ['title', 'content', 'prefix', 'tags']
+            for f in fields:
+                self.fields[f].widget.attrs.update({'disabled': True})
 
     def save(self, commit=True):
         new_thread = super().save(commit=False)

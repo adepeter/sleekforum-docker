@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse
+from django.views.generic import View
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import FormView, UpdateView
 
@@ -9,23 +10,8 @@ from ..models import Thread
 TEMPLATE_URL = 'flyapps/threads/thread'
 
 
-class HideThread(UpdateView):
-    model = Thread
+class HideThread(SingleObjectMixin, View):
     query_pk_and_slug = True
-
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        return redirect(self.object.get_absolute_url())
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
-
-    def get_object(self):
-        thread = super().get_object()
-        thread.is_hidden = True
-        thread.save()
-        return thread
 
 
 class LockThread(UpdateView):
