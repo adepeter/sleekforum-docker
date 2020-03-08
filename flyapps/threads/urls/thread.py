@@ -21,23 +21,17 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('<int:pk>/<slug:slug>/', ReadThread.as_view(), name='read_thread'),
-    path('<int:pk>/<slug:slug>/edit/', EditThread.as_view(), name='edit_thread'),
-    path('<int:pk>/<slug:slug>/delete', DeleteThread.as_view(), name='delete_thread'),
-]
-
-# Admin actions
-urlpatterns += [
-    path('<int:pk>/<slug:slug>/hide/', HideThread.as_view(), name='hide_thread'),
-    path('<int:pk>/<slug:slug>/lock/', LockThread.as_view(), name='lock_thread'),
-    path('<int:pk>/<slug:slug>/unhide/', UnhideThread.as_view(), name='unhide_thread'),
-    path('<int:pk>/<slug:slug>/unlock/', UnlockThread.as_view(), name='unlock_thread'),
-]
-
-# Misc actions
-urlpatterns += [
-    path('<int:pk>/<slug:slug>/share/', ShareThread.as_view(), name='share_thread'),
-    path('<int:pk>/<slug:slug>/report/', ReportThread.as_view(), name='report_thread'),
+    path('<int:pk>/<slug:slug>/', include([
+        path('', ReadThread.as_view(), name='read_thread'),
+        path('edit/', EditThread.as_view(), name='edit_thread'),
+        path('delete/', DeleteThread.as_view(), name='delete_thread'),
+        path('share/', ShareThread.as_view(), name='share_thread'),
+        path('report/', ReportThread.as_view(), name='report_thread'),
+        path('hide/', HideThread.as_view(), name='hide_thread'),
+        path('lock/', LockThread.as_view(), name='lock_thread'),
+        path('unhide/', UnhideThread.as_view(), name='unhide_thread'),
+        path('unlock/', UnlockThread.as_view(), name='unlock_thread'),
+    ])),
 ]
 
 # Dirty hack for Posts (IE comments) URL inclusion
