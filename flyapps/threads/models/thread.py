@@ -2,7 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
-from django.utils.translation import gettext_lazy as _, ngettext
+from django.utils.translation import gettext_lazy as _
 
 from taggit.managers import TaggableManager
 
@@ -57,9 +57,6 @@ class Thread(models.Model):
             models.Index(fields=['id', 'slug'])
         ]
         ordering = ['title', 'modified']
-
-    def get_create_url(self):
-        return reverse('flyapps:threads:create_thread', args=(str(self.category.slug)))
 
     def get_kwargs(self):
         kwargs = {

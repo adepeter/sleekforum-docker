@@ -11,7 +11,7 @@ class PostStackedInline(admin.StackedInline):
 
 @admin.register(Thread)
 class ThreadAdmin(admin.ModelAdmin):
-    list_display = ['title', 'id', 'category', 'starter', 'slug', 'prefix', 'created', 'modified', 'is_hidden', 'is_locked']
+    list_display = ['title', 'id', 'category', 'starter', 'prefix', 'created', 'modified', 'is_hidden', 'is_locked']
     list_filter = ['category', 'starter', 'is_hidden', 'is_locked', 'prefix']
     search_fields = ['title', 'content', 'category']
     date_hierarchy = 'created'

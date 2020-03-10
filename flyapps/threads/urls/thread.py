@@ -9,6 +9,7 @@ from ..views.thread import (
 from ..views.thread_misc import (
     HideThread,
     LockThread,
+    SearchThread,
     ShareThread,
     ReportThread,
     UnhideThread,
@@ -18,6 +19,7 @@ from ..views.thread_misc import (
 urlpatterns = [
     path('', ListThread.as_view(), name='list_threads'),
     path('create/', CreateThread.as_view(), name='create_thread'),
+    path('search/', SearchThread.as_view(), name='search_thread'),
 ]
 
 urlpatterns += [

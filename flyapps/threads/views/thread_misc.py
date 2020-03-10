@@ -1,11 +1,14 @@
+from django.db.models import Q
 from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse
-from django.views.generic import View
+from django.views.generic import View, ListView
 from django.views.generic.detail import SingleObjectMixin
-from django.views.generic.edit import FormView, UpdateView
+from django.views.generic.edit import FormMixin, FormView, UpdateView
 
 from ..forms.thread_share import ThreadShareForm
+from ..forms.thread_search import ThreadSearchForm
 from ..models import Thread
+from ...categories.models import Category
 
 TEMPLATE_URL = 'flyapps/threads/thread'
 
@@ -21,6 +24,30 @@ class LockThread(UpdateView):
 class ReportThread(UpdateView):
     pass
 
+
+class SearchThread(SingleObjectMixin, FormMixin, ListView):
+    slug_url_kwarg = 'category_slug'
+    template_name = f'{TEMPLATE_URL}/search_thread.html'
+    form_class = ThreadSearchForm
+    paginate_by = 2
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object(Category.objects.all())
+        self.search_query = request.GET.get('search')
+        return super().get(request, *args, **kwargs)
+
+    def get_queryset(self):
+        if self.search_query:
+            return self.object.threads.filter(title__icontains=self.search_query)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['request'] = self.request
+        return kwargs
 
 class ShareThread(SingleObjectMixin, FormView):
     model = Thread
@@ -64,3 +91,11 @@ def hide_thread(request, category_slug, pk, slug):
     thread = get_object_or_404(Thread, category__slug__iexact=category_slug, pk=pk, slug__iexact=slug)
     thread.is_hidden = True
     return redirect(thread.get_absolute_url())
+
+# def search_thread(request, category_slug):
+#     category = get_object_or_404(Category, slug__iexact=category_slug)
+#     is_result = False
+#     results = category.threads.none()
+#     if 'search' in request.GET:
+#         q = request.GET.get('search')
+#         results = category.threads.filter(title__icontains=q | Q(content__icontains=q))

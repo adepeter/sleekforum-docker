@@ -17,7 +17,7 @@ class ListThread(SingleObjectMixin, ListView):
     slug_url_kwarg = 'category_slug'
     template_name = f'{TEMPLATE_URL}/list_threads.html'
     context_object_name = 'threads'
-    paginate_by = 1
+    paginate_by = 5
 
     def get(self, request, *args, **kwargs):
         self.object = self.get_object(Category.objects.all())
@@ -29,7 +29,6 @@ class ListThread(SingleObjectMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['category'] = self.object
-        context['threads'] = self.object_list
         return context
 
 
