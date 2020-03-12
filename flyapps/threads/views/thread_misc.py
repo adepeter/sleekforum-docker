@@ -26,28 +26,40 @@ class ReportThread(UpdateView):
 
 
 class SearchThread(SingleObjectMixin, FormMixin, ListView):
-    slug_url_kwarg = 'category_slug'
-    template_name = f'{TEMPLATE_URL}/search_thread.html'
+    model = Thread
+    template_name = f'{TEMPLATE_URL}/thread_misc/search_thread.html'
     form_class = ThreadSearchForm
     paginate_by = 2
+    slug_url_kwarg = 'category_slug'
+    ordering = 'created'
+    
 
     def get(self, request, *args, **kwargs):
         self.object = self.get_object(Category.objects.all())
-        self.search_query = request.GET.get('search')
+        self.search_query = self.request.GET.get('keyword')
+        self.check_content = self.request.GET.get('check_content')
+        self.object_list = None
         return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
+        qs = super().get_queryset().filter(category__slug__iexact=self.kwargs['category_slug'])
         if self.search_query:
-            return self.object.threads.filter(title__icontains=self.search_query)
+            if self.check_content:
+                return qs.filter(Q(title__icontains=self.search_query) | Q(content__icontains=self.search_query))
+            return qs.filter(title__icontains=self.search_query)
+        return qs.none()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['category'] = self.object
+        context['search_query'] = self.search_query
         return context
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs['request'] = self.request
         return kwargs
+
 
 class ShareThread(SingleObjectMixin, FormView):
     model = Thread
@@ -85,17 +97,3 @@ class UnhideThread(UpdateView):
 
 class UnlockThread(UpdateView):
     pass
-
-
-def hide_thread(request, category_slug, pk, slug):
-    thread = get_object_or_404(Thread, category__slug__iexact=category_slug, pk=pk, slug__iexact=slug)
-    thread.is_hidden = True
-    return redirect(thread.get_absolute_url())
-
-# def search_thread(request, category_slug):
-#     category = get_object_or_404(Category, slug__iexact=category_slug)
-#     is_result = False
-#     results = category.threads.none()
-#     if 'search' in request.GET:
-#         q = request.GET.get('search')
-#         results = category.threads.filter(title__icontains=q | Q(content__icontains=q))

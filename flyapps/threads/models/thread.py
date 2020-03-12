@@ -42,6 +42,7 @@ class Thread(models.Model):
     modified = models.DateTimeField(auto_now=True)
     is_locked = models.BooleanField(verbose_name=_('lock thread'), default=False)
     is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
+    is_editable = models.BooleanField(verbose_name=_('allow edit'), default=True)
     shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
     tags = TaggableManager(blank=True)
 

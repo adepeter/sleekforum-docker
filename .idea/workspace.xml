@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread_search.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/search_thread.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs_search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/threads.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/templatetags/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/templatetags/thread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +214,7 @@
       <workItem from="1583590617011" duration="173000" />
       <workItem from="1583590806827" duration="1055000" />
       <workItem from="1583702111879" duration="21639000" />
+      <workItem from="1583800759332" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
