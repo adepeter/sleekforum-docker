@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/thread_misc/search_thread.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" afterDir="false" />
-    </list>
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
