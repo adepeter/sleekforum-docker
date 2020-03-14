@@ -13,12 +13,3 @@ class ThreadShareForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
-    def send_email(self):
-        send_mail(
-            'Shared successfully',
-            'This is a shared post',
-            'adepeter26@gmail.com',
-            ['adeboy@gmail.com'],
-            fail_silently=False
-        )

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if search_query %}Search results for {{ search_query }}
+    {% else %}Search{% endif %}
+{% endblock %}
+
+{% block content %}
+    <main id="tt-pageContent">
+        <div class="container">
+            <div class="tt-wrapper-inner">
+                <h1 class="tt-title-border">
+                    Search topic
+                </h1>
+                <form method="GET" action="" class="form-default form-create-topic">
+                    <div class="form-group">
+                        <label for="inputTopicTitle">Search keyword</label>
+                        <div class="tt-value-wrapper">
+                            {{ form.keyword }}
+                        </div>
+                        {% if form.keyword.help_text %}
+                        <div class="tt-note">{{ form.keyword.help_text }}</div>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/thread_misc/search_thread.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -214,7 +218,8 @@
       <workItem from="1583590617011" duration="173000" />
       <workItem from="1583590806827" duration="1055000" />
       <workItem from="1583702111879" duration="21639000" />
-      <workItem from="1583800759332" duration="664000" />
+      <workItem from="1583800759332" duration="1664000" />
+      <workItem from="1584042154017" duration="8126000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
@@ -242,10 +247,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Gitignore added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583448836342">
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584041112561">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1583448836342" />
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1584041112561" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583591091545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

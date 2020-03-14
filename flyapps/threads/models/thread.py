@@ -35,6 +35,7 @@ class Thread(models.Model):
     starter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='threads')
     title = models.CharField(verbose_name=_('title'), max_length=150, unique=True)
+    pin = models.IntegerField(verbose_name=_('pin thread'), choices=PIN_CHOICES, default=PIN_DEFAULT)
     prefix = models.IntegerField(verbose_name=_('prefix'), choices=PREFIX_CHOICES, default=PREFIX_DEFAULT)
     slug = models.SlugField(verbose_name=_('slug'), blank=True, editable=False, db_index=True)
     content = models.TextField(verbose_name=_('content'), unique_for_date='created')
@@ -75,3 +76,15 @@ class Thread(models.Model):
 
     def get_delete_url(self):
         return reverse('flyapps:threads:delete_thread', kwargs=self.get_kwargs())
+
+    def get_hide_url(self):
+        return reverse('flyapps:threads:hide_thread', kwargs=self.get_kwargs())
+       
+    def get_lock_url(self):
+        return reverse('flyapps:threads:lock_thread', kwargs=self.get_kwargs())
+   
+    def get_unlock_url(self):
+        return reverse('flyapps:threads:unlock_thread', kwargs=self.get_kwargs())
+
+    def get_unhide_url(self):
+        return reverse('flyapps:threads:unhide_thread', kwargs=self.get_kwargs())
