@@ -1,4 +1,5 @@
 from django.urls import path, include
+
 from ..views.thread import (
     ListThread,
     CreateThread,
@@ -7,13 +8,11 @@ from ..views.thread import (
     DeleteThread
 )
 from ..views.thread_misc import (
-    HideThread,
-    LockThread,
     SearchThread,
     ShareThread,
     ReportThread,
-    UnhideThread,
-    UnlockThread
+    LockUnlockThread,
+    HideUnhideThread
 )
 
 urlpatterns = [
@@ -29,9 +28,7 @@ urlpatterns += [
         path('delete/', DeleteThread.as_view(), name='delete_thread'),
         path('share/', ShareThread.as_view(), name='share_thread'),
         path('report/', ReportThread.as_view(), name='report_thread'),
-        path('hide/', HideThread.as_view(), name='hide_thread'),
-        path('lock/', LockThread.as_view(), name='lock_thread'),
-        path('unhide/', UnhideThread.as_view(), name='unhide_thread'),
-        path('unlock/', UnlockThread.as_view(), name='unlock_thread'),
+        path('hide-unhide/', HideUnhideThread.as_view(), name='toggle_hide_thread'),
+        path('lock-unlock/', LockUnlockThread.as_view(), name='toggle_lock_thread'),
     ])),
 ]

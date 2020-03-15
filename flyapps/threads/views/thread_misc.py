@@ -1,10 +1,10 @@
 from django.db.models import Q
-from django.shortcuts import redirect
 from django.urls import reverse
-from django.views.generic import View, ListView
+from django.views.generic import ListView
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import FormMixin, FormView, UpdateView
 
+from ..viewmixins.thread import ThreadSingleActionMiscView
 from ..forms.thread_share import ThreadShareForm
 from ..forms.thread_search import ThreadSearchForm
 from ..models import Thread
@@ -12,52 +12,18 @@ from ...categories.models import Category
 
 TEMPLATE_URL = 'flyapps/threads/thread/thread_misc'
 
-
-class HideThread(SingleObjectMixin, View):
+class LockUnlockThread(ThreadSingleActionMiscView):
     model = Thread
+    boolean_field = 'is_locked'
     redirect_to_threads = False
-    query_pk_and_slug = True
 
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        self.object.is_hidden = True
-        self.object.save()
-        return self.get_success_url()
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
-
-    def get_success_url(self):
-        if self.redirect_to_threads:
-            return redirect(reverse('flyapps:threads:list_threads', args=[str(self.kwargs['category_slug'])]))
-        return redirect(self.object.get_absolute_url())
-
-
-class LockThread(SingleObjectMixin, View):
-    http_method_names = ['get']
+class HideUnhideThread(ThreadSingleActionMiscView):
     model = Thread
-    redirect_to_threads = True
-    query_pk_and_slug = True
-
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        self.object.is_locked = True
-        self.object.save()
-        return self.get_success_url()
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
-
-    def get_success_url(self):
-        if self.redirect_to_threads:
-            return redirect(reverse('flyapps:threads:list_threads', args=[str(self.kwargs['category_slug'])]))
-        return redirect(self.object.get_absolute_url())
-
+    boolean_field = 'is_hidden'
+    redirect_to_threads = False
 
 class ReportThread(UpdateView):
-    pass  # pip install --upgrade asgiref bokeh click pyaml pygments setuptools virtualenv wrapt
+    pass
 
 
 class SearchThread(SingleObjectMixin, FormMixin, ListView):
@@ -124,50 +90,6 @@ class ShareThread(SingleObjectMixin, FormView):
             'slug': self.object.slug
         }
         return reverse('flyapps:threads:read_thread', kwargs=kwargs)
-
-
-class UnhideThread(UpdateView):
-    model = Thread
-    redirect_to_threads = False
-    query_pk_and_slug = True
-
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        self.object.is_hidden = False
-        self.object.save()
-        return self.get_success_url()
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
-
-    def get_success_url(self):
-        if self.redirect_to_threads:
-            return redirect(reverse('flyapps:threads:list_threads', args=[str(self.kwargs['category_slug'])]))
-        return redirect(self.object.get_absolute_url())
-
-
-class UnlockThread(UpdateView):
-    http_method_names = ['get']
-    model = Thread
-    redirect_to_threads = False
-    query_pk_and_slug = True
-
-    def get(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        self.object.is_locked = False
-        self.object.save()
-        return self.get_success_url()
-
-    def get_queryset(self):
-        qs = super().get_queryset()
-        return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
-
-    def get_success_url(self):
-        if self.redirect_to_threads:
-            return redirect(reverse('flyapps:threads:list_threads', args=[str(self.kwargs['category_slug'])]))
-        return redirect(self.object.get_absolute_url())
-
 
 class ListThreadParticipant(SingleObjectMixin, ListView):
     template_name = f'{TEMPLATE_URL}/list_thread_participant.html'

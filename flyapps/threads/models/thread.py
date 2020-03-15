@@ -76,15 +76,9 @@ class Thread(models.Model):
 
     def get_delete_url(self):
         return reverse('flyapps:threads:delete_thread', kwargs=self.get_kwargs())
-
-    def get_hide_url(self):
-        return reverse('flyapps:threads:hide_thread', kwargs=self.get_kwargs())
-       
-    def get_lock_url(self):
-        return reverse('flyapps:threads:lock_thread', kwargs=self.get_kwargs())
-   
-    def get_unlock_url(self):
-        return reverse('flyapps:threads:unlock_thread', kwargs=self.get_kwargs())
-
-    def get_unhide_url(self):
-        return reverse('flyapps:threads:unhide_thread', kwargs=self.get_kwargs())
+    
+    def toggle_hide(self):
+        return reverse('flyapps:threads:toggle_hide_thread', kwargs=self.get_kwargs())
+    
+    def toggle_lock(self):
+        return reverse('flyapps:threads:toggle_lock_thread', kwargs=self.get_kwargs())
