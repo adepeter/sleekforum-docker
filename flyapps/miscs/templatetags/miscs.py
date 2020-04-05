@@ -12,7 +12,7 @@ def time_ago(param):
     if isinstance(param, object):
         now = timezone.now()
         diff = now - param
-        if diff.days == 0 and diff.seconds > 0 and diff.seconds < 60:
+        if diff.days == 0 and 0 < diff.seconds < 60:
             seconds = diff.seconds
             result = ngettext(_('%(seconds)d second ago'), _('%(seconds)d seconds ago'), seconds) % {
                 'seconds': seconds
@@ -27,7 +27,17 @@ def time_ago(param):
             result = ngettext(_('%(hours)d hour ago'), _('%(hours)d hours ago'), hours) % {
                 'hours': hours
             }
-        elif 30 <= diff.days <= 365 or diff:
+        elif 1 <= diff.days <= 7:
+            days = diff.days
+            result = ngettext(_('%(days)d day ago'), _('%(days)d days ago'), days) % {
+                'days': days
+            }
+        elif 7 <= diff.days <= 30:
+            weeks = math.floor(diff.days / 7)
+            result = ngettext(_('%(weeks)d week ago'), _('%(weeks)d weeks ago'), weeks) % {
+                'weeks': weeks
+            }
+        elif 30 <= diff.days <= 365:
             months = math.floor(diff.days / 30)
             result = ngettext(_('%(months)d month ago'), _('%(months)d months ago'), months) % {
                 'months': months
@@ -38,3 +48,20 @@ def time_ago(param):
                 'years': years
             }
         return result
+
+
+@register.filter
+def pretty_count(instance, decimal_place=1):
+    if isinstance(instance, int):
+        views = str(instance)
+        if 3 <= len(views) <= 6:
+            views = round(int(views) / 1000, decimal_place)
+            result = '%(views)sk' % {'views': views}
+        elif 6 <= len(views) <= 9:
+            views = round(int(views) / 1000000, decimal_place)
+            result = '%(views)sM' % {'views': views}
+        else:
+            result = views
+        return result
+    raise Exception(
+        f'You can\'t attach \'{instance}\' to {pretty_count.__name__} because it is not instance of an int')

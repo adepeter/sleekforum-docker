@@ -13,17 +13,15 @@ GENDER = (
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name=_('e-mail'), unique=True)
     username = models.CharField(verbose_name=_('username'), max_length=25, unique=True)
-    username_slug = models.SlugField(verbose_name=_('username slug'), blank=True, db_index=True)
+    slug = models.SlugField(verbose_name=_('username slug'), blank=True, db_index=True)
     avatar = models.ImageField(upload_to='images', blank=True, null=True)
     first_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
     sex = models.CharField(max_length=1, choices=GENDER, blank=True)
     dob = models.DateField(blank=True, null=True)
+    about = models.TextField(verbose_name=_('About me'), blank=True)
     location = models.CharField(max_length=75, blank=True)
     signature = models.TextField(blank=True)
-    threads = models.PositiveIntegerField(default=0)
-    comments = models.PositiveIntegerField(default=0)
-    is_hide_presence = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
@@ -31,6 +29,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_modified = models.DateTimeField(auto_now=True)
     phone_number = models.PositiveIntegerField(default=0)
     website = models.URLField(default='https://', blank=True)
+    github = models.URLField(default='https://github.com/', blank=True)
+    facebook = models.URLField(default='https://facebook.com/', blank=True)
+    twitter = models.URLField(default='https://twitter.com/@', blank=True)
     ip_address = models.GenericIPAddressField(blank=True, null=True)
 
     objects = UserManager()
@@ -41,7 +42,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['email', 'username_slug'], name='unique_user')
+            models.UniqueConstraint(fields=['email', 'slug'], name='unique_user')
         ]
         ordering = ['email']
 
@@ -51,8 +52,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.username
 
+    def get_display_name(self):
+        if self.first_name or self.last_name:
+            return self.get_full_name().rstrip()
+        return self.username
+
+
     def save(self, *args, **kwargs):
-        self.username_slug = slugify(self.username)
+        self.slug = slugify(self.username)
         super().save(*args, **kwargs)
 
     def __str__(self):

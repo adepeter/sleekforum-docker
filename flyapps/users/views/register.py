@@ -1,31 +1,27 @@
-from django.shortcuts import render
-from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth import get_user_model
-from django.utils.translation import ugettext_lazy as _
-from ..forms.register import UserRegistrationForm
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
+from django.views.generic.edit import FormView
 
+from ..forms.register import UserRegistrationForm
 
 TEMPLATE_URL = 'flyapps/users/auth'
 
 User = get_user_model()
 
-def register_user(request):
-    template_name = f'{TEMPLATE_URL}/register.html'
-    registration_successful = False
-    if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
-        if form.is_valid():
-            cleaned_data = form.cleaned_data
-            email = cleaned_data['email']
-            username = cleaned_data['username']
-            password = cleaned_data['password_1']
-            new_user = User.objects.create_user(email, username, password)
-            if new_user:
-                messages.success(request, _('Registration was successfull'))
-                registration_successful = True
-    else:
-        form = UserRegistrationForm()
-    return render(request, template_name, {
-        'form': form,
-        'registration_successful': registration_successful
-    })
+
+class UserRegistration(SuccessMessageMixin, FormView):
+    form_class = UserRegistrationForm
+    success_message = _('Registration was successful')
+    template_name = f'flyapps/users/auth/register.html'
+    success_url = reverse_lazy('flyapps:home')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['request'] = self.request
+        return kwargs
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)

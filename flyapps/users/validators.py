@@ -5,13 +5,12 @@ from django.utils.translation import ugettext_lazy as _
 User = get_user_model()
 
 
-def validate_uniqueness(username):
-    user_exist = User.objects.get_by_username_or_email(username)
-    if user_exist:
-        raise ValidationError(_('%(name)s is already taken' % {'name': username, }))
-
-
 def validate_unique_user(error_message, **criteria):
-    existent_user = User.objects.filter(**criteria)
+    existent_user = User.objects.filter(**criteria).exists()
     if existent_user:
         raise ValidationError(error_message)
+
+
+def validate_username_chars(username):
+    if not username.isalnum():
+        raise ValidationError(_('Username "%(username)s" cannot contain invalid characters' % {'username': username}))

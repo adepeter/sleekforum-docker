@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import Thread, Post, ThreadParticipant, ThreadView, ThreadEdit
+from .models import Thread, Post, ThreadLikeDislike
 
-
-# Register your models here.
 
 class PostStackedInline(admin.StackedInline):
     model = Post
@@ -11,15 +9,16 @@ class PostStackedInline(admin.StackedInline):
 
 @admin.register(Thread)
 class ThreadAdmin(admin.ModelAdmin):
-    list_display = ['title', 'id', 'category', 'starter', 'prefix', 'created', 'modified', 'is_hidden', 'is_locked']
-    list_filter = ['category', 'starter', 'is_hidden', 'is_locked', 'prefix']
+    list_display = ['title', 'id', 'category', 'starter', 'prefix', 'pin', 'created', 'modified', 'is_hidden', 'is_locked']
+    list_filter = ['category', 'starter', 'is_hidden', 'is_locked', 'prefix', 'pin']
     search_fields = ['title', 'content', 'category']
     date_hierarchy = 'created'
-    ordering = ['title', 'starter', 'category', 'is_hidden', 'is_locked', 'created', 'modified', 'prefix']
+    ordering = ['title', 'starter', 'pin', 'category', 'is_hidden', 'is_locked', 'created', 'modified', 'prefix']
     inlines = [PostStackedInline]
 
-
-admin.site.register(Post)
-admin.site.register(ThreadParticipant)
-admin.site.register(ThreadEdit)
-admin.site.register(ThreadView)
+@admin.register(ThreadLikeDislike)
+class ThreadAdminLikeDislike(admin.ModelAdmin):
+    list_display = ['thread', 'user', 'value']
+    list_filter = ['thread']
+    search_fields = ['thread', 'user']
+    ordering = ['thread', 'user']

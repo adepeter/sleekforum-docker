@@ -67,7 +67,7 @@
                     <div class="tt-col-value">Created</div>
                 </div>
                 {% for thread in page_obj %}
-                    <div class="tt-item">
+                    <div class="tt-item {% if thread.pin %}tt-itemselect{% endif %}">
                         <div class="tt-col-avatar">
                             <svg class="tt-icon">
                                 <use xlink:href="#icon-ava-k"></use>
@@ -75,6 +75,16 @@
                         </div>
                         <div class="tt-col-description">
                             <h6 class="tt-title"><a href="{{ thread.get_absolute_url }}">
+                                {% if thread.pin %}
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-pinned"></use>
+                                    </svg>
+                                {% endif %}
+                                {% if thread.is_locked %}
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-locked"></use>
+                                    </svg>
+                                {% endif %}
                                 {{ thread.title }}
                             </a></h6>
                             <div class="row align-items-center no-gutters">
@@ -98,9 +108,9 @@
                                 class="tt-color01 tt-badge">{{ thread.get_prefix_display }}</span>
                         </div>
                         <div class="tt-col-value hide-mobile">{{ thread.starter.username }}</div>
-                        <div class="tt-col-value hide-mobile">985</div>
-                        <div class="tt-col-value tt-color-select hide-mobile">{{ thread.posts.all | length }}</div>
-                        <div class="tt-col-value hide-mobile">0</div>
+                        <div class="tt-col-value hide-mobile">{{ thread.total_likes | pretty_count }}</div>
+                        <div class="tt-col-value tt-color-select hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
+                        <div class="tt-col-value hide-mobile">{{ thread.views | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.created | time_ago }}</div>
                     </div>
                 {% endfor %}

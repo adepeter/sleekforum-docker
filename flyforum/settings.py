@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'flyapps.categories',
     'flyapps.threads',
     'flyapps.miscs',
+    'flyapps.home',
 
 ]
 
@@ -146,7 +147,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # FLYFORUM CUSTOM USER MODEL
 AUTH_USER_MODEL = 'users.User'
 
-LOGIN_URL = reverse_lazy('flyapps:users:login')
-LOGIN_REDIRECT_URL = reverse_lazy('flyapps:home')
-LOGOUT_URL = reverse_lazy('flyapps:users:logout')
-LOGOUT_REDIRECT_URL = reverse_lazy('flyapps:home')
+LOGIN_URL = reverse_lazy('flyapps:users:auth:login')
+LOGIN_REDIRECT_URL = reverse_lazy('flyapps:home:home')
+LOGOUT_URL = reverse_lazy('flyapps:users:auth:logout')
+LOGOUT_REDIRECT_URL = reverse_lazy('flyapps:home:home')

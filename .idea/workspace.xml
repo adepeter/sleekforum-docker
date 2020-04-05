@@ -2,68 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flyapps/home/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/home/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/home/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/home/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/home/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/home/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_auto_20200326_2123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/forms/post/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread/thread_share.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200330_2258.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0003_auto_20200330_2314.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/models/post/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread_like_dislike.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/validators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/validators/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/validators/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/views/post/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/views/post/post_misc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/users/migrations/0002_auto_20200319_2232.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/users/migrations/0003_user_about.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/users/migrations/0004_auto_20200319_2357.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/home/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/migrations/0002_auto_20200307_1555.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/migrations/0002_auto_20200307_1555.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/urls/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/forms/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/forms/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/forms/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/home/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/forms/search.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/miscs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/threads.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/templatetags/threads.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/urls/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/miscs_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/templatetags/threads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/post/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread/thread_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread_share.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/managers/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/managers/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/managers/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/managers/thread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200307_1550.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200307_1550.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0003_thread_is_editable.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0003_thread_is_editable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0006_auto_20200314_1447.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0006_auto_20200314_1447.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200307_1550.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0003_thread_is_editable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0004_remove_thread_is_editable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0005_thread_is_editable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0006_auto_20200314_1447.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread_edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_participant.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread_participant.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread_report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_subscriber.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread_subscriber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/post/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread_edit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_participant.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread_participant.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_subscriber.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread_subscriber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread_view.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/viewmixins/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/viewmixins/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/post/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/post_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/home/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread_misc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/authentication_backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/authentication_backend.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/fields.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/forms/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/forms/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/register.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/managers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/managers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/urls/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/urls/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/urls/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/urls/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/urls/profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/validators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/views/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/views/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/views/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/search_thread.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +120,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -126,8 +151,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\threads\thread" />
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\threads\forms\post" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\threads\forms\thread" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\threads\views\post" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\threads\views\thread" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\threads\models\post" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.pekpage">
@@ -275,7 +303,33 @@
       <workItem from="1583590806827" duration="1055000" />
       <workItem from="1583702111879" duration="21639000" />
       <workItem from="1583800759332" duration="1664000" />
-      <workItem from="1584042154017" duration="8755000" />
+      <workItem from="1584042154017" duration="9255000" />
+      <workItem from="1584404718023" duration="43000" />
+      <workItem from="1584404780358" duration="1915000" />
+      <workItem from="1584489844478" duration="509000" />
+      <workItem from="1584723240203" duration="6968000" />
+      <workItem from="1584730309525" duration="3366000" />
+      <workItem from="1584839139107" duration="34000" />
+      <workItem from="1584839210320" duration="42000" />
+      <workItem from="1584839425209" duration="19000" />
+      <workItem from="1584839628838" duration="242000" />
+      <workItem from="1584839950566" duration="108000" />
+      <workItem from="1584840086291" duration="134000" />
+      <workItem from="1584840235858" duration="249000" />
+      <workItem from="1584840498661" duration="7000" />
+      <workItem from="1584841953965" duration="291000" />
+      <workItem from="1584842358329" duration="37000" />
+      <workItem from="1584842423823" duration="69000" />
+      <workItem from="1584857478597" duration="2564000" />
+      <workItem from="1584860074770" duration="81000" />
+      <workItem from="1584860175811" duration="12578000" />
+      <workItem from="1585596019074" duration="760000" />
+      <workItem from="1585600155892" duration="6472000" />
+      <workItem from="1585606663450" duration="849000" />
+      <workItem from="1585607922945" duration="6923000" />
+      <workItem from="1585690897597" duration="101000" />
+      <workItem from="1585691012517" duration="80000" />
+      <workItem from="1585695462749" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
@@ -303,14 +357,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Gitignore added" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584041112561">
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585690927301">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1584041112561" />
-    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583591091545">
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1585690927301" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585690779310">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1583591091545" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1585690779310" />
     <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1583590821301">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -347,10 +401,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583591036638" />
-    <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1583800794055">
+    <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1585691080453">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="337" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583800794055" />
+    <state x="337" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585691080453" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583540535174">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

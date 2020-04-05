@@ -9,13 +9,17 @@ TEMPLATE_URL = 'flyapps/categories'
 
 
 class CategoryList(ListView):
-    template_name = f'{TEMPLATE_URL}/categories.html'
+    template_name = f'{TEMPLATE_URL}/category_list.html'
     model = Category
     context_object_name = 'categories'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
 
 class SubcategoryList(ListView):
-    template_name = f'{TEMPLATE_URL}/subcategories.html'
+    template_name = f'{TEMPLATE_URL}/subcategory_list.html'
     context_object_name = 'subcategories'
 
     def get_queryset(self):

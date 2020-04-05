@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.text import slugify
+
 from mptt.models import MPTTModel
 from mptt.fields import TreeForeignKey
 
@@ -10,7 +11,7 @@ class Category(MPTTModel):
     slug = models.SlugField(verbose_name=_('slug'), blank=True, db_index=True)
     description = models.TextField(verbose_name=_('description'), blank=True)
     is_lock = models.BooleanField(verbose_name=_('lock category'), default=False)
-    parent = TreeForeignKey('self', on_delete=models.CASCADE, blank=True, null=True)
+    parent = TreeForeignKey('self', on_delete=models.CASCADE, related_name='children', blank=True, null=True)
 
     def get_description(self):
         if not self.description:

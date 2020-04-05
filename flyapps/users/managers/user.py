@@ -1,5 +1,6 @@
 from django.contrib.auth.base_user import BaseUserManager
 from django.utils import timezone
+from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 
@@ -16,6 +17,7 @@ class UserManager(BaseUserManager):
             username=self.model.normalize_username(username),
             **extra_fields
         )
+        user.slug = slugify(username)
         user.set_password(password)
         now = timezone.now()
         user.date_created = now
@@ -41,4 +43,4 @@ class UserManager(BaseUserManager):
     def get_by_username_or_email(self, login):
         if '@' in login:
             return self.get(email__iexact=login)
-        return self.get(username_slug__iexact=login)
+        return self.get(slug__iexact=login)

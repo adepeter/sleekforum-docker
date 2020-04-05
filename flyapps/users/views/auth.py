@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
+
 from ..forms.auth import AuthenticationForm
 
 TEMPLATE_URL = 'flyapps/users/auth'
@@ -13,3 +14,7 @@ class AuthLogin(LoginView):
         if self.request.user.is_authenticated:
             return render(self.request, f'{TEMPLATE_URL}/session_active.html')
         return super(AuthLogin, self).get(*args, **kwargs)
+
+
+class AuthLogout(LogoutView):
+    pass
