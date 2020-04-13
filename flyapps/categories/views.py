@@ -1,32 +1,38 @@
-from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 
+from ..threads.models.thread import Thread
 from .models import Category
+from .viewmixins.category import ListViewMixin
 
 # Create your views here.
 
 TEMPLATE_URL = 'flyapps/categories'
 
 
-class CategoryList(ListView):
+class ListBaseCategory(ListView):
     template_name = f'{TEMPLATE_URL}/category_list.html'
     model = Category
     context_object_name = 'categories'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
 
-
-class SubcategoryList(ListView):
+class ListCategory(ListViewMixin):
     template_name = f'{TEMPLATE_URL}/subcategory_list.html'
     context_object_name = 'subcategories'
 
     def get_queryset(self):
-        self.parent_category = get_object_or_404(Category, slug__iexact=self.kwargs['category_slug'])
-        return self.parent_category.get_children()
+        parent_node_obj = self.get_parent_node_obj()
+        return parent_node_obj.get_children()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['category'] = self.parent_category
-        return context
+
+class ListDescendantCategoryThread(ListViewMixin):
+    model = Thread
+    template_name = f'{TEMPLATE_URL}/thread_list.html'
+    context_object_name = 'threads'
+
+    def get_queryset(self):
+        parent_node_obj = self.get_parent_node_obj()
+        qs = self.model.objects.filter(
+            category__in=parent_node_obj.get_descendants(include_self=True),
+            is_hidden=False,
+        )
+        return qs

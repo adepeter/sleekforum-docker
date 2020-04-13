@@ -15,7 +15,7 @@ class BaseThreadForm(forms.ModelForm):
 
     class Meta:
         model = Thread
-        fields = ['title', 'prefix', 'content', 'tags']
+        fields = ['title', 'prefix', 'content']
         widgets = {
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
@@ -49,7 +49,7 @@ class ThreadEditForm(BaseThreadForm):
         self.thread = kwargs.pop('thread')
         super().__init__(*args, **kwargs)
         if self.request.user != self.thread.starter or not self.request.user.is_staff:
-            fields = ['title', 'content', 'prefix', 'tags']
+            fields = ['title', 'content', 'prefix']
             for field in fields:
                 self.fields[field].widget.attrs.update({'disabled': True})
 

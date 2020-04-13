@@ -1,1 +1,1 @@
-from .post import EditPost, DeletePost
+from .post import EditPost, DeletePost, ReplyPost

@@ -12,10 +12,7 @@ from ..views.thread.thread_misc import (
     ShareThread,
     ReportThread,
     LockUnlockThread,
-    HideUnhideThread
-)
-from ..views.thread.thread_misc import (
-    like_unlike_thread,
+    HideUnhideThread,
 )
 
 urlpatterns = [
@@ -33,6 +30,5 @@ urlpatterns += [
         path('report/', ReportThread.as_view(), name='report_thread'),
         path('hide-unhide/', HideUnhideThread.as_view(), name='toggle_hide_thread'),
         path('lock-unlock/', LockUnlockThread.as_view(), name='toggle_lock_thread'),
-        path('<str:likeunlike>/', like_unlike_thread, name='toggle_like_thread'),
     ])),
 ]

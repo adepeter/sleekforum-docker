@@ -24,7 +24,7 @@ class Post(models.Model):
             'slug': self.thread.slug,
             'pk': self.thread.id
         }
-        return reverse('flyapps:threads:read_thread', kwargs=kwargs)
+        return reverse('flyapps:threads:read_thread', kwargs=kwargs) + '?page=last'
 
     def get_edit_url(self):
         kwargs = {
@@ -39,3 +39,13 @@ class Post(models.Model):
             'pk': self.id,
         }
         return reverse('flyapps:threads:post:delete_post', kwargs=kwargs)
+
+    def get_reply_url(self):
+        kwargs = {
+            'thread_slug': self.thread.slug,
+            'pk': self.id,
+        }
+        return reverse('flyapps:threads:post:reply_post', kwargs=kwargs)
+
+    def __str__(self):
+        return f'{self.content[:10]} by {self.user.username} to {self.thread.title}'

@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load miscs_tags %}
+
+{% block title %}{{ parent_node.name }} - Threads{% endblock %}
+
+{% block content %}
+    {% include 'flyapps/threads/thread/list_threads.html' with category=parent_node page_obj=threads %}
+{% endblock %}

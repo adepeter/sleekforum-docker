@@ -16,7 +16,6 @@ TEMPLATE_URL = 'flyapps/threads/thread'
 class ListThread(SingleObjectMixin, ListView):
     slug_url_kwarg = 'category_slug'
     template_name = f'{TEMPLATE_URL}/list_threads.html'
-    context_object_name = 'threads'
     paginate_by = 5
 
     def get(self, request, *args, **kwargs):
@@ -54,7 +53,7 @@ class CreateThread(CreateView):
 class ReadThread(MultipleObjectMixin, CreateView):
     query_pk_and_slug = True
     form_class = PostForm
-    paginate_by = 10
+    paginate_by = 1
     template_name = f'{TEMPLATE_URL}/read_thread.html'
     context_object_name = 'posts'
 

@@ -5,10 +5,8 @@ from django.urls import reverse
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
-from taggit.managers import TaggableManager
-
 from ....categories.models import Category
-from ....miscs.models import Activity
+from ....miscs.models import Action
 from ...managers.thread import ThreadManager
 
 
@@ -48,10 +46,9 @@ class Thread(models.Model):
     is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
     is_editable = models.BooleanField(verbose_name=_('allow edit'), default=True)
     shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
-    likes = GenericRelation(Activity, related_query_name='threads')
+    likes = GenericRelation(Action, related_query_name='threads')
     total_likes = models.PositiveIntegerField(verbose_name=_('total likes'), default=0)
     views = models.PositiveIntegerField(default=0)
-    tags = TaggableManager(blank=True)
 
     objects = ThreadManager()
 

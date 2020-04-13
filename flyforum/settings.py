@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
     # FlyForum startup apps
     'flyapps.users',
 
@@ -43,14 +44,14 @@ INSTALLED_APPS = [
 
     # Flyapps 3rd party django apps
     'mptt',
-    'taggit',
     'PIL',
 
     # FlyForum apps
     'flyapps.categories',
-    'flyapps.threads',
-    'flyapps.miscs',
     'flyapps.home',
+    'flyapps.miscs',
+    'flyapps.rules',
+    'flyapps.threads',
 
 ]
 
@@ -92,8 +93,12 @@ WSGI_APPLICATION = 'flyforum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'flyforum',
+        'USER': 'adepeter',
+        'PASSWORD': 'oluwaseun123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 

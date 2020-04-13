@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load mptt_tags %}
+{% load thread_tags %}
+{% load miscs_tags %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+    <main id="tt-pageContent">
+        <div class="tt-custom-mobile-indent container">
+            <div class="tt-categories-title">
+                <div class="tt-title">Categories</div>
+                <div class="tt-search">
+                    <form method="GET" action="" class="search-wrapper">
+                        <div class="search-form">
+                            <input type="text" class="tt-search__input" placeholder="Search Categories">
+                            <button class="tt-search__btn" type="submit">
+                                <svg class="tt-icon">
+                                    <use xlink:href="#icon-search"></use>
+                                </svg>
+                            </button>
+                            <button class="tt-search__close">
+                                <svg class="tt-icon">
+                                    <use xlink:href="#icon-cancel"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="tt-categories-list">
+                <div class="row">
+                    {% recursetree categories %}
+                        {% category_threads node as node_threads %}
+                        <div class="col-md-6 col-lg-4">
+                            <div class="tt-item">
+                                <div class="tt-item-header">
+                                    <ul class="tt-list-badge">
+                                        <li><a href="#"><span
+                                                class="tt-{% cycle 'color01' 'color02' 'color03' 'color04' 'color05' %} tt-badge">{{ node.name }}</span></a>
+                                        </li>
+                                    </ul>
+                                    <h6 class="tt-title"><a
+                                            href="page-categories-single.html">Thread{{ node_threads | pluralize }}
+                                        - {{ node_threads | length }}</a></h6>
+                                </div>
+                                <div class="tt-item-layout">
+                                    <div class="innerwrapper">
+                                        {{ node.description }}
+                                    </div>
+                                    <a href="#" class="tt-btn-icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endrecursetree %}
+                    <div class="col-12">
+                        <div class="tt-row-btn">
+                            <button type="button" class="btn-icon js-topiclist-showmore">
+                                <svg class="tt-icon">
+                                    <use xlink:href="#icon-load_lore_icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

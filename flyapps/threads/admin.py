@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Thread, Post, ThreadLikeDislike
+
+from ..miscs.admin import ActivityStackedInline
+from .models import Thread, Post
 
 
 class PostStackedInline(admin.StackedInline):
@@ -14,11 +16,11 @@ class ThreadAdmin(admin.ModelAdmin):
     search_fields = ['title', 'content', 'category']
     date_hierarchy = 'created'
     ordering = ['title', 'starter', 'pin', 'category', 'is_hidden', 'is_locked', 'created', 'modified', 'prefix']
-    inlines = [PostStackedInline]
+    inlines = [ActivityStackedInline, PostStackedInline]
 
-@admin.register(ThreadLikeDislike)
-class ThreadAdminLikeDislike(admin.ModelAdmin):
-    list_display = ['thread', 'user', 'value']
-    list_filter = ['thread']
-    search_fields = ['thread', 'user']
-    ordering = ['thread', 'user']
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ['user', 'thread', 'parent', 'content', 'is_hidden', 'created', 'modified']
+    search_fields = ['content', 'user', 'thread', 'parent']
+    list_filter = ['user', 'thread', 'parent', 'is_hidden']
+    date_hierarchy = 'created'

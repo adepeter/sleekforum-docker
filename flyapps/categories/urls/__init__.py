@@ -1,9 +1,16 @@
-from django.urls import path
-from .. import views
+from django.urls import include, path
+from ..views import (
+    ListBaseCategory,
+    ListCategory,
+    ListDescendantCategoryThread
+)
 
 app_name = 'categories'
 
 urlpatterns = [
-    path('', views.CategoryList.as_view(), name='categories'),
-    path('<slug:category_slug>/', views.SubcategoryList.as_view(), name='subcategories'),
+    path('', ListBaseCategory.as_view(), name='list_category'),
+    path('<slug:slug>/', include([
+        path('', ListCategory.as_view(), name='list_subcategory'),
+        path('threads/', ListDescendantCategoryThread.as_view(), name='list_thread'),
+    ]))
 ]

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load miscs %}
+{% load miscs_tags %}
 
 {% block title %}{{ category.name }}{{ block.super }}{% endblock %}
 
@@ -15,7 +15,7 @@
                     </div>
                     <div class="ml-left tt-col-right">
                         <div class="tt-col-item">
-                            {% with category.threads.all as threads_in_category %}
+                            {% with page_obj as threads_in_category %}
                                 <h2 class="tt-value">Thread{{ threads_in_category | length | pluralize }}
                                     - {{ threads_in_category | length }}</h2>
                             {% endwith %}
@@ -92,11 +92,6 @@
                                     <ul class="tt-list-badge">
                                         <li class="show-mobile"><span
                                                 class="tt-color01 tt-badge">{{ thread.get_prefix_display }}</span></li>
-                                        {% if thread.tags.all %}
-                                            {% for tag in thread.tags.all %}
-                                                <li><a href="#"><span class="tt-badge">{{ tag.name }}</span></a></li>
-                                            {% endfor %}
-                                        {% endif %}
                                     </ul>
                                 </div>
                                 <div class="col-1 ml-auto show-mobile">

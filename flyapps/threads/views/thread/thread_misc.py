@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.urls import reverse
 from django.views.generic import ListView
@@ -47,10 +46,15 @@ class SearchThread(SingleObjectMixin, FormMixin, ListView):
         return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
-        qs = super().get_queryset().filter(category__slug__iexact=self.kwargs['category_slug'])
+        qs = super().get_queryset().filter(
+            category__slug__iexact=self.kwargs['category_slug']
+        )
         if self.search_query:
             if self.check_content:
-                return qs.filter(Q(title__icontains=self.search_query) | Q(content__icontains=self.search_query))
+                return qs.filter(
+                    Q(title__icontains=self.search_query) |
+                    Q(content__icontains=self.search_query)
+                )
             return qs.filter(title__icontains=self.search_query)
         return qs.none()
 
@@ -83,7 +87,9 @@ class ShareThread(SingleObjectMixin, FormView):
         return kwargs
 
     def get_queryset(self):
-        return self.model.objects.filter(category__slug__iexact=self.kwargs['category_slug'])
+        return self.model.objects.filter(
+            category__slug__iexact=self.kwargs['category_slug']
+        )
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
@@ -108,38 +114,94 @@ class ListThreadParticipant(SingleObjectMixin, ListView):
     query_pk_and_slug = True
 
     def get(self, request, *args, **kwargs):
-        self.object = self.get_object(Thread.objects.filter(category__slug__iexact=self.kwargs['category_slug']))
+        self.object = self.get_object(Thread.objects.filter(
+            category__slug__iexact=self.kwargs['category_slug']
+        ))
         return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
         return self.object.participants.all()
 
 
-class ThreadLikeUnlike:
-    pass
-
-
-@login_required
-def like_unlike_thread(request, category_slug, pk, slug, **kwargs):
+def like_thread(request, category_slug, pk, slug):
     from django.shortcuts import get_object_or_404
-    from ...models.thread.thread_like_dislike import ThreadLikeDislike
-    like_action = kwargs.get('likeunlike', None)
-    base_value = ThreadLikeDislike.LIKE if like_action == 'like' else ThreadLikeDislike.DISLIKE
-    thread = get_object_or_404(Thread, category__slug__iexact=category_slug, pk=pk, slug__iexact=slug)
+    from django.contrib.contenttypes.models import ContentType
+    from ....miscs.models import Action
+    thread_obj = get_object_or_404(
+        Thread,
+        category__slug__iexact=category_slug,
+        pk=pk, slug__iexact=slug
+    )
     try:
-        user_like = ThreadLikeDislike.objects.get(thread=thread, user=request.user)
-        user_like_value = user_like.value
-        if like_action == 'like':
-            if user_like_value == base_value:
-                user_like.delete()
-            else:
-                user_like.value = base_value
-                user_like.save()
+        fetch_existing_thread_actions = Action.objects.filter(
+            content_type=ContentType.objects.get_for_model(thread_obj),
+            object_id=thread_obj.id,
+        ).exclude(action_value=Action.FAVORITE)
+        fetch_existing_user_actions = fetch_existing_thread_actions.get(user=request.user)
+        if fetch_existing_user_actions.action_value == 'D':
+            fetch_existing_user_actions.action_value = 'L'
+            fetch_existing_user_actions.save()
         else:
-            if user_like_value == base_value:
-                user_like.delete()
-            else:
-                user_like.value = base_value
-                user_like.save()
-    except ThreadLikeDislike.DoesNotExist:
-        ThreadLikeDislike.objects.create(thread=thread, user=request.user, value=base_value)
+            fetch_existing_user_actions.delete()
+    except Action.DoesNotExist:
+        Action.objects.create(
+            content_object=thread_obj,
+            action_value='L',
+            user=request.user
+        )
+
+
+def dislike_thread(request, category_slug, pk, slug):
+    from django.shortcuts import get_object_or_404
+    from django.contrib.contenttypes.models import ContentType
+    from ....miscs.models import Action
+    thread_obj = get_object_or_404(
+        Thread,
+        category__slug__iexact=category_slug,
+        pk=pk,
+        slug__iexact=slug
+    )
+    try:
+        fetch_existing_thread_actions = Action.objects.filter(
+            content_type=ContentType.objects.get_for_model(thread_obj),
+            object_id=thread_obj.id,
+        )
+        fetch_existing_user_actions = fetch_existing_thread_actions.get(user=request.user)
+        if fetch_existing_user_actions.action_value_value == 'L':
+            fetch_existing_user_actions.action_value = 'D'
+            fetch_existing_user_actions.save()
+        else:
+            fetch_existing_user_actions.delete()
+    except Action.DoesNotExist:
+        Action.objects.create(
+            content_object=thread_obj,
+            action_value='D',
+            user=request.user
+        )
+
+
+def favorite_thread(request, category_slug, pk, slug):
+    from django.shortcuts import get_object_or_404
+    from django.contrib.contenttypes.models import ContentType
+    from ....miscs.models import Action
+    thread_obj = get_object_or_404(
+        Thread,
+        category__slug__iexact=category_slug,
+        pk=pk,
+        slug__iexact=slug
+    )
+    try:
+        fetch_thread_favorite_action = Action.objects.filter(
+            content_type=ContentType.objects.get_for_model(thread_obj),
+            object_id=thread_obj.id,
+            action_value='F',
+            user=request.user
+        )
+        if fetch_thread_favorite_action:
+            fetch_thread_favorite_action.delete()
+    except Action.DoesNotExist:
+        Action.objects.create(
+            content_object=thread_obj,
+            user=request.user,
+            action_value=Action.FAVORITE
+        )
