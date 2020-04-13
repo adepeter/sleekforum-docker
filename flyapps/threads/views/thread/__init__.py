@@ -3,7 +3,9 @@ from .thread import (
     DeleteThread,
     EditThread,
     ListThread,
-    ReadThread
+    ReadThread,
+    ListNewestThread,
+    ListTrendingThread
 )
 
 from .thread_misc import (

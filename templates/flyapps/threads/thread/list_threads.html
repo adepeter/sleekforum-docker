@@ -103,7 +103,7 @@
                                 class="tt-color01 tt-badge">{{ thread.get_prefix_display }}</span>
                         </div>
                         <div class="tt-col-value hide-mobile">{{ thread.starter.username }}</div>
-                        <div class="tt-col-value hide-mobile">{{ thread.total_likes | pretty_count }}</div>
+                        <div class="tt-col-value hide-mobile">{{ thread.likes | pretty_count }}</div>
                         <div class="tt-col-value tt-color-select hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.views | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.created | time_ago }}</div>

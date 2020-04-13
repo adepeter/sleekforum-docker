@@ -40,7 +40,7 @@ class Post(models.Model):
         }
         return reverse('flyapps:threads:post:delete_post', kwargs=kwargs)
 
-    def get_reply_url(self):
+    def get_reply_to_url(self):
         kwargs = {
             'thread_slug': self.thread.slug,
             'pk': self.id,

@@ -1,0 +1,120 @@
+{% load miscs_tags %}
+
+<div class="tt-info-box">
+    <h6 class="tt-title">Thread Status</h6>
+    <div class="tt-row-icon">
+        <div class="tt-item">
+            <a class="tt-icon-btn tt-position-bottom">
+                <i class="tt-icon">
+                    <svg>
+                        <use xlink:href="#icon-reply"></use>
+                    </svg>
+                </i>
+                <span class="tt-text">{{ posts | length | pretty_count  }}</span>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a class="tt-icon-btn tt-position-bottom">
+                <i class="tt-icon">
+                    <svg>
+                        <use xlink:href="#icon-view"></use>
+                    </svg>
+                </i>
+                <span class="tt-text">{{ thread.views | pretty_count }}</span>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a class="tt-icon-btn tt-position-bottom">
+                <i class="tt-icon">
+                    <svg>
+                        <use xlink:href="#icon-user"></use>
+                    </svg>
+                </i>
+                <span class="tt-text">Yet to be implemented</span>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a class="tt-icon-btn tt-position-bottom">
+                <i class="tt-icon">
+                    <svg>
+                        <use xlink:href="#icon-like"></use>
+                    </svg>
+                </i>
+                <span class="tt-text">{{ thread.likes | pretty_count }}</span>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class="tt-icon-btn tt-position-bottom">
+                <i class="tt-icon">
+                    <svg>
+                        <use xlink:href="#icon-favorite"></use>
+                    </svg>
+                </i>
+                <span class="tt-text">{{ thread.favorites | pretty_count }}</span>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class="tt-icon-btn tt-position-bottom">
+                <i class="tt-icon">
+                    <svg>
+                        <use xlink:href="#icon-share"></use>
+                    </svg>
+                </i>
+                <span class="tt-text">{{ thread.shares | pretty_count }}</span>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <h6 class="tt-title">Frequent Posters</h6>
+    <div class="tt-row-icon">
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-d"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-t"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-k"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-n"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-a"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-c"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-item">
+            <a href="#" class=" tt-icon-avatar">
+                <svg>
+                    <use xlink:href="#icon-ava-h"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>

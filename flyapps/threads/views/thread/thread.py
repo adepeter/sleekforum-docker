@@ -53,7 +53,7 @@ class CreateThread(CreateView):
 class ReadThread(MultipleObjectMixin, CreateView):
     query_pk_and_slug = True
     form_class = PostForm
-    paginate_by = 1
+    paginate_by = 5
     template_name = f'{TEMPLATE_URL}/read_thread.html'
     context_object_name = 'posts'
 
@@ -141,3 +141,19 @@ class DeleteThread(DeleteView):
             'category': self.kwargs['category_slug']
         }
         return reverse('flyapps:threads:list_threads', kwargs=kwargs)
+
+
+class ListNewestThread(ListView):
+    model = Thread
+    template_name = f'{TEMPLATE_URL}/newest_threads.html'
+    paginate_by = 10
+
+
+class ListTrendingThread(ListView):
+    model = Thread
+    template_name = f'{TEMPLATE_URL}/trending_threads.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        return qs.none()

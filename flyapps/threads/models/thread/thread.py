@@ -6,7 +6,7 @@ from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 from ....categories.models import Category
-from ....miscs.models import Action
+from ....miscs.models import Action, Violation
 from ...managers.thread import ThreadManager
 
 
@@ -45,10 +45,15 @@ class Thread(models.Model):
     is_locked = models.BooleanField(verbose_name=_('lock thread'), default=False)
     is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
     is_editable = models.BooleanField(verbose_name=_('allow edit'), default=True)
+
+    favorites = models.PositiveIntegerField(verbose_name=_('total favorites'), default=0)
+    likes = models.PositiveIntegerField(verbose_name=_('total likes'), default=0)
+    dislikes = models.PositiveIntegerField(verbose_name=_('total dislikes'), default=0)
     shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
-    likes = GenericRelation(Action, related_query_name='threads')
-    total_likes = models.PositiveIntegerField(verbose_name=_('total likes'), default=0)
     views = models.PositiveIntegerField(default=0)
+
+    actions = GenericRelation(Action, related_query_name='threads')
+    violations = GenericRelation(Violation, related_query_name='violations')
 
     objects = ThreadManager()
 
