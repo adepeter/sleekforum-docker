@@ -13,4 +13,8 @@ def validate_unique_user(error_message, **criteria):
 
 def validate_username_chars(username):
     if not username.isalnum():
-        raise ValidationError(_('Username "%(username)s" cannot contain invalid characters' % {'username': username}))
+        raise ValidationError(
+            _('Username "%(username)s" cannot contain invalid characters'),
+              code='invalid_chars_username',
+            params={'username': username},
+        )

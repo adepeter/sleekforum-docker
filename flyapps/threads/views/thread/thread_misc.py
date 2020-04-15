@@ -3,12 +3,15 @@ from django.db.models import Q
 from django.urls import reverse
 from django.views.generic import ListView
 from django.views.generic.detail import SingleObjectMixin
-from django.views.generic.edit import FormMixin, FormView, UpdateView
+from django.views.generic.edit import FormMixin, FormView, CreateView
 
 from ....categories.models import Category
+
+from ...forms.thread.thread_report import ThreadViolationForm
 from ...forms.thread.thread_share import ThreadShareForm
 from ...forms.thread.thread_search import ThreadSearchForm
 from ...models.thread import Thread
+
 from ...viewmixins.thread import ThreadSingleActionMiscView
 
 TEMPLATE_URL = 'flyapps/threads/thread/thread_misc'
@@ -26,8 +29,26 @@ class HideUnhideThread(ThreadSingleActionMiscView):
     redirect_to_threads = False
 
 
-class ReportThread(UpdateView):
-    pass
+class ReportThread(CreateView):
+    model = Thread
+    form_class = ThreadViolationForm
+    query_pk_and_slug = True
+    template_name = f'{TEMPLATE_URL}/report_thread.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['thread'] = self.get_object()
+        return context
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['object'] = self.get_object()
+        kwargs['request'] = self.request
+        return kwargs
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        return qs.filter(category__slug__iexact=self.kwargs['category_slug'])
 
 
 class SearchThread(SingleObjectMixin, FormMixin, ListView):

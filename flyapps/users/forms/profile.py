@@ -18,5 +18,17 @@ class UserProfileEditForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['email', 'first_name', 'last_name', 'dob', 'sex', 'location', 'signature', 'facebook', 'twitter',
-                  'github', 'website', 'about']
+        fields = [
+            'email',
+            'first_name',
+            'last_name',
+            'dob',
+            'sex',
+            'location',
+            'signature',
+            'facebook',
+            'twitter',
+            'github',
+            'website',
+            'about'
+        ]

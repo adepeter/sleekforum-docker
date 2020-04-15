@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200413_0300.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/post/create_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/post/delete_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/post/edit_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/post/list_posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/post/reply_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/post/share_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/_partials/_thread_statistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/managers/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/managers/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/post/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/post/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/read_thread.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/read_thread.html" afterDir="false" />
-    </list>
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,7 +263,7 @@
       <workItem from="1586740983243" duration="978000" />
       <workItem from="1586741981540" duration="70000" />
       <workItem from="1586742073343" duration="174000" />
-      <workItem from="1586742265796" duration="13473000" />
+      <workItem from="1586742265796" duration="14104000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>

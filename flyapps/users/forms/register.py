@@ -56,7 +56,10 @@ class UserRegistrationForm(forms.Form):
         password_1 = self.cleaned_data.get('password_1')
         password_2 = self.cleaned_data.get('password_2')
         if password_1 and password_2 and (password_1 != password_2):
-            raise forms.ValidationError(self.error_messages['password_mismatch'], code='password_mismatch')
+            raise forms.ValidationError(
+                self.error_messages['password_mismatch'],
+                code='password_mismatch'
+            )
 
     def save(self):
         email = self.cleaned_data['email']

@@ -13,7 +13,7 @@ class ThreadSearchForm(forms.Form):
         self.fields['keyword'].widget = forms.TextInput(attrs={
             'class': 'form-control',
             'size': 10,
-            'placeholder': _('Search in %(category)s' % {'category': self.category.slug})
+            'placeholder': _('Search in %(category)s' % {'category': self.category.name})
         })
 
         if self.request.GET:

@@ -44,4 +44,4 @@ class Rule(models.Model):
     penalties = models.ManyToManyField(Penalty)
 
     def __str__(self):
-        return self.name
+        return f'{self.name} - {self.get_category_display()}'
