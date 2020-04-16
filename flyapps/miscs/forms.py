@@ -39,7 +39,8 @@ class BaseViolationForm(forms.ModelForm):
         check_spam_violations = self.check_spam_rules(cleaned_rules, self.request.user)
         if check_spam_violations:
             raise forms.ValidationError(
-                _('A rule cannot be reported twice for violation'), code='multiple_violations'
+                _('A rule cannot be reported twice for violation'),
+                code='multiple_violations'
             )
         return cleaned_rules
 

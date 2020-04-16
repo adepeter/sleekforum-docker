@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200414_1921.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200414_1921.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/forms/thread/thread_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/forms/thread/thread_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200414_1921.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread_misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,6 +277,7 @@
       <workItem from="1586741981540" duration="70000" />
       <workItem from="1586742073343" duration="174000" />
       <workItem from="1586742265796" duration="14104000" />
+      <workItem from="1587048223517" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>

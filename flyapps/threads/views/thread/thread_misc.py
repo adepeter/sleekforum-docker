@@ -143,7 +143,6 @@ class ListThreadParticipant(SingleObjectMixin, ListView):
     def get_queryset(self):
         return self.object.participants.all()
 
-
 def like_thread(request, category_slug, pk, slug):
     from django.shortcuts import get_object_or_404
     from django.contrib.contenttypes.models import ContentType
@@ -157,8 +156,12 @@ def like_thread(request, category_slug, pk, slug):
         fetch_existing_thread_actions = Action.objects.filter(
             content_type=ContentType.objects.get_for_model(thread_obj),
             object_id=thread_obj.id,
-        ).exclude(action_value=Action.FAVORITE)
-        fetch_existing_user_actions = fetch_existing_thread_actions.get(user=request.user)
+        ).exclude(
+            action_value=Action.FAVORITE
+        )
+        fetch_existing_user_actions = fetch_existing_thread_actions.get(
+            user=request.user
+        )
         if fetch_existing_user_actions.action_value == 'D':
             fetch_existing_user_actions.action_value = 'L'
             fetch_existing_user_actions.save()
@@ -187,7 +190,9 @@ def dislike_thread(request, category_slug, pk, slug):
             content_type=ContentType.objects.get_for_model(thread_obj),
             object_id=thread_obj.id,
         )
-        fetch_existing_user_actions = fetch_existing_thread_actions.get(user=request.user)
+        fetch_existing_user_actions = fetch_existing_thread_actions.get(
+            user=request.user
+        )
         if fetch_existing_user_actions.action_value_value == 'L':
             fetch_existing_user_actions.action_value = 'D'
             fetch_existing_user_actions.save()
