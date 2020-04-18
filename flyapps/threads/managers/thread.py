@@ -10,7 +10,7 @@ class ThreadManager(models.Manager):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        return qs.order_by('-pin', 'modified')
+        return qs.order_by('-pin', '-modified')
 
 
 class ThreadParticipantManager(models.Manager):

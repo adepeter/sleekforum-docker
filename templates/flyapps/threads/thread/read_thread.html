@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load miscs_tags %}
 
 {% block title %}{{ thread.title }}{% endblock %}
 
@@ -14,19 +15,19 @@
                                 <div class="tt-avatar-icon">
                                     <i class="tt-icon">
                                         <svg>
-                                            <use xlink:href="#icon-ava-d"></use>
+                                            <use xlink:href="#icon-ava-{{ thread.starter.username | first_char }}"></use>
                                         </svg>
                                     </i>
                                 </div>
                                 <div class="tt-avatar-title">
                                     <a href="#">{{ thread.starter.username }}</a>
                                 </div>
-                                <a href="#" class="tt-info-time">
+                                <a class="tt-info-time">
                                     <i class="tt-icon">
                                         <svg>
                                             <use xlink:href="#icon-time"></use>
                                         </svg>
-                                    </i>6 Jan,2019
+                                    </i>{{ thread.created | date:'dS M Y, P' }}
                                 </a>
                             </div>
                             <h3 class="tt-item-title">
@@ -51,7 +52,7 @@
                                         <use xlink:href="#icon-like"></use>
                                     </svg>
                                 </i>
-                                <span class="tt-text">671</span>
+                                <span class="tt-text">{{ thread.likes | pretty_count }}</span>
                             </a>
                             <a href="#" class="tt-icon-btn">
                                 <i class="tt-icon">
@@ -59,7 +60,7 @@
                                         <use xlink:href="#icon-dislike"></use>
                                     </svg>
                                 </i>
-                                <span class="tt-text">39</span>
+                                <span class="tt-text">{{ thread.dislikes | pretty_count }}</span>
                             </a>
                             <a href="#" class="tt-icon-btn">
                                 <i class="tt-icon">
@@ -67,27 +68,20 @@
                                         <use xlink:href="#icon-favorite"></use>
                                     </svg>
                                 </i>
-                                <span class="tt-text">12</span>
+                                <span class="tt-text">{{ thread.favorites | pretty_count }}</span>
                             </a>
                             <div class="col-separator"></div>
-                            <a href="#" class="tt-icon-btn tt-hover-02 tt-small-indent">
+                            <a href="{{ thread.get_share_url }}" class="tt-icon-btn tt-hover-02 tt-small-indent">
                                 <i class="tt-icon">
                                     <svg>
                                         <use xlink:href="#icon-share"></use>
                                     </svg>
                                 </i>
                             </a>
-                            <a href="#" class="tt-icon-btn tt-hover-02 tt-small-indent">
+                            <a href="{{ thread.get_report_url }}" class="tt-icon-btn tt-hover-02 tt-small-indent">
                                 <i class="tt-icon">
                                     <svg>
                                         <use xlink:href="#icon-flag"></use>
-                                    </svg>
-                                </i>
-                            </a>
-                            <a href="#" class="tt-icon-btn tt-hover-02 tt-small-indent">
-                                <i class="tt-icon">
-                                    <svg>
-                                        <use xlink:href="#icon-reply"></use>
                                     </svg>
                                 </i>
                             </a>
@@ -121,9 +115,17 @@
                 {% endif %}
             </div>
 
-            <div class="tt-wrapper-inner">
-                {% include 'flyapps/threads/post/create_post.html' %}
-            </div>
+            {% if request.user.is_authenticated %}
+                {% if not thread.is_locked %}
+                    <div class="tt-wrapper-inner">
+                        {% include 'flyapps/threads/post/create_post.html' %}
+                    </div>
+                {% else %}
+                    <div class="tt-info-box">Post reply is not possible. Thread is locked</div>
+                {% endif %}
+            {% else %}
+                <div class="tt-info-box">Please login to be able to post a reply</div>
+            {% endif %}
         </div>
     </main>
 

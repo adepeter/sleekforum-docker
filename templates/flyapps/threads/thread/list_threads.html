@@ -70,7 +70,7 @@
                     <div class="tt-item {% if thread.pin %}tt-itemselect{% endif %}">
                         <div class="tt-col-avatar">
                             <svg class="tt-icon">
-                                <use xlink:href="#icon-ava-k"></use>
+                                <use xlink:href="#icon-ava-{{ thread.title | first_char }}"></use>
                             </svg>
                         </div>
                         <div class="tt-col-description">
@@ -104,10 +104,12 @@
                         </div>
                         <div class="tt-col-value hide-mobile">{{ thread.starter.username }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.likes | pretty_count }}</div>
-                        <div class="tt-col-value tt-color-select hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
+                        <div class="tt-col-value hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.views | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.created | time_ago }}</div>
                     </div>
+                    {% empty %}
+                    <div class="tt-info-box">There are no threads yet in this category</div>
                 {% endfor %}
             </div>
         </div>

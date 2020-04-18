@@ -1,3 +1,5 @@
+{% load miscs_tags %}
+
 <div class="tt-item">
     <div class="tt-single-topic">
         <div class="tt-item-header pt-noborder">
@@ -5,19 +7,19 @@
                 <div class="tt-avatar-icon">
                     <i class="tt-icon">
                         <svg>
-                            <use xlink:href="#icon-ava-t"></use>
+                            <use xlink:href="#icon-ava-{{ post.user.username | first_char }}"></use>
                         </svg>
                     </i>
                 </div>
                 <div class="tt-avatar-title">
                     <a href="#">{{ post.user.username }}</a>
                 </div>
-                <a href="#" class="tt-info-time">
+                <a class="tt-info-time">
                     <i class="tt-icon">
                         <svg>
                             <use xlink:href="#icon-time"></use>
                         </svg>
-                    </i>6 Jan,2019
+                    </i>{{ post.created | date:'d M, Y - g:i A' }}
                 </a>
             </div>
         </div>
@@ -29,7 +31,7 @@
                             <div class="topic-inner-avatar">
                                 <i class="tt-icon">
                                     <svg>
-                                        <use xlink:href="#icon-ava-s"></use>
+                                        <use xlink:href="#icon-ava-{{ post.parent.user.username | first_char }}"></use>
                                     </svg>
                                 </i>
                             </div>
@@ -50,7 +52,7 @@
                         <use xlink:href="#icon-like"></use>
                     </svg>
                 </i>
-                <span class="tt-text">671</span>
+                <span class="tt-text">{{ post.likes | pretty_count }}</span>
             </a>
             <a href="#" class="tt-icon-btn">
                 <i class="tt-icon">
@@ -58,25 +60,17 @@
                         <use xlink:href="#icon-dislike"></use>
                     </svg>
                 </i>
-                <span class="tt-text">39</span>
-            </a>
-            <a href="#" class="tt-icon-btn">
-                <i class="tt-icon">
-                    <svg>
-                        <use xlink:href="#icon-favorite"></use>
-                    </svg>
-                </i>
-                <span class="tt-text">12</span>
+                <span class="tt-text">{{ post.dislikes | pretty_count }}</span>
             </a>
             <div class="col-separator"></div>
-            <a href="#" class="tt-icon-btn tt-hover-02 tt-small-indent">
+            <a href="{{ post.get_share_url }}" class="tt-icon-btn tt-hover-02 tt-small-indent">
                 <i class="tt-icon">
                     <svg>
                         <use xlink:href="#icon-share"></use>
                     </svg>
                 </i>
             </a>
-            <a href="#" class="tt-icon-btn tt-hover-02 tt-small-indent">
+            <a href="{{ post.get_report_url }}" class="tt-icon-btn tt-hover-02 tt-small-indent">
                 <i class="tt-icon">
                     <svg>
                         <use xlink:href="#icon-flag"></use>

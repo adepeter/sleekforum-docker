@@ -1,10 +1,17 @@
 import math
 
 from django import template
+from django.template.defaultfilters import stringfilter
 from django.utils import timezone
 from django.utils.translation import ngettext, gettext_lazy as _
 
 register = template.Library()
+
+
+@register.filter
+@stringfilter
+def first_char(chars):
+    return chars[0].lower()
 
 
 @register.filter(expects_localtime=True)

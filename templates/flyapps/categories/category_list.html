@@ -30,39 +30,36 @@
             </div>
             <div class="tt-categories-list">
                 <div class="row">
-                    {% recursetree categories %}
-                        {% category_threads node as node_threads %}
-                        <div class="col-md-6 col-lg-4">
-                            <div class="tt-item">
-                                <div class="tt-item-header">
-                                    <ul class="tt-list-badge">
-                                        <li><a href="#"><span
-                                                class="tt-{% cycle 'color01' 'color02' 'color03' 'color04' 'color05' %} tt-badge">{{ node.name }}</span></a>
-                                        </li>
-                                    </ul>
-                                    <h6 class="tt-title"><a
-                                            href="page-categories-single.html">Thread{{ node_threads | pluralize }}
-                                        - {{ node_threads | length }}</a></h6>
-                                </div>
-                                <div class="tt-item-layout">
-                                    <div class="innerwrapper">
-                                        {{ node.description }}
-                                    </div>
-                                    <a href="#" class="tt-btn-icon">
-                                    </a>
-                                </div>
+                    {% if not categories %}
+                        <div class="col">
+                            <div class="tt-info-box">
+                                <p class="text-center">There are no created root categories yet by the admin</p>
                             </div>
                         </div>
-                    {% endrecursetree %}
-                    <div class="col-12">
-                        <div class="tt-row-btn">
-                            <button type="button" class="btn-icon js-topiclist-showmore">
-                                <svg class="tt-icon">
-                                    <use xlink:href="#icon-load_lore_icon"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                    {% else %}
+                        {% recursetree categories %}
+                            {% category_threads node as node_threads %}
+                            <div class="col-md-6 col-lg-4">
+                                <div class="tt-item">
+                                    <div class="tt-item-header">
+                                        <ul class="tt-list-badge">
+                                            <li><a href="#"><span
+                                                    class="tt-{% cycle 'color01' 'color02' 'color03' 'color04' 'color05' %} tt-badge">{{ node.name }}</span></a>
+                                            </li>
+                                        </ul>
+                                        <h6 class="tt-title"><a
+                                                href="{% url 'flyapps:categories:list_thread' node.slug %}">Thread{{ node_threads | pluralize }}
+                                            - {{ node_threads | length }}</a></h6>
+                                    </div>
+                                    <div class="tt-item-layout">
+                                        <div class="innerwrapper">
+                                            {{ node.description }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endrecursetree %}
+                    {% endif %}
                 </div>
             </div>
         </div>

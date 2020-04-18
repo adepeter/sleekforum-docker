@@ -87,6 +87,9 @@ class Thread(models.Model):
     def get_delete_url(self):
         return reverse('flyapps:threads:delete_thread', kwargs=self.get_kwargs())
 
+    def get_report_url(self):
+        return reverse('flyapps:threads:report_thread', kwargs=self.get_kwargs())
+
     def get_share_url(self):
         return reverse('flyapps:threads:share_thread', kwargs=self.get_kwargs())
 

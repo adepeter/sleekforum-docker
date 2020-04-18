@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.views.generic import ListView
 
 from ..threads.models.thread import Thread
@@ -36,3 +37,18 @@ class ListDescendantCategoryThread(ListViewMixin):
             is_hidden=False,
         )
         return qs
+
+
+class SearchCategory(ListView):
+    model = Category
+    template_name = f'{TEMPLATE_URL}/search_category.html'
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        if self.request.GET:
+            return qs.filter(
+                Q(name__iexact=self.request.get('keyword')) |
+                Q(description__icontain=self.request.get('keyword')) |
+                Q(slug__iexact=self.request.get('keyword'))
+            )
+        return qs.none()

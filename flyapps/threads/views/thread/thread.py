@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -6,8 +6,10 @@ from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.list import MultipleObjectMixin
 
 from ....categories.models import Category
+
 from ...forms.post import PostForm
 from ...forms.thread import ThreadCreationForm, ThreadEditForm
+
 from ...models.thread import Thread, ThreadView
 
 TEMPLATE_URL = 'flyapps/threads/thread'
@@ -46,7 +48,10 @@ class CreateThread(CreateView):
         form.instance.starter = self.request.user
         form.instance.category = self.get_object()
         form.instance.views += 1
-        ThreadView.objects.create(thread=form.save(), user=self.request.user)
+        ThreadView.objects.create(
+            thread=form.save(),
+            user=self.request.user
+        )
         return super().form_valid(form)
 
 
@@ -64,7 +69,9 @@ class ReadThread(MultipleObjectMixin, CreateView):
 
     def get_object(self):
         thread = super().get_object(
-            Thread.objects.filter(category__slug__iexact=self.kwargs['category_slug'])
+            Thread.objects.filter(
+                category__slug__iexact=self.kwargs['category_slug']
+            )
         )
         if self.request.user.is_authenticated:
             viewers = thread.thread_views.filter(user=self.request.user)

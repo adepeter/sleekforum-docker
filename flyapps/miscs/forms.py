@@ -62,6 +62,7 @@ class BaseViolationForm(forms.ModelForm):
     Always use this method in subclasses to return queryset.
     Do not set queryset directly on fields
     """
+
     def repeat_reported_rules(self, repeat_rule=True):
         if repeat_rule:
             return self.queryset
