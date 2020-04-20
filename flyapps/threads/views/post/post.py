@@ -8,17 +8,15 @@ TEMPLATE_URL = 'flyapps/threads/post'
 
 
 class EditPost(BasePostMixin, UpdateView):
-    model = Post
     form_class = PostEditForm
     template_name = f'{TEMPLATE_URL}/edit_post.html'
 
 
-class DeletePost(DeleteView):
-    model = Post
+class DeletePost(BasePostMixin, DeleteView):
+    pass
 
 
-class ReplyPost(CreateView):
-    model = Post
+class ReplyPost(BasePostMixin, CreateView):
     form_class = PostForm
     template_name = f'{TEMPLATE_URL}/reply_post.html'
 

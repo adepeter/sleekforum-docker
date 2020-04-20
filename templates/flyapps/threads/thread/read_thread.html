@@ -46,7 +46,7 @@
                             </p>
                         </div>
                         <div class="tt-item-info info-bottom">
-                            <a href="#" class="tt-icon-btn">
+                            <a href="{{ thread.get_like_url }}" class="tt-icon-btn">
                                 <i class="tt-icon">
                                     <svg>
                                         <use xlink:href="#icon-like"></use>
@@ -54,7 +54,7 @@
                                 </i>
                                 <span class="tt-text">{{ thread.likes | pretty_count }}</span>
                             </a>
-                            <a href="#" class="tt-icon-btn">
+                            <a href="{{ thread.get_dislike_url }}" class="tt-icon-btn">
                                 <i class="tt-icon">
                                     <svg>
                                         <use xlink:href="#icon-dislike"></use>
@@ -62,7 +62,7 @@
                                 </i>
                                 <span class="tt-text">{{ thread.dislikes | pretty_count }}</span>
                             </a>
-                            <a href="#" class="tt-icon-btn">
+                            <a href="{{ thread.get_favorite_url }}" class="tt-icon-btn">
                                 <i class="tt-icon">
                                     <svg>
                                         <use xlink:href="#icon-favorite"></use>

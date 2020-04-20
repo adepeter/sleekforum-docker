@@ -19,7 +19,20 @@ class Action(ContentTypeMixin):
         (DOWN_VOTE, _('Down Vote')),
     )
 
-    action_value = models.CharField(verbose_name=_('Action'), max_length=3, choices=ACTION_CHOICES)
+    action_value = models.CharField(
+        verbose_name=_('Action'),
+        max_length=3,
+        choices=ACTION_CHOICES
+    )
+
+    def __str__(self):
+        return f'{self.user.username} just {self.get_action_value_display()}d {self.content_object}'
 
     class Meta:
         verbose_name_plural = _('Activities')
+        constraints = [
+            models.UniqueConstraint(
+                fields=['user', 'action_value', 'content_type', 'object_id'],
+                name='unique_user_activity'
+            )
+        ]

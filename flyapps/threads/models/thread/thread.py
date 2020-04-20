@@ -87,6 +87,15 @@ class Thread(models.Model):
     def get_delete_url(self):
         return reverse('flyapps:threads:delete_thread', kwargs=self.get_kwargs())
 
+    def get_dislike_url(self):
+        return reverse('flyapps:threads:dislike_thread', kwargs=self.get_kwargs())
+
+    def get_favorite_url(self):
+        return reverse('flyapps:threads:favorite_thread', kwargs=self.get_kwargs())
+
+    def get_like_url(self):
+        return reverse('flyapps:threads:like_thread', kwargs=self.get_kwargs())
+
     def get_report_url(self):
         return reverse('flyapps:threads:report_thread', kwargs=self.get_kwargs())
 

@@ -13,6 +13,9 @@ from ..views.thread.thread_misc import (
     ReportThread,
     LockUnlockThread,
     HideUnhideThread,
+    LikeThread,
+    DislikeThread,
+    FavoriteThread
 )
 
 urlpatterns = [
@@ -30,5 +33,8 @@ urlpatterns += [
         path('report/', ReportThread.as_view(), name='report_thread'),
         path('hide-unhide/', HideUnhideThread.as_view(), name='toggle_hide_thread'),
         path('lock-unlock/', LockUnlockThread.as_view(), name='toggle_lock_thread'),
+        path('like/', LikeThread.as_view(), name='like_thread'),
+        path('dislike/', DislikeThread.as_view(), name='dislike_thread'),
+        path('favorite/', FavoriteThread.as_view(), name='favorite_thread'),
     ])),
 ]

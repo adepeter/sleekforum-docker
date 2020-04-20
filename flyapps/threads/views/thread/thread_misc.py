@@ -12,7 +12,11 @@ from ...forms.thread.thread_share import ThreadShareForm
 from ...forms.thread.thread_search import ThreadSearchForm
 from ...models.thread import Thread
 
-from ...viewmixins.thread import ThreadSingleActionMiscView
+from ...viewmixins.thread import (
+    ThreadSingleActionMiscView,
+    LikeDislikeThreadMixin,
+    FavoriteThreadMixin
+)
 
 TEMPLATE_URL = 'flyapps/threads/thread/thread_misc'
 
@@ -143,91 +147,14 @@ class ListThreadParticipant(SingleObjectMixin, ListView):
     def get_queryset(self):
         return self.object.participants.all()
 
-def like_thread(request, category_slug, pk, slug):
-    from django.shortcuts import get_object_or_404
-    from django.contrib.contenttypes.models import ContentType
-    from ....miscs.models import Action
-    thread_obj = get_object_or_404(
-        Thread,
-        category__slug__iexact=category_slug,
-        pk=pk, slug__iexact=slug
-    )
-    try:
-        fetch_existing_thread_actions = Action.objects.filter(
-            content_type=ContentType.objects.get_for_model(thread_obj),
-            object_id=thread_obj.id,
-        ).exclude(
-            action_value=Action.FAVORITE
-        )
-        fetch_existing_user_actions = fetch_existing_thread_actions.get(
-            user=request.user
-        )
-        if fetch_existing_user_actions.action_value == 'D':
-            fetch_existing_user_actions.action_value = 'L'
-            fetch_existing_user_actions.save()
-        else:
-            fetch_existing_user_actions.delete()
-    except Action.DoesNotExist:
-        Action.objects.create(
-            content_object=thread_obj,
-            action_value='L',
-            user=request.user
-        )
+
+class LikeThread(LikeDislikeThreadMixin):
+    activity_action = 'LIK'
 
 
-def dislike_thread(request, category_slug, pk, slug):
-    from django.shortcuts import get_object_or_404
-    from django.contrib.contenttypes.models import ContentType
-    from ....miscs.models import Action
-    thread_obj = get_object_or_404(
-        Thread,
-        category__slug__iexact=category_slug,
-        pk=pk,
-        slug__iexact=slug
-    )
-    try:
-        fetch_existing_thread_actions = Action.objects.filter(
-            content_type=ContentType.objects.get_for_model(thread_obj),
-            object_id=thread_obj.id,
-        )
-        fetch_existing_user_actions = fetch_existing_thread_actions.get(
-            user=request.user
-        )
-        if fetch_existing_user_actions.action_value_value == 'L':
-            fetch_existing_user_actions.action_value = 'D'
-            fetch_existing_user_actions.save()
-        else:
-            fetch_existing_user_actions.delete()
-    except Action.DoesNotExist:
-        Action.objects.create(
-            content_object=thread_obj,
-            action_value='D',
-            user=request.user
-        )
+class DislikeThread(LikeDislikeThreadMixin):
+    activity_action = 'DSL'
 
 
-def favorite_thread(request, category_slug, pk, slug):
-    from django.shortcuts import get_object_or_404
-    from django.contrib.contenttypes.models import ContentType
-    from ....miscs.models import Action
-    thread_obj = get_object_or_404(
-        Thread,
-        category__slug__iexact=category_slug,
-        pk=pk,
-        slug__iexact=slug
-    )
-    try:
-        fetch_thread_favorite_action = Action.objects.filter(
-            content_type=ContentType.objects.get_for_model(thread_obj),
-            object_id=thread_obj.id,
-            action_value='F',
-            user=request.user
-        )
-        if fetch_thread_favorite_action:
-            fetch_thread_favorite_action.delete()
-    except Action.DoesNotExist:
-        Action.objects.create(
-            content_object=thread_obj,
-            user=request.user,
-            action_value=Action.FAVORITE
-        )
+class FavoriteThread(FavoriteThreadMixin):
+    activity_action = 'FAV'

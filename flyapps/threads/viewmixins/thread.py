@@ -1,8 +1,14 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.views import View
 from django.core.exceptions import ImproperlyConfigured, FieldDoesNotExist
 from django.views.generic.detail import SingleObjectMixin
+
+from ...miscs.models.activity import Action
+from ...miscs.viewmixins.activity import BaseActivityActionView
+
+from ..models.thread import Thread
 
 
 class SingleBooleanObjectMixin:
@@ -63,29 +69,14 @@ class ThreadSingleActionMiscView(SingleBooleanObjectMixin, SingleObjectMixin, Vi
             return redirect(self.object.get_absolute_url())
 
 
-class ActivityMixin:
-    activity_model = None
-    activity_action = None
-    activity_value_field = ''
+class LikeDislikeThreadMixin(LoginRequiredMixin, BaseActivityActionView):
+    model = Thread
+    activity_model = Action
+    activity_field_name = 'action_value'
+    field_exclusion = True
+    excluded_fields = [Action.UP_VOTE, Action.DOWN_VOTE, Action.FAVORITE]
 
-    def confirm_activity_action(self, action=None):
-        pass
 
-    @property
-    def get_activity_model(self):
-        if self.activity_model is None:
-            raise ImproperlyConfigured(
-                "activity_model is missing for this view. You need to define and attach a model to it"
-            )
-        return self.activity_model
-
-    def validate_value_field(self, activity_value_field):
-        activity_model = self.get_activity_model()
-        fields = [field.name for field in activity_model._meta.get_fields()]
-        if activity_value_field not in fields:
-            raise FieldDoesNotExist('%(field_name)s does not seem to be a valid field on the supplied %(model)s' % {
-                'model': activity_model._meta.model_name,
-                'field_name': activity_value_field
-            })
-        else:
-            return activity_value_field
+class FavoriteThreadMixin(LikeDislikeThreadMixin):
+    field_exclusion = False
+    excluded_fields = []
