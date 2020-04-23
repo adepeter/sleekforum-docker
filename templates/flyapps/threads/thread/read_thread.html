@@ -62,14 +62,6 @@
                                 </i>
                                 <span class="tt-text">{{ thread.dislikes | pretty_count }}</span>
                             </a>
-                            <a href="{{ thread.get_favorite_url }}" class="tt-icon-btn">
-                                <i class="tt-icon">
-                                    <svg>
-                                        <use xlink:href="#icon-favorite"></use>
-                                    </svg>
-                                </i>
-                                <span class="tt-text">{{ thread.favorites | pretty_count }}</span>
-                            </a>
                             <div class="col-separator"></div>
                             <a href="{{ thread.get_share_url }}" class="tt-icon-btn tt-hover-02 tt-small-indent">
                                 <i class="tt-icon">

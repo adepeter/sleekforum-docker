@@ -7,6 +7,8 @@ from django.views.generic.edit import FormMixin, FormView, CreateView
 
 from ....categories.models import Category
 
+from ....miscs.models.activity import Action
+
 from ...forms.thread.thread_report import ThreadViolationForm
 from ...forms.thread.thread_share import ThreadShareForm
 from ...forms.thread.thread_search import ThreadSearchForm
@@ -15,7 +17,6 @@ from ...models.thread import Thread
 from ...viewmixins.thread import (
     ThreadSingleActionMiscView,
     LikeDislikeThreadMixin,
-    FavoriteThreadMixin
 )
 
 TEMPLATE_URL = 'flyapps/threads/thread/thread_misc'
@@ -149,12 +150,12 @@ class ListThreadParticipant(SingleObjectMixin, ListView):
 
 
 class LikeThread(LikeDislikeThreadMixin):
+    model = Thread
+    activity_model = Action
     activity_action = 'LIK'
 
 
 class DislikeThread(LikeDislikeThreadMixin):
+    model = Thread
+    activity_model = Action
     activity_action = 'DSL'
-
-
-class FavoriteThread(FavoriteThreadMixin):
-    activity_action = 'FAV'

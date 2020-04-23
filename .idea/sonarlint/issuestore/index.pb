@@ -39,3 +39,33 @@ R
 "flyapps/threads/forms/post/post.py,1\1\113d3248f0e0032b8d0a53688eaa6d2ed23c2fb9
 b
 2templates/flyapps/threads/thread/list_threads.html,4\2\42aefb95b88c1e21e3e319a2541d22baabefa56f
+L
+flyapps/threads/urls/post.py,6\3\636f85fc026b6054bb259de41c1b8ae4a07fe79a
+R
+"flyapps/threads/views/post/post.py,2\b\2b5b2f766aa7babe9f994ebf322c180c9066fdc3
+P
+ flyapps/miscs/models/activity.py,9\0\90a4bf201076cefb22e77a7f94bc8e8f4f932c9e
+W
+'flyapps/threads/views/post/post_misc.py,9\c\9c96b4bded5fbc8a4a79b91b4fb70c44c7acca5f
+R
+"flyapps/threads/viewmixins/post.py,a\c\ac71454b8c31b9b03056ec5899303f8376969fc2
+N
+flyapps/miscs/urls/__init__.py,5\3\536d6e7c25304d00d5b06f98d970ffec249b8d5a
+X
+(flyapps/threads/views/thread/__init__.py,6\e\6e82414aacffb046208ec9779302cb5498dc2de6
+P
+ flyapps/threads/urls/__init__.py,5\c\5c18a6a40bdff6d6c9aba12aadb6f672d556ebfc
+T
+$flyapps/miscs/viewmixins/activity.py,9\a\9a2214110533a65e0e2885cff0e5e0941206ca3c
+T
+$flyapps/threads/viewmixins/thread.py,7\4\7481057e31592b3fcbde72bd5665c30931217955
+N
+flyapps/threads/urls/thread.py,1\f\1f832ff663f643edfaf404363ec07e0fc56e2f25
+[
++flyapps/threads/views/thread/thread_misc.py,7\0\70ab98716aafc9385ef13c643c98a8dcf52f94ce
+P
+ flyapps/threads/managers/post.py,3\b\3b1da1b3b2ac5ff7ed55ca4f6208d477851d99ed
+H
+flyapps/threads/admin.py,f\3\f3a57fe9979d471db25666ebcecc5ec652960bb1
+r
+Btemplates/flyapps/threads/thread/_partials/_thread_statistics.html,a\0\a00c43383789ff03fb96b0ea8ca4ae3f6b287be9

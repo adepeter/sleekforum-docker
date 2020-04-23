@@ -10,7 +10,7 @@
                         <use xlink:href="#icon-reply"></use>
                     </svg>
                 </i>
-                <span class="tt-text">{{ posts | length | pretty_count  }}</span>
+                <span class="tt-text">{{ posts | length | pretty_count }}</span>
             </a>
         </div>
         <div class="tt-item">
@@ -47,16 +47,6 @@
             <a href="#" class="tt-icon-btn tt-position-bottom">
                 <i class="tt-icon">
                     <svg>
-                        <use xlink:href="#icon-favorite"></use>
-                    </svg>
-                </i>
-                <span class="tt-text">{{ thread.favorites | pretty_count }}</span>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class="tt-icon-btn tt-position-bottom">
-                <i class="tt-icon">
-                    <svg>
                         <use xlink:href="#icon-share"></use>
                     </svg>
                 </i>
@@ -67,54 +57,14 @@
     <hr>
     <h6 class="tt-title">Frequent Posters</h6>
     <div class="tt-row-icon">
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-d"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-t"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-k"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-n"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-a"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-c"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="tt-item">
-            <a href="#" class=" tt-icon-avatar">
-                <svg>
-                    <use xlink:href="#icon-ava-h"></use>
-                </svg>
-            </a>
-        </div>
+        {% for frequent_poster in frequent_posters %}
+            <div class="tt-item">
+                <a href="#" class=" tt-icon-avatar">
+                    <svg>
+                        <use xlink:href="#icon-ava-{{ frequent_poster.username | first_char }}"></use>
+                    </svg>
+                </a>
+            </div>
+        {% endfor %}
     </div>
 </div>

@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/miscs/viewmixins/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/miscs/viewmixins/activity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0004_auto_20200420_2142.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0005_auto_20200420_2144.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/744782d203b6048c3734330ea32859ab1c383735" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/744782d203b6048c3734330ea32859ab1c383735" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/924536ca7bf8f1f4de02bf0a9e3bedd811712c15" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/924536ca7bf8f1f4de02bf0a9e3bedd811712c15" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200416_1935.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/models/activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/models/activity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/viewmixins/activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/viewmixins/activity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/managers/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/managers/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/viewmixins/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/viewmixins/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/viewmixins/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/viewmixins/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/viewmixins/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/post/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/post/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/post/post_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/post/post_misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread/thread_misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread_misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/_partials/_thread_statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/_partials/_thread_statistics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/read_thread.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/read_thread.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +65,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\adepeter\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -276,7 +275,9 @@
       <workItem from="1587200870662" duration="370000" />
       <workItem from="1587201264287" duration="1033000" />
       <workItem from="1587202342746" duration="13590000" />
-      <workItem from="1587251134859" duration="32120000" />
+      <workItem from="1587251134859" duration="56502000" />
+      <workItem from="1587637809749" duration="366000" />
+      <workItem from="1587638200981" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
@@ -344,14 +345,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="189" height="498" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1580041814281" />
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1587297082866">
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1587638225756">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587297082866" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1587251114787">
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1587638225756" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1587638186196">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587251114787" />
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587638186196" />
     <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1586333028029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

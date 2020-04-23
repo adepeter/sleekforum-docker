@@ -46,9 +46,6 @@ class Thread(models.Model):
     is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
     is_editable = models.BooleanField(verbose_name=_('allow edit'), default=True)
 
-    favorites = models.PositiveIntegerField(verbose_name=_('total favorites'), default=0)
-    likes = models.PositiveIntegerField(verbose_name=_('total likes'), default=0)
-    dislikes = models.PositiveIntegerField(verbose_name=_('total dislikes'), default=0)
     shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
     views = models.PositiveIntegerField(default=0)
 
@@ -89,9 +86,6 @@ class Thread(models.Model):
 
     def get_dislike_url(self):
         return reverse('flyapps:threads:dislike_thread', kwargs=self.get_kwargs())
-
-    def get_favorite_url(self):
-        return reverse('flyapps:threads:favorite_thread', kwargs=self.get_kwargs())
 
     def get_like_url(self):
         return reverse('flyapps:threads:like_thread', kwargs=self.get_kwargs())

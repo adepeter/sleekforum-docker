@@ -15,7 +15,6 @@ from ..views.thread.thread_misc import (
     HideUnhideThread,
     LikeThread,
     DislikeThread,
-    FavoriteThread
 )
 
 urlpatterns = [
@@ -35,6 +34,5 @@ urlpatterns += [
         path('lock-unlock/', LockUnlockThread.as_view(), name='toggle_lock_thread'),
         path('like/', LikeThread.as_view(), name='like_thread'),
         path('dislike/', DislikeThread.as_view(), name='dislike_thread'),
-        path('favorite/', FavoriteThread.as_view(), name='favorite_thread'),
     ])),
 ]

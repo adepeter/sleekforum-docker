@@ -1,3 +1,5 @@
+from django.contrib.auth import get_user_model
+from django.db.models import Count, Sum, Max, Min
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic import ListView
@@ -14,6 +16,8 @@ from ...models.thread import Thread, ThreadView
 
 TEMPLATE_URL = 'flyapps/threads/thread'
 
+User = get_user_model()
+
 
 class ListThread(SingleObjectMixin, ListView):
     slug_url_kwarg = 'category_slug'
@@ -25,7 +29,9 @@ class ListThread(SingleObjectMixin, ListView):
         return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
-        return self.object.threads.unhidden_threads()
+        return self.object.threads.unhidden_threads().annotate(
+            latest_posts=Count('posts__created')
+        ).order_by('-latest_posts')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -92,6 +98,10 @@ class ReadThread(MultipleObjectMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(ReadThread, self).get_context_data(**kwargs)
         context['thread'] = self.thread
+        context['frequent_posters'] = User.objects.filter(
+            post__in=self.object_list,
+            post__is_hidden=False
+        ).annotate(num_of_posts=Count('post')).order_by('-num_of_posts')
         return context
 
     def form_valid(self, form):

@@ -5,10 +5,7 @@ from django.views import View
 from django.core.exceptions import ImproperlyConfigured, FieldDoesNotExist
 from django.views.generic.detail import SingleObjectMixin
 
-from ...miscs.models.activity import Action
 from ...miscs.viewmixins.activity import BaseActivityActionView
-
-from ..models.thread import Thread
 
 
 class SingleBooleanObjectMixin:
@@ -70,13 +67,6 @@ class ThreadSingleActionMiscView(SingleBooleanObjectMixin, SingleObjectMixin, Vi
 
 
 class LikeDislikeThreadMixin(LoginRequiredMixin, BaseActivityActionView):
-    model = Thread
-    activity_model = Action
-    activity_field_name = 'action_value'
-    field_exclusion = True
-    excluded_fields = [Action.UP_VOTE, Action.DOWN_VOTE, Action.FAVORITE]
-
-
-class FavoriteThreadMixin(LikeDislikeThreadMixin):
-    field_exclusion = False
-    excluded_fields = []
+    """
+    This view mixin is used in thread_misc module
+    """
