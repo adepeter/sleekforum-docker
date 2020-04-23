@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load activity_tags %}
 {% load miscs_tags %}
 
 {% block title %}{{ category.name }}{{ block.super }}{% endblock %}
@@ -99,16 +100,17 @@
                                 </div>
                             </div>
                         </div>
+                        {% activity_action_queryset 'LIK' thread as thread_likes %}
                         <div class="tt-col-category"><span
                                 class="tt-color01 tt-badge">{{ thread.get_prefix_display }}</span>
                         </div>
                         <div class="tt-col-value hide-mobile">{{ thread.starter.username }}</div>
-                        <div class="tt-col-value hide-mobile">{{ thread.likes | pretty_count }}</div>
+                        <div class="tt-col-value hide-mobile">{{ thread_likes | length | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.views | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.created | time_ago }}</div>
                     </div>
-                    {% empty %}
+                {% empty %}
                     <div class="tt-info-box">There are no threads yet in this category</div>
                 {% endfor %}
             </div>

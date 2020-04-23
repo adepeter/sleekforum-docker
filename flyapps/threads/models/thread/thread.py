@@ -58,6 +58,12 @@ class Thread(models.Model):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
+    def get_likes_count(self):
+        return self.actions.filter_action_by('LIK').count()
+
+    def get_dislikes_count(self):
+        return self.actions.filter_action_by('DSL').count()
+
     def __str__(self):
         return self.title
 

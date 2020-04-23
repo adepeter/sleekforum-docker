@@ -2,11 +2,11 @@ from django.db import models
 
 
 class ThreadManager(models.Manager):
-    def unhidden_threads(self):
-        return self.filter(is_hidden=False)
+    def unhidden_threads(self, **kwargs):
+        return self.filter(is_hidden=False, **kwargs)
 
-    def hidden_threads(self):
-        return self.filter(is_hidden=True)
+    def hidden_threads(self, **kwargs):
+        return self.filter(is_hidden=True, **kwargs)
 
     def get_queryset(self):
         qs = super().get_queryset()

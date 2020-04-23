@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.db.models import Count, Sum, Max, Min
+from django.db.models import Count, Max
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic import ListView
@@ -29,9 +29,7 @@ class ListThread(SingleObjectMixin, ListView):
         return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
-        return self.object.threads.unhidden_threads().annotate(
-            latest_posts=Count('posts__created')
-        ).order_by('-latest_posts')
+        return self.object.threads.unhidden_threads()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -98,6 +96,8 @@ class ReadThread(MultipleObjectMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(ReadThread, self).get_context_data(**kwargs)
         context['thread'] = self.thread
+        context['liked_by'] = [liked_by.user for liked_by in self.thread.actions.filter_action_by('LIK')]
+        context['disliked_by'] = [disliked_by.user for disliked_by in self.thread.actions.filter_action_by('DSL')]
         context['frequent_posters'] = User.objects.filter(
             post__in=self.object_list,
             post__is_hidden=False

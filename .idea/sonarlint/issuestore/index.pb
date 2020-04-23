@@ -69,3 +69,10 @@ H
 flyapps/threads/admin.py,f\3\f3a57fe9979d471db25666ebcecc5ec652960bb1
 r
 Btemplates/flyapps/threads/thread/_partials/_thread_statistics.html,a\0\a00c43383789ff03fb96b0ea8ca4ae3f6b287be9
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+R
+"flyapps/miscs/managers/activity.py,6\5\656a4adc55785b5d723a7ef21866c5aab7cfe4d4
+[
++flyapps/miscs/templatetags/activity_tags.py,8\2\826730f645e6a0029e6a78aa47251e95f0fcfd78
