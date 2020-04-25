@@ -8,6 +8,7 @@ from .models import Penalty, Rule
 class PenaltyAdmin(admin.ModelAdmin):
     list_display = ['name']
 
+
 @admin.register(Rule)
 class RuleAdmin(admin.ModelAdmin):
     list_display = ['category', 'creator', 'name', 'show', 'description']

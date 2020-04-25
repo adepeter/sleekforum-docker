@@ -1,7 +1,7 @@
-from django.db.models import F, Q
+from django.db.models import Q
 from django.views.generic import ListView
 
-from ..threads.models.thread import Thread
+from ...threads.models.thread import Thread
 
 TEMPLATE_URL = 'flyapps/home'
 

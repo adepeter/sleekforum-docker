@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load miscs_tags %}
+{% load staff_tags %}
+
+{% block title %}Users List{% endblock %}
+
+{% block content %}
+    <main id="tt-pageContent" class="tt-offset-small">
+        <div class="container">
+            <div class="tt-tab-wrapper">
+                <div class="tt-wrapper-inner">
+                    <ul class="nav nav-tabs pt-tabs-default" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link show active" data-toggle="tab" href="#tt-tab-01"
+                               role="tab"><span>All users</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tt-tab-02"
+                               role="tab"><span>Admin Users</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tt-tab-03" role="tab"><span>Super users</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane show fade active" id="tt-tab-01" role="tabpanel">
+                        <div class="tt-layout-tab">
+                            <div class="tt-wrapper-inner">
+                                <h2 class="tt-title">
+                                    Users
+                                </h2>
+                                <div class="tt-list-avatar">
+                                    <div class="row">
+                                        {% for user in users %}
+                                            <div class="col-6 col-md-4 col-lg-3">
+                                                <a href="{{ user.get_absolute_url }}" class="tt-avatar">
+                                                    <div class="tt-col-icon">
+                                                        <svg class="tt-icon">
+                                                            <use xlink:href="#icon-ava-{{ user.username | first_char }}"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="tt-col-description">
+                                                        <h6 class="tt-title">{{ user.username }}</h6>
+                                                        <div class="tt-value">@{{ user.username }}</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tt-tab-02" role="tabpanel">
+                        <div class="tt-wrapper-inner tt-layout-tab">
+                            <h6 class="tt-title tt-size-lg">
+                                Website Staffs
+                            </h6>
+                            <p>Welcome to our website STAFFS' page.</p>
+                            <p>
+                                This page was purposely created for your convenience if you wanna reach out to any of
+                                our staffs
+                                for some related issues.
+                            </p>
+                            <div class="tt-list-avatar">
+                                <div class="row">
+                                    {% staffs as admins %}
+                                    {% for admin in admins %}
+                                        <div class="col-6 col-md-4 col-lg-3">
+                                            <a href="{{ admin.get_absolute_url }}" class="tt-avatar">
+                                                <div class="tt-col-icon">
+                                                    <svg class="tt-icon">
+                                                        <use xlink:href="#icon-ava-{{ admin.username | first_char }}"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="tt-col-description">
+                                                    <h6 class="tt-title">{{ admin.get_display_name }}</h6>
+                                                    <div class="tt-value">@{{ admin.username }}</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tt-tab-03" role="tabpanel">
+                        <div class="tt-wrapper-inner tt-layout-tab">
+                            <h6 class="tt-title">Super users</h6>
+                        </div>
+                        <div class="tt-list-avatar">
+                            <div class="row">
+                                {% superusers as super_su %}
+                                {% for su in super_su %}
+                                    <div class="col-6 col-md-4 col-lg-3">
+                                        <a href="{{ su.get_absolute_url }}" class="tt-avatar">
+                                            <div class="tt-col-icon">
+                                                <svg class="tt-icon">
+                                                    <use xlink:href="#icon-ava-{{ su.username | first_char }}"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="tt-col-description">
+                                                <h6 class="tt-title">{{ su.get_display_name }}</h6>
+                                                <div class="tt-value">@{{ su.username }}</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.db import models
-from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 
@@ -17,7 +16,6 @@ class Penalty(models.Model):
 
 
 class Rule(models.Model):
-
     GLOBAL_RULE = 0
     FORUM_RULE = 1
     USER_RULE = 2

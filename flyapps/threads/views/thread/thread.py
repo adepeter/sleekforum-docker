@@ -1,11 +1,16 @@
+import datetime
+
+from django.contrib import messages
 from django.contrib.auth import get_user_model
-from django.db.models import Count, Max
+from django.db.models import Count
 from django.shortcuts import render
 from django.urls import reverse
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.list import MultipleObjectMixin
+from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
 
 from ....categories.models import Category
 
@@ -164,13 +169,33 @@ class ListNewestThread(ListView):
     model = Thread
     template_name = f'{TEMPLATE_URL}/newest_threads.html'
     paginate_by = 10
+    context_object_name = 'threads'
+
+    def get(self, request, *args, **kwargs):
+        messages.info(
+            self.request,
+            _('Dear %(login)s, you are viewing newest threads that were created 7days ago') % {
+                'login': self.request.user.username if self.request.user.is_authenticated else 'guest'
+            }
+        )
+        return super().get(request, *args, **kwargs)
+
+    def get_queryset(self):
+        return self.model._meta.default_manager.unhidden_threads(
+            created__gte=timezone.now() - datetime.timedelta(days=7)
+        )
 
 
 class ListTrendingThread(ListView):
     model = Thread
     template_name = f'{TEMPLATE_URL}/trending_threads.html'
     paginate_by = 10
+    context_object_name = 'threads'
 
     def get_queryset(self):
         qs = super().get_queryset()
-        return qs.none()
+        return qs.annotate(
+            num_of_hidden_posts=Count('posts__is_hidden')
+        ).exclude(
+            num_of_hidden_posts__gte=10
+        ).order_by('-pin', '-num_of_hidden_posts')[:100]
