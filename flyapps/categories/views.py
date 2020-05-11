@@ -42,13 +42,18 @@ class ListDescendantCategoryThread(ListViewMixin):
 class SearchCategory(ListView):
     model = Category
     template_name = f'{TEMPLATE_URL}/search_category.html'
+    context_object_name = 'categories'
+
+    def get(self, request, *args, **kwargs):
+        self.keyword = self.request.GET.get('keyword')
+        return super().get(request, *args, **kwargs)
 
     def get_queryset(self):
         qs = super().get_queryset()
         if self.request.GET:
             return qs.filter(
-                Q(name__iexact=self.request.get('keyword')) |
-                Q(description__icontain=self.request.get('keyword')) |
-                Q(slug__iexact=self.request.get('keyword'))
+                Q(name__iexact=self.request.GET.get('keyword')) |
+                Q(description__icontains=self.request.GET.get('keyword')) |
+                Q(slug__iexact=self.request.GET.get('keyword'))
             )
         return qs.none()

@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.utils import timezone
 
 User = get_user_model()
 
@@ -13,6 +14,8 @@ class AuthenticationBackend:
         try:
             user = User.objects.get_by_username_or_email(username)
             if user.check_password(password):
+                user.last_login = timezone.now()
+                user.save(update_fields=['last_login'])
                 return user
         except User.DoesNotExist:
             return None

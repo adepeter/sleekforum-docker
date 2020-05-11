@@ -42,9 +42,7 @@
                             </div>
                         </div>
                         <div class="tt-item-description">
-                            <p>
-                                {{ thread.content }}
-                            </p>
+                            <p>{{ thread.content | linebreaks }}</p>
                         </div>
                         <div class="tt-item-info info-bottom">
                             <a href="{{ thread.get_like_url }}" class="tt-icon-btn">

@@ -1,8 +1,10 @@
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 from ..behaviours.content_types import ContentTypeMixin
 from ..managers.activity import ActivityManager
+from ..signals.activity import activity_updater
 
 
 class Action(ContentTypeMixin):
@@ -27,6 +29,29 @@ class Action(ContentTypeMixin):
     )
 
     objects = ActivityManager()
+
+    def signal_emitter(self):
+        """
+        Custom signal for updating user actions
+        Emits action_value and object type of instance been created/deleted
+        """
+        ct = ContentType.objects.get_for_model(self.content_object)
+        obj = ct.get_object_for_this_type(id=self.object_id)
+        activity_updater.send(
+            sender=self.__class__,
+            action_value=self.action_value,
+            obj=obj
+        )
+
+    def delete(self):
+        """ Signal is called again to know the object been deleted """
+        self.signal_emitter()
+        super().delete()
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        """ Signal is called to know the object been created """
+        self.signal_emitter()
 
     def __str__(self):
         return f'{self.user.username} just {self.get_action_value_display()}d {self.content_object}'

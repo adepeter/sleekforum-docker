@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from ..miscs.admin import ActivityStackedInline
-from .models import Thread, Post
+from .models import Thread, Post, ThreadView
 
 
 class PostStackedInline(admin.StackedInline):
@@ -11,7 +11,7 @@ class PostStackedInline(admin.StackedInline):
 
 @admin.register(Thread)
 class ThreadAdmin(admin.ModelAdmin):
-    list_display = ['title', 'id', 'category', 'starter', 'prefix', 'pin', 'created', 'modified', 'is_hidden', 'is_locked']
+    list_display = ['title', 'id', 'category', 'starter', 'prefix', 'pin', 'tags', 'created', 'modified', 'is_hidden', 'is_locked']
     list_filter = ['category', 'starter', 'is_hidden', 'is_locked', 'prefix', 'pin']
     search_fields = ['title', 'content', 'category']
     radio_fields = {
@@ -19,6 +19,7 @@ class ThreadAdmin(admin.ModelAdmin):
         'prefix': admin.HORIZONTAL,
     }
     date_hierarchy = 'created'
+    save_on_top = True
     ordering = ['title', 'starter', 'pin', 'category', 'is_hidden', 'is_locked', 'created', 'modified', 'prefix']
     inlines = [ActivityStackedInline, PostStackedInline]
 
@@ -28,3 +29,6 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['content', 'user', 'thread', 'parent']
     list_filter = ['user', 'thread', 'parent', 'is_hidden']
     date_hierarchy = 'created'
+
+
+admin.site.register(ThreadView)

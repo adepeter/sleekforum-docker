@@ -18,6 +18,9 @@ class Category(MPTTModel):
             return _('No description yet')
         return self.description
 
+    def get_name(self):
+        return self.name
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)
@@ -30,10 +33,18 @@ class Category(MPTTModel):
         verbose_name_plural = 'categories'
         ordering = ['name']
         constraints = [
-            models.UniqueConstraint(fields=['name', 'parent'], name='unique_name_parent'),
+            models.UniqueConstraint(
+                fields=['name'],
+                name='unique_name_on_category'
+            ),
+            models.UniqueConstraint(
+                fields=['name', 'parent'],
+                name='unique_name_parent_on_category'
+            ),
         ]
         indexes = [
-            models.Index(fields=['id', 'slug']),
+            models.Index(fields=['slug'], name='index_slug_on_category'),
+            models.Index(fields=['id', 'slug'], name='index_id_slug_on_category'),
         ]
 
     class MPTTMeta:

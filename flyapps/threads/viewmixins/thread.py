@@ -17,7 +17,9 @@ class SingleBooleanObjectMixin:
 
     def get_boolean_field(self):
         if not self.boolean_field:
-            raise ImproperlyConfigured('You must set boolean_field attribute on this view')
+            raise ImproperlyConfigured(
+                'You must set boolean_field attribute on this view'
+            )
         return self.validate_boolean_field(self.boolean_field)
 
     def validate_boolean_field(self, boolean_field):
@@ -48,7 +50,10 @@ class SingleBooleanObjectMixin:
         return obj
 
 
-class ThreadSingleActionMiscView(SingleBooleanObjectMixin, SingleObjectMixin, View):
+class ThreadSingleActionMiscView(
+    SingleBooleanObjectMixin,
+    SingleObjectMixin, View
+):
     redirect_to_threads = None
 
     def get(self, request, *args, **kwargs):
@@ -59,10 +64,15 @@ class ThreadSingleActionMiscView(SingleBooleanObjectMixin, SingleObjectMixin, Vi
     def get_success_url(self):
         if self.redirect_to_threads is None:
             raise ImproperlyConfigured(
-                '\'redirect_to_threads\' class attr cannot be set to None. Attribute must be set to a boolean')
+                '\'redirect_to_threads\' class attr cannot be set to None. '
+                'Attribute must be set to a boolean'
+            )
         else:
             if self.redirect_to_threads is True:
-                return redirect(reverse('flyapps:threads:list_threads', args=[str(self.kwargs['category_slug'])]))
+                return redirect(reverse(
+                    'flyapps:threads:list_threads',
+                    args=[str(self.kwargs['category_slug'])]
+                ))
             return redirect(self.object.get_absolute_url())
 
 

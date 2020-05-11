@@ -19,6 +19,8 @@ from ...forms.thread import ThreadCreationForm, ThreadEditForm
 
 from ...models.thread import Thread, ThreadView
 
+from ...signals import thread_views_creator_and_updater
+
 TEMPLATE_URL = 'flyapps/threads/thread'
 
 User = get_user_model()

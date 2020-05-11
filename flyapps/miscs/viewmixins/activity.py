@@ -29,7 +29,9 @@ class BaseActivityActionMixin(SingleObjectMixin):
 
     def get_activity_field_name(self):
         if not self.activity_field_name or self.activity_field_name is None:
-            raise ImproperlyConfigured('activity_field_name attrs for this view is missing')
+            raise ImproperlyConfigured(
+                'activity_field_name attrs for this view is missing'
+            )
         return self.validate_activity_field_name(self.activity_field_name)
 
     def validate_activity_field_name(self, field_name):

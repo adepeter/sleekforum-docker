@@ -8,8 +8,10 @@ User = get_user_model()
 
 
 class UserSearchForm(forms.Form):
-    keyword = forms.CharField(label=_('E-mail or username'),
-                              help_text=_('Kindly enter the e-mail, username or profile display name of user'))
+    keyword = forms.CharField(
+        label=_('E-mail or username'),
+        help_text=_('Kindly enter the e-mail, username or profile display name of user')
+    )
 
 
 class UserProfileEditForm(forms.ModelForm):
@@ -32,3 +34,6 @@ class UserProfileEditForm(forms.ModelForm):
             'website',
             'about'
         ]
+
+class UserPasswordChangeForm(forms.ModelForm):
+    pass

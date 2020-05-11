@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.contenttypes.fields import GenericRelation
+from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
@@ -36,16 +37,18 @@ class Thread(models.Model):
     starter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='threads')
     title = models.CharField(verbose_name=_('title'), max_length=150, unique=True)
+    tags = ArrayField(models.SlugField(), blank=True)
     pin = models.IntegerField(verbose_name=_('pin thread'), choices=PIN_CHOICES, default=PIN_DEFAULT)
     prefix = models.IntegerField(verbose_name=_('prefix'), choices=PREFIX_CHOICES, default=PREFIX_DEFAULT)
-    slug = models.SlugField(verbose_name=_('slug'), blank=True, editable=False, db_index=True)
+    slug = models.SlugField(verbose_name=_('slug'), blank=True, editable=False)
     content = models.TextField(verbose_name=_('content'), unique_for_date='created')
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     is_locked = models.BooleanField(verbose_name=_('lock thread'), default=False)
     is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
     is_editable = models.BooleanField(verbose_name=_('allow edit'), default=True)
-
+    likes = models.PositiveIntegerField(verbose_name=_('total likes'), default=0)
+    dislikes = models.PositiveIntegerField(verbose_name=_('total dislikes'), default=0)
     shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
     views = models.PositiveIntegerField(default=0)
 
@@ -68,8 +71,11 @@ class Thread(models.Model):
         return self.title
 
     class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['title'], name='unique_title_on_thread')
+        ]
         indexes = [
-            models.Index(fields=['id', 'slug'])
+            models.Index(fields=['id', 'slug'], name='index_id_slug_on_thread')
         ]
         ordering = ['-modified']
 

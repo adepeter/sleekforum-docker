@@ -60,6 +60,7 @@ class UserRegistrationForm(forms.Form):
                 self.error_messages['password_mismatch'],
                 code='password_mismatch'
             )
+        return password_2
 
     def save(self):
         email = self.cleaned_data['email']
