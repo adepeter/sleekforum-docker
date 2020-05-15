@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/354bfe10f8b8600439d2f77462f70c344fd74eb1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55578291001ea74af7aa34df6036a25ed217c26a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59db0b9ce243699d8e520cfb8a76c667f0f73de8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/642738f7d0355d9ffb1e3bde33e912775c26847b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73a8f11ed45f9d01205c0887c5fca1b70db01758" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cc7f296180027f0c8534410e8f56ce0371ae5a8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf36ccc461d56780fd76b93aeebb4fe10e7745b3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eac2b936e1448bf533ac93163f1dc3397d3d0c14" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flyapps/core/exceptions/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flyapps/core/exceptions/database.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flyapps/core/shortcuts.py" afterDir="false" />
@@ -320,7 +328,7 @@
       <workItem from="1589226709006" duration="3807000" />
       <workItem from="1589302574078" duration="393000" />
       <workItem from="1589308487743" duration="6000" />
-      <workItem from="1589559997033" duration="11872000" />
+      <workItem from="1589559997033" duration="11999000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
