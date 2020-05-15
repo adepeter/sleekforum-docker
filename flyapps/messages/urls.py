@@ -9,7 +9,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('<slug:recipient>', include([
+    path('<slug:recipient>/', include([
         path('<int:pk>/', ReplyMessage.as_view(), name='reply_message'),
         path('start/', StartMessage.as_view(), name='start_message'),
     ]))

@@ -1,5 +1,6 @@
 from django.contrib import messages
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, get_user
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import CreateView
@@ -21,8 +22,12 @@ class InboxMessage(SingleObjectMixin, ListView):
     paginate_by = 10
 
     def get(self, request, *args, **kwargs):
-        self.object = self.get_object(User.objects.all())
+        self.user = get_user(self.request)
+        self.object = self.get_object()
         return super().get(request, *args, **kwargs)
+
+    def get_object(self):
+        return get_object_or_404(User, **{self.slug_field + str('__iexact'): self.user.slug})
 
     def get_queryset(self):
         return self.object.messages()

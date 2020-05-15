@@ -272,3 +272,5 @@ I
 flyapps/messages/forms.py,9\6\96a5d728bcdf25e8bf64ddb089622f269ff08feb
 L
 flyapps/messages/managers.py,8\5\8588d991f6b6eb04e68741119867c261e977575c
+]
+-templates/flyapps/messages/inbox_message.html,6\7\67e1602848490bac245b32b6b257118cfa5ed7db
