@@ -15,7 +15,9 @@ import os
 from django.urls import reverse_lazy
 from django.core.exceptions import ImproperlyConfigured
 
-with open(os.path.join(os.path.dirname(__file__), 'secrets.json'), 'r') as f:
+PATH_TO_SETTINGS = os.path.join(os.path.dirname(__file__))
+
+with open(os.path.join(PATH_TO_SETTINGS, 'secrets.json'), 'r') as f:
     secrets = json.loads(f.read())
 
 
@@ -64,6 +66,7 @@ INSTALLED_APPS = [
     # FlyForum apps
     'flyapps.categories',
     'flyapps.home',
+    'flyapps.messages',
     'flyapps.miscs',
     'flyapps.rules',
     'flyapps.threads',
