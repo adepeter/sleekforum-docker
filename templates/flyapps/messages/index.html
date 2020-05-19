@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load message_tags %}
+{% load miscs_tags %}
+
+{% block title %}Start Chat{% endblock %}
+
+{% block content %}
+    <main id="tt-pageContent" class="tt-offset-small">
+        <div class="container">
+            <div class="tt-messages-layout">
+                <div class="row no-gutters">
+                    {% include 'flyapps/messages/_partials/dyna_sidebar.html' with title='Inbox' %}
+                    <div class="col-md-8">
+                        <div class="tt-title-content">
+                            <a href="#" class="tt-toggle-aside">
+                                <i class="tt-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#icon-arrow_left"></use>
+                                    </svg>
+                                </i>
+                            </a>
+                            <h2 class="tt-title">
+                                My active mailbag
+                            </h2>
+                            <div class="tt-description">
+                                Total: {{ object_list.count }}
+                            </div>
+                            <a href="#" class="tt-icon-link">
+                                <i class="tt-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#notification"></use>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="tt-list-time-topic">
+                            {% for message in page_obj %}
+                                <div class="tt-item-title">
+                                    <span>{{ message.modified }}</span>
+                                </div>
+                                <div class="tt-item">
+                                    <div class="tt-col-avatar">
+                                        <svg class="tt-icon">
+                                            <use xlink:href="#icon-ava-{{ message.recipient | first_char }}"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="tt-col-description">
+                                        {% get_latest_reply_or_message message as reply_or_message %}
+                                        <h4 class="tt-title">
+                                            <a href="{{ message.recipient.get_absolute_url }}">{{ message.recipient.get_display_name }}</a>
+                                            <span class="time">
+                                                {{ reply_or_message.created | time_ago }}
+                                            </span>
+                                        </h4>
+                                        {% is_instance_of_message reply_or_message as isinstanceofmsg %}
+                                        <p>{% if not isinstanceofmsg %}
+                                            {% if request.user == reply_or_message.sender %}
+                                                Me:
+                                            {% else %}
+                                                {{ reply_or_message.sender }}:
+                                            {% endif %}
+                                        {% else %}
+                                            Me:
+                                        {% endif %}{{ reply_or_message.text | truncate_message }} <a
+                                                href="{{ reply_or_message.get_absolute_url }}"
+                                                class="tt-underline-02">view</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <div class="tt-title-content">No active messages yet</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

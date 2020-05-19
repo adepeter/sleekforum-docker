@@ -1,0 +1,50 @@
+{% comment %}
+- This is a dynamic sidebar for messages.
+- It serves the purpose of inclusion and passing some parameter
+for proper usage.
+{% endcomment %}
+
+<div class="col-md-4 tt-aside" id="js-aside">
+    <a href="#" class="tt-title-aside">
+        <h2 class="tt-title">
+            {{ title }}
+        </h2>
+        <i class="tt-icon">
+            <svg class="icon">
+                <use xlink:href="#icon-pencil"></use>
+            </svg>
+        </i>
+    </a>
+    <div class="tt-all-avatar">
+        <div class="tt-box-search">
+            <input class="tt-input" type="text" placeholder="Search messages">
+            <a href="#" class="tt-btn-input">
+                <svg>
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+            </a>
+            <a href="#" class="tt-btn-icon">
+                <svg class="icon">
+                    <use xlink:href="#icon-filter"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-list-avatar js-init-scroll">
+            {% for message in messages %}
+                <a href="#" class="tt-item">
+                    <div class="tt-col-avatar">
+                        <svg class="tt-icon">
+                            <use xlink:href="#icon-ava-t"></use>
+                        </svg>
+                    </div>
+                    <div class="tt-col-description">
+                        <h4 class="tt-title"><span>Taylor</span> <span class="time">Feb 03</span></h4>
+                        <div class="tt-message tt-select">Taylor: need to see that</div>
+                    </div>
+                </a>
+            {% empty %}
+                <div class="tt-title-content">No messages yet!</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

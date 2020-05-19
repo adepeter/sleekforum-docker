@@ -1,16 +1,12 @@
-from django.urls import include, path
+from django.urls import path
 
-from .views import InboxMessage, ReplyMessage, StartMessage
+from .views import InboxMessage, ReadReplyMessage, StartMessage
 
 app_name = 'messages'
 
 urlpatterns = [
     path('', InboxMessage.as_view(), name='new_inbox'),
-]
-
-urlpatterns += [
-    path('<slug:recipient>/', include([
-        path('<int:pk>/', ReplyMessage.as_view(), name='reply_message'),
-        path('start/', StartMessage.as_view(), name='start_message'),
-    ]))
+    path('<int:pk>/', ReadReplyMessage.as_view(), name='read_reply_message'),
+    path('<int:pk>/<slug:starter>/', ReadReplyMessage.as_view(), name='read_reply_message'),
+    path('<slug:recipient>/compose/', StartMessage.as_view(), name='start_message'),
 ]

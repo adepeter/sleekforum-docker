@@ -18,6 +18,21 @@ class BaseMessageForm(forms.ModelForm):
 
 
 class MessageCreationForm(BaseMessageForm):
+    STATE_ACTIVE = 'A'
+    STATE_NEW = 'N'
+    STATE_ACTIVE_NEW = 'AN'
+
+    STATUS_CHOICES = (
+        (STATE_NEW, _('New')),
+        (STATE_ACTIVE, _('Active')),
+        (STATE_ACTIVE_NEW, _('Active and New')),
+    )
+    status = forms.ChoiceField(
+        choices=STATUS_CHOICES,
+        initial=STATE_ACTIVE_NEW,
+        widget=forms.HiddenInput
+    )
+
     class Meta(BaseMessageForm.Meta):
         model = Message
 
@@ -26,6 +41,8 @@ class MessageCreationForm(BaseMessageForm):
         super().__init__(*args, **kwargs)
         if similar_starter is True:
             self.fields['text'].disabled = True
+            self.fields['status'].disabled = True
+
 
 
 class MessageReplyForm(BaseMessageForm):

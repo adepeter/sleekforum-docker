@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
-
 {% load message_tags %}
 
-{% block title %}Start Chat{% endblock %}
+{% block title %}{{ message }}{% endblock %}
 
 {% block content %}
     <main id="tt-pageContent" class="tt-offset-small">
         <div class="container">
             <div class="tt-messages-layout">
                 <div class="row no-gutters">
-                    {% active_messages request.user %}
+                    {% active_messages_with_inclusion_tag request.user %}
                     <div class="col-md-8">
                         <div class="tt-title-content">
                             <a href="#" class="tt-toggle-aside">
@@ -20,12 +19,91 @@
                                 </i>
                             </a>
                             <h2 class="tt-title">
-                                New message
+                                {% if message.starter == request.user %}
+                                    {{ message.recipient.get_display_name }}
+                                {% else %}
+                                    My conversations
+                                {% endif %}
                             </h2>
+                            <div class="tt-description">
+                                Last seen 3h ago
+                            </div>
+                            <a href="#" class="tt-icon-link">
+                                <i class="tt-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#notification"></use>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div>
+                        <div class="tt-list-time-topic">
+                            <div class="tt-item-title">
+                                <span>12/26/2017</span>
+                            </div>
+                            <div class="tt-item">
+                                <div class="tt-col-avatar">
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-ava-k"></use>
+                                    </svg>
+                                </div>
+                                <div class="tt-col-description">
+                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">3:12 AM</span></h4>
+                                    <p>How is it going man? Did you see my new forum <a href="#"
+                                                                                        class="tt-underline-02">post?</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tt-item">
+                                <div class="tt-col-avatar">
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-ava-a"></use>
+                                    </svg>
+                                </div>
+                                <div class="tt-col-description">
+                                    <h4 class="tt-title"><a href="#">azyrusmax</a> <span class="time">3:16 AM</span>
+                                    </h4>
+                                    <p>Hey, going good, what about you? yes I saw your post, great stuff man <a href="#"
+                                                                                                                class="tt-underline-02">post?</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tt-item-title"><span>12/27/2017</span></div>
+                            <div class="tt-item">
+                                <div class="tt-col-avatar">
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-ava-k"></use>
+                                    </svg>
+                                </div>
+                                <div class="tt-col-description">
+                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">10:49 AM</span></h4>
+                                    <p>I’m doing good too, how’s business going?</p>
+                                </div>
+                            </div>
+                            <div class="tt-item">
+                                <div class="tt-col-avatar">
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-ava-a"></use>
+                                    </svg>
+                                </div>
+                                <div class="tt-col-description">
+                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">10:49 AM</span></h4>
+                                    <p>Business is good, but going a bit slow than usual.</p>
+                                </div>
+                            </div>
+                            <div class="tt-item">
+                                <div class="tt-col-avatar">
+                                    <svg class="tt-icon">
+                                        <use xlink:href="#icon-ava-k"></use>
+                                    </svg>
+                                </div>
+                                <div class="tt-col-description">
+                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">10:49 AM</span></h4>
+                                    <p>that happens during december, it will be fixed soon..</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="tt-wrapper-inner">
-                            <form method="POST" action="" class="pt-editor form-default">
-                                {% csrf_token %}
+                            <div class="pt-editor form-default">
                                 <div class="pt-row">
                                     <div class="col-left">
                                         <ul class="pt-edit-btn">
@@ -125,18 +203,20 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {{ form.text }}
+                                    <textarea name="message" class="form-control" rows="5"
+                                              placeholder="Write your message here"></textarea>
                                 </div>
                                 <div class="pt-row">
                                     <div class="col-auto ml-auto">
-                                        <button class="btn btn-secondary btn-custom" {% if similar_starter %}disabled{% endif %}>Send</button>
+                                        <a href="#" class="btn btn-secondary btn-custom">Send</a>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
 {% endblock %}

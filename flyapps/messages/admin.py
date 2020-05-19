@@ -1,15 +1,8 @@
 from django.contrib import admin
 
+from ..miscs.utils.text import truncator
+
 from .models import Message, Reply
-
-
-# Register your models here.
-def truncator(obj, word_count=20, completer='...'):
-    splitted_text = obj.split()
-    if len(splitted_text) > word_count:
-        obj = ' '.join((splitted_text)[:word_count]).rstrip()
-        return '{0} {1}'.format(obj, completer)
-    return obj
 
 
 class ReplyAdminInline(admin.StackedInline):
@@ -19,14 +12,26 @@ class ReplyAdminInline(admin.StackedInline):
 
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-    list_display = ['starter', 'recipient', 'short_message', 'created', 'is_replied', 'modified']
+    list_display = [
+        'id',
+        'starter',
+        'recipient',
+        'short_message',
+        'message_flag',
+        'created',
+        'is_replied',
+        'modified'
+    ]
     inlines = [ReplyAdminInline]
 
     def short_message(self, obj):
-        text = obj.text
-        return truncator(text)
+        return truncator(obj.text)
 
     short_message.description = 'Message preview'
+
+    def message_flag(self, obj):
+        return obj.get_flag_display()
+    message_flag.short_description = 'State'
 
 
 @admin.register(Reply)
@@ -34,7 +39,6 @@ class ReplyAdmin(admin.ModelAdmin):
     list_display = ['message', 'sender', 'text', 'created', 'modified']
 
     def short_message(self, obj):
-        text = obj.text
-        return truncator(text)
+        return truncator(obj.text)
 
     short_message.description = 'Reply preview'
