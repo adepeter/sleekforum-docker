@@ -5,6 +5,11 @@ from .models import Message, Reply
 
 
 class BaseMessageForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        self.similar_starter = kwargs.pop('similar_starter', None)
+        super().__init__(*args, **kwargs)
+
     class Meta:
         model = None
         fields = ['text']
@@ -18,33 +23,21 @@ class BaseMessageForm(forms.ModelForm):
 
 
 class MessageCreationForm(BaseMessageForm):
-    STATE_ACTIVE = 'A'
-    STATE_NEW = 'N'
-    STATE_ACTIVE_NEW = 'AN'
-
-    STATUS_CHOICES = (
-        (STATE_NEW, _('New')),
-        (STATE_ACTIVE, _('Active')),
-        (STATE_ACTIVE_NEW, _('Active and New')),
-    )
-    status = forms.ChoiceField(
-        choices=STATUS_CHOICES,
-        initial=STATE_ACTIVE_NEW,
-        widget=forms.HiddenInput
-    )
-
     class Meta(BaseMessageForm.Meta):
         model = Message
 
     def __init__(self, *args, **kwargs):
-        similar_starter = kwargs.pop('similar_starter')
         super().__init__(*args, **kwargs)
-        if similar_starter is True:
-            self.fields['text'].disabled = True
-            self.fields['status'].disabled = True
-
+        if self.similar_starter is True:
+            del self.fields['status']
+            self.fields['text'].widget.attrs.update({'disabled': True})
 
 
 class MessageReplyForm(BaseMessageForm):
     class Meta(BaseMessageForm.Meta):
         model = Reply
+
+    def __init__(self, *args, **kwargs):
+        if kwargs.get('similar_starter'):
+            del kwargs['similar_starter']
+        super().__init__(*args, **kwargs)

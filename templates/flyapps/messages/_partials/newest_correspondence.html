@@ -1,0 +1,64 @@
+{% load message_tags %}
+{% load miscs_tags %}
+
+<div class="col-md-4 tt-aside" id="js-aside">
+    <a href="#" class="tt-title-aside">
+        <h2 class="tt-title">
+            {{ title }}
+        </h2>
+        <i class="tt-icon">
+            <svg class="icon">
+                <use xlink:href="#icon-pencil"></use>
+            </svg>
+        </i>
+    </a>
+    <div class="tt-all-avatar">
+        <div class="tt-box-search">
+            <input class="tt-input" type="text" placeholder="Search messages">
+            <a href="#" class="tt-btn-input">
+                <svg>
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+            </a>
+            <a href="#" class="tt-btn-icon">
+                <svg class="icon">
+                    <use xlink:href="#icon-filter"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="tt-list-avatar js-init-scroll">
+            {% for message in messages %}
+                {% if  message.status == 0 %}
+                    {% get_latest_reply_or_message message as msg %}
+                    <a href="#" class="tt-item">
+                        <div class="tt-col-avatar">
+                            <svg class="tt-icon">
+                                <use xlink:href="#icon-ava-{{ msg.sender | first_char }}"></use>
+                            </svg>
+                        </div>
+                        <div class="tt-col-description">
+                            <h4 class="tt-title"><span>{{ msg.sender.get_display_name }}</span></h4> <span
+                                class="time">{{ msg.created | time_ago }}</span></h4>
+                            <div class="tt-message tt-select">{{ msg.text }}</div>
+                        </div>
+                    </a>
+                {% else %}
+                    <a href="#" class="tt-item">
+                        <div class="tt-col-avatar">
+                            <svg class="tt-icon">
+                                <use xlink:href="#icon-ava-{{ message.starter.username | first_char }}"></use>
+                            </svg>
+                        </div>
+                        <div class="tt-col-description">
+                            <h4 class="tt-title"><span>{{ message.starter.get_display_name }}</span></h4> <span
+                                class="time">{{ message.created | time_ago }}</span></h4>
+                            <div class="tt-message tt-select">{{ message.text | truncate_message }}</div>
+                        </div>
+                    </a>
+                {% endif %}
+            {% empty %}
+                <div class="tt-col-message">No messages yet!</div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

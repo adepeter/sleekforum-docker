@@ -6,6 +6,15 @@ from .models import Message, Reply
 message_view_handler = Signal(providing_args=['request'])
 
 
+@receiver(post_save, sender=Message)
+def message_views_creator(sender, instance, created, **kwargs):
+    """
+    This signal handles a newly created message.
+    Instantly also creates a corresponding MessageView instance
+    """
+    if created:
+        instance.message_views.create(user=instance.starter)
+
 @receiver(post_save, sender=Reply)
 def is_replied_updater(sender, instance, created, **kwargs):
     if created:

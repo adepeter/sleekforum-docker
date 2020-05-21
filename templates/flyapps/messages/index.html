@@ -9,7 +9,7 @@
         <div class="container">
             <div class="tt-messages-layout">
                 <div class="row no-gutters">
-                    {% include 'flyapps/messages/_partials/dyna_sidebar.html' with title='Inbox' %}
+                {% newest_messages_with_inclusion_tag request.user %}
                     <div class="col-md-8">
                         <div class="tt-title-content">
                             <a href="#" class="tt-toggle-aside">

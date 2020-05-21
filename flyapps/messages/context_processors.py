@@ -1,0 +1,2 @@
+def inbox(request):
+    pass

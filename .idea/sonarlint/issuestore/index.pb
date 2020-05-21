@@ -296,3 +296,7 @@ _
 -templates/flyapps/threads/post/edit_post.html,a\e\aeabcc0480ac5638ff36d86f5c0544c2f64202e4
 M
 flyapps/messages/shortcuts.py,5\7\570502858cc0951264971b9e0d2bbb000d50f826
+V
+&flyapps/messages/context_processors.py,9\4\94b5ce6c963e39556c1afd32892a41efa54d4bad
+o
+?templates/flyapps/messages/_partials/newest_correspondence.html,4\0\40109c98db8f5184cfe89581e36cc732b30aabad

@@ -2,6 +2,11 @@
 - This is a dynamic sidebar for messages.
 - It serves the purpose of inclusion and passing some parameter
 for proper usage.
+_ But howeever to fully use this template with django include {% include %}
+you have to pass pass in message queryset context from your views.
+Usage example:
+In view file, context = {'messages': Message.objects.all()}
+In template, {% include 'path_to_this_file' with messages=messages title='Any header' %}
 {% endcomment %}
 
 <div class="col-md-4 tt-aside" id="js-aside">

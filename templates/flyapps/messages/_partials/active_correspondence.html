@@ -1,7 +1,10 @@
+{% load message_tags %}
+{% load miscs_tags %}
+
 <div class="col-md-4 tt-aside" id="js-aside">
     <a href="#" class="tt-title-aside">
         <h2 class="tt-title">
-            Messages
+            {{ title }}
         </h2>
         <i class="tt-icon">
             <svg class="icon">
@@ -25,17 +28,34 @@
         </div>
         <div class="tt-list-avatar js-init-scroll">
             {% for message in messages %}
-            <a href="#" class="tt-item">
-                <div class="tt-col-avatar">
-                    <svg class="tt-icon">
-                        <use xlink:href="#icon-ava-t"></use>
-                    </svg>
-                </div>
-                <div class="tt-col-description">
-                    <h4 class="tt-title"><span>Taylor</span> <span class="time">Feb 03</span></h4>
-                    <div class="tt-message tt-select">Taylor: need to see that</div>
-                </div>
-            </a>
+                {% get_latest_reply_or_message message as reply_or_message %}
+                <a href="#" class="tt-item">
+                    <div class="tt-col-avatar">
+                        {% recipient_switcher message user as recipient %}
+                        <svg class="tt-icon">
+                            <use xlink:href="#icon-ava-{{ recipient | first_char }}"></use>
+                        </svg>
+                    </div>
+                    <div class="tt-col-description">
+                        <h4 class="tt-title">
+                            <span>
+                                {{ recipient.get_display_name }}
+                            </span>
+                            <span class="time">{{ reply_or_message.created | time_ago }}</span>
+                        </h4>
+                        <div class="tt-message tt-select">
+                            {% is_instance_of_message reply_or_message as instanceofmsg %}
+                            {% if not instanceofmsg %}
+                                {% if reply_or_message.sender == user %}
+                                    Me:
+                                {% endif %}
+                            {% elif message.starter == user %}
+                                Me:
+                            {% endif %}
+                            {{ reply_or_message.text | truncate_message:5 }}
+                        </div>
+                    </div>
+                </a>
             {% empty %}
                 <div class="tt-col-message">No messages yet!</div>
             {% endfor %}

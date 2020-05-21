@@ -2,43 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200517_2018.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0003_delete_messageflag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0004_message_flag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/shortcuts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/templatetags/message_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/messages/_partials/active_correspondence.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/messages/_partials/dyna_sidebar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/messages/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/messages/read_reply_message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07edbbd5c7ffd54ab3c73c6c038e99f0fc312562" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07edbbd5c7ffd54ab3c73c6c038e99f0fc312562" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59db0b9ce243699d8e520cfb8a76c667f0f73de8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59db0b9ce243699d8e520cfb8a76c667f0f73de8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5ce07000241f8cd3ceebf0e6627e6f3eb8948696" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5ce07000241f8cd3ceebf0e6627e6f3eb8948696" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67e1602848490bac245b32b6b257118cfa5ed7db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6dead9abb7e21803c504eaf254cec67cb7c629ee" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6dead9abb7e21803c504eaf254cec67cb7c629ee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80e01f21d40b959478059a6938ea54537231f8d9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80e01f21d40b959478059a6938ea54537231f8d9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/924536ca7bf8f1f4de02bf0a9e3bedd811712c15" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/924536ca7bf8f1f4de02bf0a9e3bedd811712c15" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da7c237b85a69c00a9ab8c189bf63e22070fcac3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da7c237b85a69c00a9ab8c189bf63e22070fcac3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/adepeter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/messages/context_processors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0005_messageview.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/messages/_partials/newest_correspondence.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/messages/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/managers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/messages/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/utils/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/utils/text.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrate/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/messages/inbox_message.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/messages/start_message.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/messages/start_message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/messages/templatetags/message_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/templatetags/message_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/messages/_partials/active_correspondence.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/messages/_partials/active_correspondence.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/messages/_partials/dyna_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/messages/_partials/dyna_sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/messages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/messages/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,6 +302,7 @@
       <workItem from="1589799037336" duration="10890000" />
       <workItem from="1589895232971" duration="44000" />
       <workItem from="1589897055106" duration="55000" />
+      <workItem from="1589993125170" duration="28723000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
