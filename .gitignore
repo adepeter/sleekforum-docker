@@ -72,9 +72,6 @@ src/
 *.bmp
 *.dib
 
-# ICO
-*.ico
-
 # 3D Images
 *.3dm
 *.max
