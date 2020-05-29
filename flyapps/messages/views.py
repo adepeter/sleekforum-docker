@@ -1,5 +1,8 @@
 from django.contrib import messages
 from django.contrib.auth import get_user_model, get_user
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import PermissionDenied
+from django.db.models import Count
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from django.views.generic.detail import SingleObjectMixin
@@ -17,7 +20,7 @@ TEMPLATE_URL = 'flyapps/messages'
 User = get_user_model()
 
 
-class InboxMessage(SingleObjectMixin, ListView):
+class InboxMessage(LoginRequiredMixin, SingleObjectMixin, ListView):
     template_name = f'{TEMPLATE_URL}/index.html'
     paginate_by = 10
     ordering = ['-modified']
@@ -38,7 +41,7 @@ class InboxMessage(SingleObjectMixin, ListView):
         return self.object.messages_started.all()
 
 
-class StartMessage(CreateView):
+class StartMessage(LoginRequiredMixin, CreateView):
     model = User
     form_class = MessageCreationForm
     template_name = f'{TEMPLATE_URL}/start_message.html'
@@ -80,22 +83,30 @@ class ReadReplyMessage(MultipleObjectMixin, CreateView):
     model = Message
     form_class = MessageReplyForm
     template_name = f'{TEMPLATE_URL}/read_reply_message.html'
+    paginate_by = 1
     query_pk_and_slug = True
     slug_url_kwarg = 'starter'
 
     def get(self, request, *args, **kwargs):
         self.message = self.get_object(Message.objects.all())
+        if self.request.user != self.message.starter and \
+                self.request.user != self.message.recipient:
+            raise PermissionDenied
         self.object_list = self.get_queryset()
         return super().get(request, *args, **kwargs)
 
+    def get_queryset(self):
+        return self.message.replies.all()
+
     def get_slug_field(self):
-        return 'starter__username__iexact'
+        return 'starter__slug__iexact'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['message'] = self.message
-        context['messages'] = Message.objects.filter(starter=self.request.user)
         return context
 
-    def get_queryset(self):
-        self.message.replies.all()
+    def form_valid(self, form):
+        form.instance.message = self.message
+        form.instance.sender = self.request.user
+        return super().form_valid(form)

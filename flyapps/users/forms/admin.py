@@ -11,7 +11,7 @@ from ..validators import validate_unique_user, validate_username_chars
 User = get_user_model()
 
 
-class UserAdminCreationForm(forms.ModelForm):
+class BaseUserAdminForm(forms.ModelForm):
     password = forms.CharField(
         label=_('Password'),
         max_length=255,
@@ -28,23 +28,30 @@ class UserAdminCreationForm(forms.ModelForm):
         fields = [
             'email',
             'username',
-            'password'
+            'is_staff',
+            'is_superuser',
         ]
-        
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        super().__init__(*args, **kwargs)
+
+
+class UserAdminCreationForm(BaseUserAdminForm):
+
     def clean_username(self):
         cleaned_username = self.cleaned_data['username']
         validate_unique_user('This username must be unique', username=cleaned_username)
         return cleaned_username
-        
-    def __init(self, *args, **kwargs):
+
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['username'].validators.append(validate_username_chars)
-        
+
     def clean_password(self):
         cleaned_password = self.cleaned_data['password']
         if not cleaned_password:
             cleaned_password = self.make_random_password()
-        print(cleaned_password)
         return cleaned_password
 
     def make_random_password(self, length=20):
@@ -52,22 +59,20 @@ class UserAdminCreationForm(forms.ModelForm):
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        if user:
-            user.password = user.set_password(self.cleaned_data['password'])
-            user.last_login = timezone.now()
+        user.password = user.set_password(self.cleaned_data['password'])
+        user.last_login = timezone.now()
+        if commit:
             user.save()
         return user
 
 
-class UserAdminChangeForm(forms.ModelForm):
+class UserAdminChangeForm(BaseUserAdminForm):
     password = ReadOnlyPasswordHashField()
 
-    class Meta:
-        model = User
-        fields = [
-            'email',
-            'username',
-            'password',
-            'is_staff',
-            'is_superuser'
+    class Meta(BaseUserAdminForm.Meta):
+        fields = BaseUserAdminForm.Meta.fields + [
+            'password'
         ]
+
+    def clean_password(self):
+        return self.initial['password']

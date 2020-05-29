@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin
+from django.contrib.auth.admin import GroupAdmin
 from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 
@@ -11,7 +11,7 @@ User = get_user_model()
 
 
 @admin.register(User)
-class UserAdmin(BaseUserAdmin):
+class UserAdmin(admin.ModelAdmin):
     form = UserAdminChangeForm
     add_form = UserAdminCreationForm
     readonly = ['username', 'date_created', 'date_modified', 'last_login']
@@ -21,7 +21,7 @@ class UserAdmin(BaseUserAdmin):
     }
     fieldsets = [
         (None, {
-            'fields': [('email', 'username',), ],
+            'fields': [('email', 'username',),],
         }),
         (_('Permissions'), {
             'fields': ['is_staff', 'is_superuser'],
@@ -37,7 +37,7 @@ class UserAdmin(BaseUserAdmin):
     ]
     add_fieldsets = [
         (None, {
-            'fields': ['email', 'username', 'password'],
+            'fields': ['email', 'username'],
         })
     ]
     list_per_page = 20

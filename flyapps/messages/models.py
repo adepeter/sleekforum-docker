@@ -47,6 +47,13 @@ class Message(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    def get_absolute_url(self):
+        kwargs = {
+            'pk': self.id,
+            'starter': self.starter.slug,
+        }
+        return reverse('flyapps:messages:read_reply_message', kwargs=kwargs)
+
     def save(self, *args, **kwargs):
         if is_same_recipient(self.starter, self.recipient) is True:
             raise DuplicateDataEntryError('You cannot send a message to yourself')

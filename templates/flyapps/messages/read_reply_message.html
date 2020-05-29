@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load message_tags %}
+{% load miscs_tags %}
 
 {% block title %}{{ message }}{% endblock %}
 
@@ -26,7 +27,11 @@
                                 {% endif %}
                             </h2>
                             <div class="tt-description">
-                                Last seen 3h ago
+                                {% if message.starter == request.user %}
+                                    {{ message.recipient.last_login | time_ago }}
+                                {% else %}
+                                    {{ message.starter.last_login | time_ago }}
+                                {% endif %}
                             </div>
                             <a href="#" class="tt-icon-link">
                                 <i class="tt-icon">
@@ -37,70 +42,53 @@
                             </a>
                         </div>
                         <div class="tt-list-time-topic">
-                            <div class="tt-item-title">
-                                <span>12/26/2017</span>
-                            </div>
-                            <div class="tt-item">
-                                <div class="tt-col-avatar">
-                                    <svg class="tt-icon">
-                                        <use xlink:href="#icon-ava-k"></use>
-                                    </svg>
+                            {% if page_obj.number == 1 %}
+                                <div class="tt-item-title">
+                                    <span>{{ message.created }} (Original message)</span>
                                 </div>
-                                <div class="tt-col-description">
-                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">3:12 AM</span></h4>
-                                    <p>How is it going man? Did you see my new forum <a href="#"
-                                                                                        class="tt-underline-02">post?</a>
-                                    </p>
+                                <div class="tt-item">
+                                    <div class="tt-col-avatar">
+                                        <svg class="tt-icon">
+                                            <use xlink:href="#icon-ava-{{ message.starter.slug | first_char }}">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                    <div class="tt-col-description">
+                                        <h4 class="tt-title">
+                                            <a href="#">{{ message.starter.get_display_name }}</a>
+                                            <span class="time">{{ message.created }}</span>
+                                        </h4>
+                                        <p>{{ message.text }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="tt-item">
-                                <div class="tt-col-avatar">
-                                    <svg class="tt-icon">
-                                        <use xlink:href="#icon-ava-a"></use>
-                                    </svg>
+                            {% endif %}
+                        {% with page_obj as replies %}
+                            {% for reply in replies %}
+                                <div class="tt-item-title"><span>{{ reply.modified }}</span></div>
+                                <div class="tt-item">
+                                    <div class="tt-col-avatar">
+                                        <svg class="tt-icon">
+                                            <use xlink:href="#icon-ava-{{ reply.sender.slug | first_char }}">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                    <div class="tt-col-description">
+                                        <h4 class="tt-title">
+                                            <a href="#">
+                                                {% if reply.sender == request.user %}
+                                                    Me
+                                                {% else %}
+                                                    {{ reply.sender.get_display_name }}
+                                                {% endif %}
+                                            </a>
+                                            <span class="time">{{ reply.created }}</span></h4>
+                                        <p>{{ reply.text }}</p>
+                                    </div>
+                                    {% empty %}
+                                    No replies yet
                                 </div>
-                                <div class="tt-col-description">
-                                    <h4 class="tt-title"><a href="#">azyrusmax</a> <span class="time">3:16 AM</span>
-                                    </h4>
-                                    <p>Hey, going good, what about you? yes I saw your post, great stuff man <a href="#"
-                                                                                                                class="tt-underline-02">post?</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="tt-item-title"><span>12/27/2017</span></div>
-                            <div class="tt-item">
-                                <div class="tt-col-avatar">
-                                    <svg class="tt-icon">
-                                        <use xlink:href="#icon-ava-k"></use>
-                                    </svg>
-                                </div>
-                                <div class="tt-col-description">
-                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">10:49 AM</span></h4>
-                                    <p>I’m doing good too, how’s business going?</p>
-                                </div>
-                            </div>
-                            <div class="tt-item">
-                                <div class="tt-col-avatar">
-                                    <svg class="tt-icon">
-                                        <use xlink:href="#icon-ava-a"></use>
-                                    </svg>
-                                </div>
-                                <div class="tt-col-description">
-                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">10:49 AM</span></h4>
-                                    <p>Business is good, but going a bit slow than usual.</p>
-                                </div>
-                            </div>
-                            <div class="tt-item">
-                                <div class="tt-col-avatar">
-                                    <svg class="tt-icon">
-                                        <use xlink:href="#icon-ava-k"></use>
-                                    </svg>
-                                </div>
-                                <div class="tt-col-description">
-                                    <h4 class="tt-title"><a href="#">Kevin</a> <span class="time">10:49 AM</span></h4>
-                                    <p>that happens during december, it will be fixed soon..</p>
-                                </div>
-                            </div>
+                            {% endfor %}
+                        {% endwith %}
                         </div>
                         <div class="tt-wrapper-inner">
                             <div class="pt-editor form-default">
@@ -203,8 +191,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" rows="5"
-                                              placeholder="Write your message here"></textarea>
+                                    {{ form.text }}
                                 </div>
                                 <div class="pt-row">
                                     <div class="col-auto ml-auto">

@@ -300,3 +300,7 @@ V
 &flyapps/messages/context_processors.py,9\4\94b5ce6c963e39556c1afd32892a41efa54d4bad
 o
 ?templates/flyapps/messages/_partials/newest_correspondence.html,4\0\40109c98db8f5184cfe89581e36cc732b30aabad
+F
+flyapps/rules/tests.py,4\b\4b539e727398361b0b60713b326ee19c14f493b7
+O
+flyapps/miscs/signals/report.py,2\2\22060305b7d0ab4b50992930cb1ff1f123ad52ce

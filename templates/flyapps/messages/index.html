@@ -9,7 +9,7 @@
         <div class="container">
             <div class="tt-messages-layout">
                 <div class="row no-gutters">
-                {% newest_messages_with_inclusion_tag request.user %}
+                    {% newest_messages_with_inclusion_tag request.user %}
                     <div class="col-md-8">
                         <div class="tt-title-content">
                             <a href="#" class="tt-toggle-aside">
@@ -41,13 +41,15 @@
                                 <div class="tt-item">
                                     <div class="tt-col-avatar">
                                         <svg class="tt-icon">
-                                            <use xlink:href="#icon-ava-{{ message.recipient | first_char }}"></use>
+                                            <use xlink:href="#icon-ava-{{ message.recipient | first_char }}">
+                                            </use>
                                         </svg>
                                     </div>
                                     <div class="tt-col-description">
                                         {% get_latest_reply_or_message message as reply_or_message %}
                                         <h4 class="tt-title">
-                                            <a href="{{ message.recipient.get_absolute_url }}">{{ message.recipient.get_display_name }}</a>
+                                            <a href="{{ message.recipient.get_absolute_url }}">
+                                                {{ message.recipient.get_display_name }}</a>
                                             <span class="time">
                                                 {{ reply_or_message.created | time_ago }}
                                             </span>
@@ -62,7 +64,7 @@
                                         {% else %}
                                             Me:
                                         {% endif %}{{ reply_or_message.text | truncate_message }} <a
-                                                href="{{ reply_or_message.get_absolute_url }}"
+                                                href="{{ message.get_absolute_url }}"
                                                 class="tt-underline-02">view</a>
                                         </p>
                                     </div>
