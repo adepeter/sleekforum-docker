@@ -60,11 +60,13 @@ INSTALLED_APPS = [
     'PIL',
 
     # Flyapps 3rd party django apps
+    'graphene_django',
     'mptt',
     'rest_framework',
 
     # FlyForum apps
     'flyapps.categories',
+    'flyapps.graphql',
     'flyapps.home',
     'flyapps.messages',
     'flyapps.miscs',
