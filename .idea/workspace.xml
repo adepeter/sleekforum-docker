@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/mutations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/queries/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/types/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/urls/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/messages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/miscs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/rules/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyforum_project/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum_project/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/queries/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/queries/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +307,7 @@
       <workItem from="1590753561563" duration="259000" />
       <workItem from="1590758628673" duration="2514000" />
       <workItem from="1590831179919" duration="664000" />
-      <workItem from="1590832226538" duration="6604000" />
+      <workItem from="1590832226538" duration="6975000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>

@@ -6,7 +6,7 @@ from ....categories.models import Category
 from ..types import CategoryType
 
 
-class CategoryQueries:
+class RootCategoryQuery:
     categories = graphene.List(CategoryType)
 
     def resolve_categories(self, info, **kwargs):
