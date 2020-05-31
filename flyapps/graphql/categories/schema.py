@@ -1,10 +1,10 @@
 import graphene
 
 from .mutations import CategoryMutations
-from .queries import RootCategoryQuery, SubcategoryQueries
+from .queries import RootCategoryQuery
 
 
-class Query(RootCategoryQuery, SubcategoryQueries, graphene.ObjectType):
+class Query(RootCategoryQuery, graphene.ObjectType):
     pass
 
 
