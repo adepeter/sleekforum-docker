@@ -7,3 +7,4 @@ class GraphqlConfig(AppConfig):
     name = 'flyapps.graphql'
     label = 'flyapps_graphql'
     verbose_name = _('Sleekforum GraphQL')
+    models_module = None

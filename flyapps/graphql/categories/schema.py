@@ -1,15 +1,15 @@
 import graphene
 
-from .mutations import CategoryMutations
-from .queries import RootCategoryQuery
+from .mutations import CategoryMutation
+from .queries import CategoryQuery
 
 
-class Query(RootCategoryQuery, graphene.ObjectType):
+class Mutation(CategoryMutation, graphene.ObjectType):
     pass
 
 
-class Mutation(CategoryMutations, graphene.ObjectType):
+class Query(CategoryQuery, graphene.ObjectType):
     pass
 
 
-schema = graphene.Schema(query=Query, mutation=Mutation)
+schema = graphene.Schema(mutation=Mutation, query=Query)

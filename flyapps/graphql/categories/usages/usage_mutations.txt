@@ -1,0 +1,70 @@
+mutation {
+  categoryCreate(input: {
+    name: "Angulaseewrs",
+    parent: {
+      name: "programming"
+    }
+  }) {
+    isCreated
+    category {
+      name
+      parent {
+        name
+      }
+    }
+  }
+}
+
+
+mutation {
+  categoryCreate (input: {
+    name:"angulawr",
+    description: "hired",
+    parent: {
+      name: "hi"
+    }
+  }) {
+    category {
+      name
+      parent {
+        name
+      }
+    }
+  }
+}
+
+
+mutation {
+  categoryEdit (input: {
+    id: 18,
+    slug: "ang",
+    patch: {
+      name: "MAngularsed",
+      description: "This has been changed wto angulars",
+      slug: "ang",
+      parent: {
+        id: 19,
+        slug: "programming"
+      }
+    }
+  }) {
+    category {
+      name
+      slug
+      id
+    }
+    isEdited
+  }
+}
+
+mutation {
+  categoryDelete (input: {
+    id: 23,
+    slug: "news"
+  }) {
+    isDeleted
+    categories {
+      name
+    }
+  }
+}

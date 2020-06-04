@@ -58,6 +58,10 @@
                         <div class="tt-col-value hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
                         <div class="tt-col-value hide-mobile">{{ thread.created | time_ago }}</div>
                     </div>
+                {% empty %}
+                    <div class="tt-info-box">
+                        <p class="text-center">There are no threads yet</p>
+                    </div>
                 {% endfor %}
             </div>
         </div>
