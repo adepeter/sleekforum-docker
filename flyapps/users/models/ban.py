@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -11,6 +12,10 @@ class Ban(models.Model):
     banned_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         limit_choices_to={'is_superuser': True}
+    )
+    sections = models.ManyToManyField(
+        ContentType,
+        related_name='bans'
     )
     message = models.TextField(verbose_name=_('Ban message'))
     until = models.DateTimeField(default=timezone.now)
