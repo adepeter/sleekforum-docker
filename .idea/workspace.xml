@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/usages/usage_mutations.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/usages/usage_queries.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/queries/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/threads/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/threads/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/queries/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/queries/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/schemas/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/types/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/types/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/urls/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/users/urls/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94b5ce6c963e39556c1afd32892a41efa54d4bad" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94b5ce6c963e39556c1afd32892a41efa54d4bad" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/inputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/inputs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/mutations.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/mutations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/payloads.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/payloads.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/queries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/context_processors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/home/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +51,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\adepeter\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -345,7 +316,12 @@
       <workItem from="1591098518150" duration="172000" />
       <workItem from="1591130190696" duration="57000" />
       <workItem from="1591190818089" duration="81000" />
-      <workItem from="1591303290737" duration="724000" />
+      <workItem from="1591303290737" duration="1390000" />
+      <workItem from="1591306633011" duration="6000" />
+      <workItem from="1591306680652" duration="8000" />
+      <workItem from="1591306838121" duration="40000" />
+      <workItem from="1591367944708" duration="115000" />
+      <workItem from="1591373816909" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
@@ -417,10 +393,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1590831900559" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1590753538857">
+    <state x="277" y="56" key="SettingsEditor" timestamp="1591306872698">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590753538857" />
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591306872698" />
     <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1586333028029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

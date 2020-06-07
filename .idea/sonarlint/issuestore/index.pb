@@ -338,5 +338,9 @@ V
 &flyapps/graphql/users/urls/__init__.py,8\e\8ef96a8a9cbc44d76acf2c06aa369e2c6d4b03fd
 S
 #flyapps/graphql/users/types/user.py,1\4\14dd97e1997192fe15361056e31750a74ba707d4
-X
-(flyapps/graphql/categories/schema.grapql,3\1\3102d0dae10d5f593faf1c0d9911872fce26384a
+H
+flyapps/graphql/views.py,d\b\dbf733b4c9a43c7876e9b363fdf83d0cb2dfa306
+e
+5flyapps/graphql/categories/usages/usage_mutations.txt,a\b\ab26dc6ff99e209e08eafea92a202ad106f589d5
+c
+3flyapps/graphql/categories/usages/usage_queries.txt,6\0\60dc40d8971f9349e35861fc48d786797bed7d05
