@@ -5,7 +5,7 @@ from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 
 from .forms.admin import UserAdminCreationForm, UserAdminChangeForm
-from .models.role import Role
+from .models import Ban, Role
 
 User = get_user_model()
 
@@ -73,3 +73,13 @@ class RoleAdmin(GroupAdmin):
 
 
 admin.site.unregister(Group)
+
+@admin.register(Ban)
+class BanAdmin(admin.ModelAdmin):
+    list_display = [
+        'user',
+        'banned_by',
+        'created',
+        'modified',
+        'expiry',
+    ]

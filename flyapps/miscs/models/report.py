@@ -11,10 +11,22 @@ class Violation(ContentTypeMixin):
     ACCEPT = 1
     REJECT = 2
 
+    PENALTY_NOTHING = 0
+    PENALTY_HIDE = 1
+    PENALTY_BAN = 2
+    PENALTY_BAN_AND_DELETE = 3
+
     VIOLATION_CHOICES = (
         (PENDING, _('Awaiting actions')),
         (ACCEPT, _('Accepted violation')),
         (REJECT, _('Rejected violation')),
+    )
+
+    PENALTY_CHOICES = (
+        (PENALTY_NOTHING, _('No action')),
+        (PENALTY_HIDE, _('Hide object')),
+        (PENALTY_BAN, _('Ban user')),
+        (PENALTY_BAN_AND_DELETE, _('Delete object and Ban User')),
     )
     rules = models.ManyToManyField(
         Rule,
@@ -30,6 +42,12 @@ class Violation(ContentTypeMixin):
     reported_on = models.DateTimeField(
         verbose_name=_('reported on'),
         default=timezone.now
+    )
+    penalty = models.IntegerField(
+        verbose_name=_('penalty'),
+        default=PENALTY_NOTHING,
+        choices=PENALTY_CHOICES,
+        help_text=_('Proper measure to be taken against violation'),
     )
 
     def __str__(self):

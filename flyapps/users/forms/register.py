@@ -13,7 +13,10 @@ class UserRegistrationForm(forms.Form):
     }
 
     email = forms.EmailField(label=_('E-mail'))
-    username = forms.CharField(label=_('Username'), validators=[validate_username_chars])
+    username = forms.CharField(
+        label=_('Username'),
+        validators=[validate_username_chars]
+    )
     password_1 = forms.CharField(label=_('Password'), strip=False)
     password_2 = forms.CharField(label=_('Repeat password'), strip=False)
 
@@ -43,13 +46,19 @@ class UserRegistrationForm(forms.Form):
 
     def clean_username(self):
         cleaned_username = self.cleaned_data['username']
-        validate_unique_user('The username "%(username)s" have already been taken' % {'username': cleaned_username},
-                             username=cleaned_username)
+        validate_unique_user(
+            'The username "%(username)s" have already been taken' % \
+            {'username': cleaned_username},
+            username=cleaned_username
+        )
         return cleaned_username
 
     def clean_email(self):
         cleaned_email = self.cleaned_data['email']
-        validate_unique_user('This email has already been taken', email=cleaned_email)
+        validate_unique_user(
+            'This email has already been taken',
+            email=cleaned_email
+        )
         return cleaned_email
 
     def clean_password_2(self):
@@ -70,5 +79,10 @@ class UserRegistrationForm(forms.Form):
             'ip_address': self.request.META.get('REMOTE_ADDR'),
 
         }
-        user = User.objects.create_user(email=email, username=username, password=password, **extra_fields)
+        user = User.objects.create_user(
+            email=email,
+            username=username,
+            password=password,
+            **extra_fields
+        )
         return user

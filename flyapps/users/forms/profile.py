@@ -10,7 +10,8 @@ User = get_user_model()
 class UserSearchForm(forms.Form):
     keyword = forms.CharField(
         label=_('E-mail or username'),
-        help_text=_('Kindly enter the e-mail, username or profile display name of user')
+        help_text=_('Kindly enter \
+        the e-mail, username or profile display name of user')
     )
 
 

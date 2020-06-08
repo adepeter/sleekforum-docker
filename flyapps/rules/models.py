@@ -3,18 +3,6 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-# Create your models here.
-
-class Penalty(models.Model):
-    name = models.CharField(verbose_name=_('name'), max_length=255)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name_plural = _('penalties')
-
-
 class Rule(models.Model):
     GLOBAL_RULE = 0
     FORUM_RULE = 1
@@ -39,7 +27,6 @@ class Rule(models.Model):
     name = models.CharField(verbose_name=_('name'), max_length=255)
     description = models.TextField(verbose_name=_('description'))
     show = models.BooleanField(verbose_name=_('show rule'), default=True)
-    penalties = models.ManyToManyField(Penalty)
 
     def __str__(self):
         return f'{self.name} - {self.get_category_display()}'

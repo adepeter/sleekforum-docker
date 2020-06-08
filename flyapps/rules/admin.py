@@ -1,12 +1,5 @@
 from django.contrib import admin
-from .models import Penalty, Rule
-
-
-# Register your models here.
-
-@admin.register(Penalty)
-class PenaltyAdmin(admin.ModelAdmin):
-    list_display = ['name']
+from .models import Rule
 
 
 @admin.register(Rule)
