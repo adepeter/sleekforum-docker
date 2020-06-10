@@ -1,0 +1,87 @@
+type Thread {
+    starter: User!
+    title: String!,
+    slug: String,
+    content: String!,
+    tags: [String],
+    created: DateTime,
+    modified: DateTime,
+    is_hidden: Boolean,
+    is_locked: Boolean,
+    is_editable: Boolean,
+    views: Int,
+    likes: Int,
+    dislikes: Int,
+    shares: Int,
+
+    # Enums
+    pin: PinEnum,
+    prefix: PrefixEnum,
+
+    # GenericForeignKey
+    actions: [Action],
+    violations: [Violation],
+
+    # Relationship
+    posts: [Post!],
+}
+
+input CategoryThreadInput {
+    id: ID!,
+    slug: String!
+}
+
+input ThreadBaseInputMixin {
+    id: ID!,
+    slug: String!
+}
+
+input ThreadCreateBaseInput {
+    id: ID,
+    title: String!,
+    slug: String!,
+    content: String!,
+    starter: User!
+}
+
+input ThreadCreateInput {
+    category: CategoryThreadInput!,
+    thread: ThreadCreateBaseInput!
+}
+
+input ThreadEditInput {
+    thread: ThreadBaseInputMixin!,
+    patch: ThreadEditPatchInput!
+}
+
+input ThreadDeleteInput extends ThreadBaseInputMixin {
+    category: String!
+}
+
+type ThreadCreatePayload {
+    thread: Thread!
+}
+
+type ThreadEditPayload {
+    thread: Thread!
+}
+
+type ThreadDeletePayload {
+    thread: [Thread!]
+}
+
+type Query {
+    getThread(cat_slug, id, slug): Thread!,
+    allThreadsByCategory(cat_id, cat_slug): [Thread!],
+}
+
+type Mutation {
+    threadCreate (input: ThreadCreateInput): ThreadCreatePayload!,
+    threadEdit (input: ThreadEditInput): ThreadEditPayload!,
+    threadDelete (input: ThreadDeleteInput): ThreadDeletePayload!,
+}
+
+type schema {
+    query: Query,
+    mutation: Mutation
+}
