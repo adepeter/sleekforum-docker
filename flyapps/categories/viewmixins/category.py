@@ -7,7 +7,8 @@ from ..models import Category
 class CategoryQuerysetMixin:
 
     def get_queryset(self):
-        raise NotImplementedError('Please override the get_queryset() method of this view')
+        raise NotImplementedError('Please override the get_queryset() \
+        method of this view')
 
     def get_parent_node_obj(self):
         return get_object_or_404(

@@ -30,20 +30,22 @@
             </div>
             <div class="tt-categories-list">
                 <div class="row">
-                    {% if not categories %}
+                    {% if not subcategories %}
                         <div class="col">
                             <div class="tt-info-box">
-                                <p class="text-center">There are no created section categories yet by the admin</p>
+                                <p class="text-center">
+                                    There ares no created section categories yet by the admin
+                                </p>
                             </div>
                         </div>
                     {% else %}
-                        {% recursetree categories %}
+                        {% recursetree subcategories %}
                             {% category_threads node as node_threads %}
                             <div class="col-md-6 col-lg-4">
                                 <div class="tt-item">
                                     <div class="tt-item-header">
                                         <ul class="tt-list-badge">
-                                            <li><a href="#"><span
+                                            <li><a href="{% url 'flyapps:categories:list_subcategory' node.slug %}"><span
                                                     class="tt-{% cycle 'color01' 'color02' 'color03' 'color04' 'color05' %} tt-badge">{{ node.name }}</span></a>
                                             </li>
                                         </ul>

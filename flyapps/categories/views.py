@@ -1,11 +1,11 @@
 from django.db.models import Q
 from django.views.generic import ListView
+from django.urls import reverse
 
 from ..threads.models.thread import Thread
 from .models import Category
 from .viewmixins.category import ListViewMixin
 
-# Create your views here.
 
 TEMPLATE_URL = 'flyapps/categories'
 
@@ -22,6 +22,11 @@ class ListCategory(ListViewMixin):
 
     def get_queryset(self):
         parent_node_obj = self.get_parent_node_obj()
+        if parent_node_obj.threads.exists():
+            kwargs = {
+                'category_slug': parent_node_obj.slug
+            }
+            return reverse('flyapps:threads:list_threads', kwargs=kwargs)
         return parent_node_obj.get_children()
 
 
