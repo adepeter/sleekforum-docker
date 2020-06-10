@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200608_0927.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200608_0927.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200608_0927.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0003_auto_20200608_0934.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200608_0927.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/models/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/models/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/models/ban.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/models/ban.py" afterDir="false" />
-    </list>
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
