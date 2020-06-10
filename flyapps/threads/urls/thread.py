@@ -18,9 +18,11 @@ from ..views.thread.thread_misc import (
 )
 
 urlpatterns = [
-    path('', ListThread.as_view(), name='list_threads'),
-    path('create/', CreateThread.as_view(), name='create_thread'),
-    path('search/', SearchThread.as_view(), name='search_thread'),
+    path('<int:category_id>/', include([
+        path('', ListThread.as_view(), name='list_threads'),
+        path('create/', CreateThread.as_view(), name='create_thread'),
+        path('search/', SearchThread.as_view(), name='search_thread'),
+    ])),
 ]
 
 urlpatterns += [

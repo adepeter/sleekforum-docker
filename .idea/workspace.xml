@@ -2,46 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/graphs/thread.graphql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/queries/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/queries/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/thread/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/thread/thread.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0002_rule_creator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0003_auto_20200609_1545.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/queries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/threads/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/threads/thread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200608_0927.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200608_0927.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200608_0927.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0003_auto_20200608_0934.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200608_0927.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/categories/urls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/urls/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/categories/viewmixins/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/viewmixins/category.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/categories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/urls/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/categories/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/categories/category_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/categories/subcategory_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/categories/subcategory_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/list_threads.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,6 +335,7 @@
       <workItem from="1591526585609" duration="9412000" />
       <workItem from="1591607927002" duration="4000" />
       <workItem from="1591608007368" duration="36299000" />
+      <workItem from="1591788578801" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>

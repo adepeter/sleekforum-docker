@@ -13,6 +13,7 @@ class CategoryQuerysetMixin:
     def get_parent_node_obj(self):
         return get_object_or_404(
             Category,
+            pk=self.kwargs.get('pk'),
             slug__iexact=self.kwargs.get('slug')
         )
 

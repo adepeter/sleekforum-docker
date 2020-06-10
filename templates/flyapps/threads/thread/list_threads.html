@@ -33,7 +33,7 @@
                         <div class="tt-col-item">
                             <div class="tt-search">
                                 <form class="search-wrapper" method="GET"
-                                      action="{% url 'flyapps:threads:search_thread' category.slug %}">
+                                      action="{% url 'flyapps:threads:search_thread' category_id=category.id category_slug=category.slug %}">
                                     <div class="search-form">
                                         <input type="text" class="tt-search__input"
                                                name="search" placeholder="Search in {{ category.name|lower }}">
@@ -117,7 +117,7 @@
         </div>
     </main>
 
-    <a href="{% url 'flyapps:threads:create_thread' category.slug %}" class="tt-btn-create-topic">
+    <a href="{% url 'flyapps:threads:create_thread' category_id=category.id category_slug=category.slug %}" class="tt-btn-create-topic">
     <span class="tt-icon">
         <svg>
           <use xlink:href="#icon-create_new"></use>

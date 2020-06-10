@@ -43,12 +43,12 @@
                                 <div class="tt-item">
                                     <div class="tt-item-header">
                                         <ul class="tt-list-badge">
-                                            <li><a href="{% url 'flyapps:categories:list_subcategory' node.slug %}"><span
+                                            <li><a href="{% url 'flyapps:categories:list_subcategory' node.id node.slug %}"><span
                                                     class="tt-{% cycle 'color01' 'color02' 'color03' 'color04' 'color05' %} tt-badge">{{ node.name }}</span></a>
                                             </li>
                                         </ul>
                                         <h6 class="tt-title"><a
-                                                href="{% url 'flyapps:categories:list_thread' node.slug %}">Thread{{ node_threads | pluralize }}
+                                                href="{% url 'flyapps:categories:list_thread' node.id node.slug %}">Thread{{ node_threads | pluralize }}
                                             - {{ node_threads | length }}</a></h6>
                                     </div>
                                     <div class="tt-item-layout">

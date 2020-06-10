@@ -1,4 +1,5 @@
 from django.db.models import Q
+from django.http import HttpResponseRedirect
 from django.views.generic import ListView
 from django.urls import reverse
 
@@ -22,12 +23,17 @@ class ListCategory(ListViewMixin):
 
     def get_queryset(self):
         parent_node_obj = self.get_parent_node_obj()
-        if parent_node_obj.threads.exists():
-            kwargs = {
-                'category_slug': parent_node_obj.slug
-            }
-            return reverse('flyapps:threads:list_threads', kwargs=kwargs)
         return parent_node_obj.get_children()
+
+    def dispatch(self, request, *args, **kwargs):
+        obj = self.get_parent_node_obj()
+        if obj.threads.exists():
+            kwargs = {
+                'category_id': obj.id,
+                'category_slug': obj.slug
+            }
+            return HttpResponseRedirect(reverse('flyapps:threads:list_threads', kwargs=kwargs))
+        return super().dispatch(request, *args, **kwargs)
 
 
 class ListDescendantCategoryThread(ListViewMixin):

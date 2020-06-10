@@ -14,7 +14,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('<slug:slug>/', include([
+    path('<int:pk>/<slug:slug>/', include([
         path('', ListCategory.as_view(), name='list_subcategory'),
         path('threads/', ListDescendantCategoryThread.as_view(), name='list_thread'),
     ]))
