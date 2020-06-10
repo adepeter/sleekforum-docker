@@ -37,7 +37,7 @@ class Thread(models.Model):
     starter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='threads')
     title = models.CharField(verbose_name=_('title'), max_length=150, unique=True)
-    tags = ArrayField(models.SlugField(), blank=True)
+    tags = ArrayField(models.SlugField(), blank=True, null=True)
     pin = models.IntegerField(verbose_name=_('pin thread'), choices=PIN_CHOICES, default=PIN_DEFAULT)
     prefix = models.IntegerField(verbose_name=_('prefix'), choices=PREFIX_CHOICES, default=PREFIX_DEFAULT)
     slug = models.SlugField(verbose_name=_('slug'), blank=True, editable=False)
@@ -58,7 +58,8 @@ class Thread(models.Model):
     objects = ThreadManager()
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        if not self.slug:
+            self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
     def get_likes_count(self):

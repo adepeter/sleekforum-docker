@@ -2,31 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200608_0927.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200608_0927.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200608_0927.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0003_auto_20200608_0934.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200608_0927.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/graphs/thread.graphql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/queries/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/queries/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/thread/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/thread/thread.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0002_rule_creator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0003_auto_20200609_1545.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/queries.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/categories/queries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/threads/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/threads/thread.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/messages/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200529_1031.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/messages/migrations/0002_auto_20200608_0927.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/models/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/models/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200608_0927.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/rules/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/rules/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0002_auto_20200608_0927.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/rules/migrations/0003_auto_20200608_0934.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200529_1031.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/migrations/0002_auto_20200608_0927.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/models/ban.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/models/ban.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,18 +87,22 @@
     <property name="add_unversioned_files" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\adepeter\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\categories\fixtures" />
       <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyforum_project" />
       <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps" />
       <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\messages\_partials" />
       <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\miscs\utils" />
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\home\pages" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.pekpage">
@@ -345,7 +364,9 @@
       <workItem from="1591306838121" duration="40000" />
       <workItem from="1591367944708" duration="115000" />
       <workItem from="1591373816909" duration="396000" />
-      <workItem from="1591526585609" duration="8670000" />
+      <workItem from="1591526585609" duration="9412000" />
+      <workItem from="1591607927002" duration="4000" />
+      <workItem from="1591608007368" duration="36299000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
