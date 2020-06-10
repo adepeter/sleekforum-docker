@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -326,7 +333,7 @@
       <workItem from="1591526585609" duration="9412000" />
       <workItem from="1591607927002" duration="4000" />
       <workItem from="1591608007368" duration="36299000" />
-      <workItem from="1591788578801" duration="684000" />
+      <workItem from="1591788578801" duration="10160000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
