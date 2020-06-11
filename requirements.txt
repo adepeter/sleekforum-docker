@@ -1,1 +1,1 @@
--r flyforum_project.requirements.local.txt
+-r flyforum_project/requirements/local.txt
