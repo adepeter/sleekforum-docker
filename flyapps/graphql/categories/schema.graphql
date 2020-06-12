@@ -3,6 +3,7 @@ type Category {
     name: String!,
     slug: String,
     description: String,
+    parent: Category,
     threads: [Thread]
 }
 

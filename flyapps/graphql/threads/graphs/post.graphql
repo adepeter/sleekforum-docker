@@ -1,0 +1,72 @@
+type Post {
+    user: User!,
+    thread: Thread!,
+    content: String!,
+    created: DateTime!,
+    modified: DateTime!,
+    is_hidden: Boolean!,
+    likes: Int,
+    dislikes: Int,
+    parent: Post
+}
+
+type Schema {
+    query: Query,
+    mutation: Mutation
+}
+
+type Query {
+    allPostInAThread(cat_slug, thr_id, thr_slug): [Post!]
+}
+
+input ThreadInputMixin {
+    id: ID!,
+    slug: String!
+}
+
+input BasePostCreateInput {
+    id: ID,
+    content: String!,
+}
+
+input PostCreateInput {
+    thread: ThreadInputMixin!,
+    post: BasePostCreateInput!
+}
+
+input PostEditInput {
+    thread: ThreadInputMixin!,
+    patch: BasePostPatchInput!
+}
+input PostDeleteInput {
+    thread: ThreadInputMixin!,
+    id: ID!,
+}
+
+input ReplyToParentPostInput {
+    parent: ParentPostInput!,
+    post: BasePostCreateInput!
+}
+
+type PostCreatePayload {
+    post: Post!
+}
+
+type PostEditPostPayload {
+    post: Post!
+}
+
+type PostDeletePayload {
+    post: [Post!]
+}
+
+type ReplyToParentPostPayload {
+    post: Post!
+}
+
+type Mutation {
+    postCreate(input: PostCreateInput): PostCreatePayload!,
+    postEdit(input: PostEditInput): PostEditPayload!,
+    postDelete(input: PostDeleteInput): PostDeletePayload!,
+    replyToParentPost(input: ReplyToParentPostInput): ReplyToParentPostPayload!,
+}

@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/graphs/post.graphql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/usages/thread.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/thread.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/graphql/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/views/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/register.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -333,7 +341,9 @@
       <workItem from="1591526585609" duration="9412000" />
       <workItem from="1591607927002" duration="4000" />
       <workItem from="1591608007368" duration="36299000" />
-      <workItem from="1591788578801" duration="10160000" />
+      <workItem from="1591788578801" duration="10798000" />
+      <workItem from="1591973221922" duration="177000" />
+      <workItem from="1591973448788" duration="11322000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
