@@ -6,7 +6,7 @@ class DictifyNestedInput:
     :param input_arg: an input instance
     :returns None:
     """
-    def __init__(self, input_arg):
+    def __init__(self, input_arg) -> None:
         """Initialize class by passing the input to serialize as dict"""
         self.__serialize_input(input_arg)
 

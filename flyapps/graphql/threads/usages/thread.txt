@@ -1,0 +1,77 @@
+# mutation {
+#   threadEdit (input: {
+#     thread: {
+#       categorySlug: "django"
+#       id: 19,
+#       slug: "loading-django"
+#     },
+#     patch: {
+#       thread: {
+#         # title: "Hope its okay",
+#         slug: "i like this",
+#       },
+#       category: {
+#         id: 23,
+#         slug: "django"
+#       }
+#     }
+#   }) {
+#     thread {
+#       title
+#     }
+#   }
+# }
+
+# mutation {
+#   threadCreate (input: {
+#     category: {
+#     id: 1,
+#     slug: "django"
+#     },
+#     thread: {
+#       title: "hello",
+#       content: "Hurray"
+#     }
+#   }) {
+#     thread {
+#       title
+#     }
+#   }
+# }
+
+# mutation {
+#   threadDelete (input: {
+#     categorySlug: "django",
+#     id: "19",
+#     slug: "i-like-this"
+#   }) {
+#     isDeleted,
+#     thread {
+#       title
+#     }
+#     threads {
+#       title
+#     }
+#   }
+# }
+
+# fragment userInfo on UserType {
+#   username,
+# }
+
+# query {
+#   threads (categoryId: 23, categorySlug: "django") {
+#     id,
+#     slug,
+#     title,
+#     starter {
+#       ...userInfo
+#     }
+#     posts {
+#       id,
+#       user {
+#         ...userInfo
+#       }
+#     }
+#   }
+# }
