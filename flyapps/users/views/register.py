@@ -15,7 +15,7 @@ class UserRegistration(SuccessMessageMixin, FormView):
     form_class = UserRegistrationForm
     success_message = _('Registration was successful')
     template_name = f'flyapps/users/auth/register.html'
-    success_url = reverse_lazy('flyapps:home')
+    success_url = reverse_lazy('flyapps:home:home')
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
