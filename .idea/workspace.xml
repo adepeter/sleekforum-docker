@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/graphs/post.graphql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/usages/thread.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/views/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/register.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +51,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\adepeter\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -343,7 +330,7 @@
       <workItem from="1591608007368" duration="36299000" />
       <workItem from="1591788578801" duration="10798000" />
       <workItem from="1591973221922" duration="177000" />
-      <workItem from="1591973448788" duration="11322000" />
+      <workItem from="1591973448788" duration="12052000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
@@ -411,14 +398,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1492" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1590831900559">
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1591985808891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1590831900559" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1591306872698">
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1591985808891" />
+    <state x="277" y="56" key="SettingsEditor" timestamp="1591985937314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591306872698" />
+    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591985937314" />
     <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1586333028029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
