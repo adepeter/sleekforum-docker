@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
+    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum_project/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum_project/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum_project/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum_project/settings/production.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -329,7 +333,7 @@
       <workItem from="1591788578801" duration="10798000" />
       <workItem from="1591973221922" duration="177000" />
       <workItem from="1591973448788" duration="12052000" />
-      <workItem from="1591985959143" duration="2111000" />
+      <workItem from="1591985959143" duration="2908000" />
     </task>
     <task id="LOCAL-00001" summary="Gitignore added">
       <created>1583590747455</created>
