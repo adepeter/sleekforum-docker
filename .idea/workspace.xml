@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/graphs/post.graphql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flyapps/graphql/threads/usages/thread.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/categories/schema.graphql.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/inputs/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/schemas/post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/types/post/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/graphql/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/views/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/mutations/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/graphql/threads/payloads/post.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

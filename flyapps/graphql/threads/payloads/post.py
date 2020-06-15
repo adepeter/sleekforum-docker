@@ -11,7 +11,8 @@ from ...utils import DictifyNestedInput as DictifyInput
 
 from ..inputs.post import (
     PostCreateInput,
-    PostEditInput
+    PostEditInput,
+    PostDeleteInput
 )
 from ..types.post import PostType
 
@@ -59,12 +60,56 @@ class PostEditPayload(graphene.Mutation):
             required=True,
             description=_('Post to be edited'),
         )
-        
+
     def mutate(self, info, input):
         input = DictifyInput(input)
-        # serialize_post = input.get_fields_or_field('post').pop('id')
-        # post = get_object_or_404(
-        #     Post,
-        #     thread__slug__iexact=
-        #     **serialize_post
-        # )
+        serialize_post = input.get_fields_or_field('post')
+        post = get_object_or_404(
+            Post,
+            id=serialize_post['post_id'],
+            thread__id=serialize_post['id'],
+            thread__slug__iexact=serialize_post['slug'],
+        )
+        serialize_patch = input.get_fields_or_field('patch')
+        if not info.context.user.is_authenticated:
+            raise PermissionDenied(
+                _('You do not have permision to complete this operation.')
+            )
+        post.content = serialize_patch['content']
+        post.save(update_fields=['content'])
+        return PostEditPayload(post=post, is_edited=True)
+
+
+class PostDeletePayload(graphene.Mutation):
+    posts = graphene.List(
+        PostType,
+        description=_('List of remaining posts on a thread')
+    )
+    is_deleted = graphene.Boolean(
+        default_value=False,
+        description=_('Confirmation of post as deleted')
+    )
+
+    class Arguments:
+        input = PostDeleteInput(
+            required=True,
+            description=_('Post to be deleted')
+        )
+
+    def mutate(self, info, input):
+        post = get_object_or_404(
+            Post,
+            thread__id=input.id,
+            thread__slug__iexact=input.slug,
+            id=input.post_id
+        )
+        if not info.context.user.is_superuser:
+            raise PermissionDenied(
+                _('You are not authorized to delete this post')
+            )
+        posts = Post.objects.filter(
+            thread__id=input.id,
+            thread__slug__iexact=input.slug
+        )
+        post.delete()
+        return PostDeletePayload(posts=posts, is_deleted=True)
