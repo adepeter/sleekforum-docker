@@ -2,10 +2,6 @@ from .base import *
 
 DEBUG = True
 
-ALLOWED_HOSTS += [
-    'sleekforumdev.herokuapp.com',
-]
-
 INSTALLED_APPS += [
     'debug_toolbar',
 ]

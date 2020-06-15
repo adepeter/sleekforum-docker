@@ -206,8 +206,6 @@ K
 flyapps/threads/__init__.py,1\e\1e4be8ea90894f757f8f6ec2679f7af7e984b1fc
 G
 flyapps/threads/apps.py,5\d\5d9b4ee512998ed6b8ef61691a38ff5661ca86d4
-]
--flyforum_project/settings/sample_secrets.json,e\b\eb12071b0d8739b74be0931dedad5a4f03f7826a
 V
 &flyforum_project/settings/secrets.json,4\d\4d379571cb34257e808dfd3a81c22e00ab7de397
 H
@@ -392,3 +390,13 @@ V
 &flyapps/graphql/threads/inputs/post.py,9\0\90e94458909e542500537e8a741543a63af82191
 X
 (flyapps/graphql/threads/payloads/post.py,7\e\7eb9ed8f34659d73c035fe9f00d6a3b7ad0b6728
+Y
+)flyforum_project/requirements/staging.txt,d\2\d2f9aafdd0cfc28472d1bfcf6619465fb1b9a91d
+V
+&flyforum_project/requirements/test.txt,b\a\baaac665591135ae389cd72b326a5b00b90c6c14
+V
+&flyforum_project/requirements/base.txt,d\b\db7c0203df63a49389426edc47de9ea47a16a085
+\
+,flyforum_project/requirements/production.txt,1\0\103e404183ee99034c518f1dab719de1f684b540
+W
+'flyforum_project/requirements/local.txt,b\8\b8052ca4949a9276e459346ec5a2d94dd729123c
