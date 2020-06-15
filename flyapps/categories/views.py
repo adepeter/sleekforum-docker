@@ -27,7 +27,7 @@ class ListCategory(ListViewMixin):
 
     def dispatch(self, request, *args, **kwargs):
         obj = self.get_parent_node_obj()
-        if obj.threads.exists():
+        if obj.threads.exists() or not obj.is_lock:
             kwargs = {
                 'category_id': obj.id,
                 'category_slug': obj.slug
