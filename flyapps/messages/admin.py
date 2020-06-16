@@ -10,7 +10,7 @@ class ReplyAdminInline(admin.StackedInline):
     extra = 3
 
 
-@admin.register(Message)
+# @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
     list_display = [
         'id',
@@ -34,7 +34,7 @@ class MessageAdmin(admin.ModelAdmin):
     message_flag.short_description = 'State'
 
 
-@admin.register(Reply)
+# @admin.register(Reply)
 class ReplyAdmin(admin.ModelAdmin):
     list_display = ['message', 'sender', 'text', 'created', 'modified']
 

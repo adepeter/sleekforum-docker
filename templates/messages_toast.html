@@ -1,0 +1,8 @@
+{% block messages_toast %}
+
+    {% for message in messages %}
+        <p class="tt-topic-alert tt-alert-{% if message.tags %}{{ message.tag }}{% else %}default{% endif %}"
+           role="alert">{{ message }}</p>
+    {% endfor %}
+
+{% endblock %}

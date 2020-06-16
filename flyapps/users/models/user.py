@@ -57,6 +57,7 @@ class User(PermissionsMixin, AbstractBaseUser):
     def get_short_name(self):
         return self.username
 
+    @property
     def get_display_name(self):
         if self.first_name or self.last_name:
             return self.get_full_name().rstrip()
