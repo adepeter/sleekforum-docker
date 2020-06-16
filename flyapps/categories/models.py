@@ -7,11 +7,32 @@ from mptt.fields import TreeForeignKey
 
 
 class Category(MPTTModel):
-    name = models.CharField(verbose_name=_('name'), max_length=25)
-    slug = models.SlugField(verbose_name=_('slug'), blank=True, db_index=True)
-    description = models.TextField(verbose_name=_('description'), blank=True)
-    is_lock = models.BooleanField(verbose_name=_('lock category'), default=False)
-    parent = TreeForeignKey('self', on_delete=models.CASCADE, related_name='children', blank=True, null=True)
+    name = models.CharField(
+        verbose_name=_('name'),
+        max_length=25
+    )
+    slug = models.SlugField(
+        verbose_name=_('slug'),
+        blank=True,
+        db_index=True
+    )
+    description = models.TextField(
+        verbose_name=_('description'),
+        blank=True
+    )
+    is_lock = models.BooleanField(
+        verbose_name=_('lock category'),
+        default=True,
+        help_text=_('Determine whether category should \
+        serve as thread section')
+    )
+    parent = TreeForeignKey(
+        'self',
+        on_delete=models.CASCADE,
+        related_name='children',
+        blank=True,
+        null=True
+    )
 
     def get_description(self):
         if not self.description:
@@ -43,8 +64,14 @@ class Category(MPTTModel):
             ),
         ]
         indexes = [
-            models.Index(fields=['slug'], name='index_slug_on_category'),
-            models.Index(fields=['id', 'slug'], name='index_id_slug_on_category'),
+            models.Index(
+                fields=['slug'],
+                name='index_slug_on_category'
+            ),
+            models.Index(
+                fields=['id', 'slug'],
+                name='index_id_slug_on_category'
+            ),
         ]
 
     class MPTTMeta:
