@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Active session{% endblock %}
+
+{% block content %}
+    <main id="tt-pageContent">
+        <div class="container">
+            <div class="tt-layout-404">
+           <span class="tt-icon">
+                <svg class="icon">
+                  <use xlink:href="#icon-error_404"></use>
+                </svg>
+           </span>
+                <h6 class="tt-title">Action Not Allowed</h6>
+                <p>Dear {{ request.user.get_display_name }},
+                    You cannot perform this action because you are logged in
+                </p>
+                <br/>
+                <p>To proceed, please <a href="{% url 'flyapps:users:auth:logout' %}">logout</a>
+                    and repeat action again
+                </p>
+            </div>
+        </div>
+    </main>
+{% endblock %}
