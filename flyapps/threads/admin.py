@@ -29,6 +29,3 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = ['content', 'user', 'thread', 'parent']
     list_filter = ['user', 'thread', 'parent', 'is_hidden']
     date_hierarchy = 'created'
-
-
-admin.site.register(ThreadView)
