@@ -73,3 +73,10 @@ class BaseReplyToParentPost(graphene.InputObjectType):
 class ReplyToParentPostInput(graphene.InputObjectType):
     parent = graphene.InputField(BaseReplyToParentPost)
     post = graphene.InputField(BasePostCreateMixin)
+
+
+class PostDeleteInput(ThreadInputMixin):
+    post_id = graphene.ID(
+        description=_('ID of post to be deleted'),
+        required=True
+    )
