@@ -400,3 +400,8 @@ V
 ,flyforum_project/requirements/production.txt,1\0\103e404183ee99034c518f1dab719de1f684b540
 W
 'flyforum_project/requirements/local.txt,b\8\b8052ca4949a9276e459346ec5a2d94dd729123c
+@
+requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
