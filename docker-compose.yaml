@@ -1,0 +1,28 @@
+version: "3"
+services:
+  postgresql:
+    image: postgre:12
+    environment:
+      # POSTGRESQL logins
+      - DJANGO_DB_ENGINE=django.db.backends.postgresql_psycopg2
+      - DJANGO_DB_NAME=flyforum
+      - DJANGO_DB_USER=flyuser
+      - DJANGO_DB_PASSWORD=flyuser
+      - DJANGO_DB_HOST=localhost
+      - DJANGO_DB_PORT=5432
+
+
+  sleekforum:
+    build:
+      command: python manage.py runserver --settings=flyforum_project.settings.local
+      environment:
+        # ENV Secret key
+        - SECRET_KEY=)=zp-!70xva+-0s((aw_hm(ib5rc5_5t03r41q8+1pe1egl*-c
+        # Superuser login credentials
+        - SUPERUSER_EMAIL=test@test.com
+        - SUPERUSER_USERNAME=test
+        - SUPERUSER_PASSWORD=test
+      port:
+        - "127.0.0.1:8000"
+      depends_on:
+        - postgresql
