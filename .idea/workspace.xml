@@ -1,427 +1,202 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="">
+    <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/adepeter.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/highlightedFiles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/highlightedFiles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pekpage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pekpage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02ee015f0c89b6eeb4a5c30e299884271d6ef274" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04b945165e1de9a648e888d9db4941df3951d450" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0511c4c7ffbcbd719b32e05fc95d666709698828" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0540e4237f3b6bd11ba29cc388e1e34af31a0447" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05cb3a1fe009dc15a0634b822a881e785787a196" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/0634cadc27d5344afdbd261a190a25a2f7fc82fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/063b25d32e9ffce9f8ba7271d622ef8f437548e7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06f87f3c79a5c165e0a217f88c9ac383de01ddd2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07edbbd5c7ffd54ab3c73c6c038e99f0fc312562" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/113d3248f0e0032b8d0a53688eaa6d2ed23c2fb9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/139cd7c2d45e1cbe21bec051b61f9902d436fba7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/1434c788375d4fdc881a29edc02e5539ef6252e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/150e4d1ad1f67ebd084abbcb6b8b9db441ec9bb2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16d3542adedc644c0e63096ebd70194b22368b16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/18e22010735f4e86e427eab66c9034295b40aaf4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a6582a41c557cfeafde78d20ee5a9e7beb67e21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e1236331aa9f13f40648b5e46e4c333f9936e24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e4be8ea90894f757f8f6ec2679f7af7e984b1fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f832ff663f643edfaf404363ec07e0fc56e2f25" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/0/20700cfd46cdafb04d9e30d7363d1b4df6f62686" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/221fa239e0c6340306246a93a4fe075998d6787f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/2943a52fcfb63cecce8e3db7d1eba449a27a16f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b5b2f766aa7babe9f994ebf322c180c9066fdc3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2dc0000dcb70c1e0a4b944a43d4b67ba257ea217" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30acb3c78153e9c35f4354a9f63833c50ed4c047" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/3156ad13e4d695cd526bbb7b031016ecba842270" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/5/354bfe10f8b8600439d2f77462f70c344fd74eb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/388585a7c5fd179d060d31b34d2c249e10b28bc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39bcc864134ed97e7cebe3b97d24d1da26040049" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3af00771f7ac796eb6626e04fa825976fb902cea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3b1da1b3b2ac5ff7ed55ca4f6208d477851d99ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3fa17248742cae29e6d653ccde41d1a6b1c81621" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/40109c98db8f5184cfe89581e36cc732b30aabad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/4284dbc04a378fcf3e25d0ea8786a879d8ee8225" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/42aefb95b88c1e21e3e319a2541d22baabefa56f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43d88d6a84646008d7f86e8cd1f12d21b0e37b84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/456e640c6afd9d875a874fcc477874e888105378" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/45bc5d12299fa658115c517527e1c63c133cf80c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/47338f406c2a234422d0e35b8dc26924be1a5635" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/475d7be7d163e2afb080decc4319b01a4c6a2332" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/488718621b1f94de02bde18ae36b947b1b83421c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b7f06e5c149dd61ee506853ed291e5af30d4d42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c72060bbb9c02e9d3d3766a15e8a2ebd16e6e0e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d379571cb34257e808dfd3a81c22e00ab7de397" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4e80f908ed9146fcfc818e0d985316543526c903" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f844c94c91a981e37c47d5381f393432a86764d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51369d3f1833ca059574674e93785f4ad13615da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53217da9232d7d84e2e03a33f48ab3852d349de5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/536d6e7c25304d00d5b06f98d970ffec249b8d5a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55578291001ea74af7aa34df6036a25ed217c26a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/570502858cc0951264971b9e0d2bbb000d50f826" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/572f32eb01b84710f11044657617cd9d59b11a2f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/59db0b9ce243699d8e520cfb8a76c667f0f73de8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c18a6a40bdff6d6c9aba12aadb6f672d556ebfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5ce07000241f8cd3ceebf0e6627e6f3eb8948696" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5ce3cad87c2949588b666023eb9de3bd42092b1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d9b4ee512998ed6b8ef61691a38ff5661ca86d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5ddd8dde5477fa87b4f526e9434aa49a1372715e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ec8795b6047559ba915fcdcb8d54b40ccf266be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/6336d6c5b399a19055637940f6573cb0f9ad6f7f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/636f85fc026b6054bb259de41c1b8ae4a07fe79a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/638602126928088937a69b71bd7887c4d91e0a52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/642738f7d0355d9ffb1e3bde33e912775c26847b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/656a4adc55785b5d723a7ef21866c5aab7cfe4d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/6756484945ad37bbecf530ec0dbdc6f8c6a23135" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/681f66faf18e4d7ebdea4ec5db5f4c21ba50a7e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/6824da8b71f51f436e43b326b5042a3f19ecc343" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b1738226b95c5a2ef070a3d3e54e749b1c97d2c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6dead9abb7e21803c504eaf254cec67cb7c629ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e82414aacffb046208ec9779302cb5498dc2de6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f6da3899bb486dbf70a263671b21c8c6d60fabc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/70ab98716aafc9385ef13c643c98a8dcf52f94ce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73a8f11ed45f9d01205c0887c5fca1b70db01758" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/3/73a9eaea1e13f2be46460dbe598d29b0769101ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/744782d203b6048c3734330ea32859ab1c383735" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7481057e31592b3fcbde72bd5665c30931217955" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75ec637c9056756fda46d9ab8f009213539eaf23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7637b90a3560f05b4452db28143791569dcf98d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a9e11cc2a1dafecc5eabaf600e09155c177928e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/c/7ca71eb83af07a3be6764817d1c3b999715a1e18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f87fd7264fcee33eddfdcafad20344352738a56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80e01f21d40b959478059a6938ea54537231f8d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/820d00ad4a2c5eabeffcdda2bd321cfc5049ff99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/826730f645e6a0029e6a78aa47251e95f0fcfd78" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82f7f7899abf4156d5ae3ee4762e9882425250b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/8588d991f6b6eb04e68741119867c261e977575c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/87fe039d082d962956f2d1d4f10436a59ac3baf2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8806522f4837a19a616bda02e30ea7cfd4c9d272" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cc7f296180027f0c8534410e8f56ce0371ae5a8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eb86511c90f3b5b45c216f7de0d1c0672c96f17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90a4bf201076cefb22e77a7f94bc8e8f4f932c9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90b535b6b406df00557a462d763f38f1188c583a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/924536ca7bf8f1f4de02bf0a9e3bedd811712c15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94b5ce6c963e39556c1afd32892a41efa54d4bad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/9669ca7644b31796d19cd5fb1e42eb83f089828c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/96a5d728bcdf25e8bf64ddb089622f269ff08feb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/9734a5d7368b3eda8606b55e34cccea213671105" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98a5b7937ae374c35e15cd5ee28f3137ecdd592a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9a2214110533a65e0e2885cff0e5e0941206ca3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c96b4bded5fbc8a4a79b91b4fb70c44c7acca5f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e7c615554053950a3cc97dc49c6d2d4320d2e52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e8f9802057585c8adaef6fd417d75dac48d68e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e952e2caefa566e6fed1d456b1208f6e90a1f0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a00c43383789ff03fb96b0ea8ca4ae3f6b287be9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2b3657366fe09cd2e2d840642853299db2f4ae6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac71454b8c31b9b03056ec5899303f8376969fc2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/adfc8a9bde948d61454c1f99cdf4f55f80174352" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/e/aeabcc0480ac5638ff36d86f5c0544c2f64202e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b07b5a3cd7459e6987103866d026f5eb7731a46b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b277976343185fca37aeb8f08bc96e00ebc2ceb6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b282ee927ff8c58985bc299675a81c02ac110676" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3151c3115b73eb8ce18ce8ceaf8309eb1a39ce1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4757bb1116522183f6847e18ea95784f67b4147" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/bac1b42aa841e2c7743a398b8cba4e041e2186e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc06f5608744de523be9d5b3a98efd1294178ad9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bda4885e1e47c0efd11484e9cad100db4d038eee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c04a91477ca724b0ab85fb62a09c3cc089395cd9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c2563a242132d15e3fda7742d356342d91620892" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3485f4d1adb5de652cf417d895d2aeb32e29bd2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4b1b44af86723f24f2e47170dee8ab8f227cd6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5c84a2bbb2a031547c23987ffbe330ca90db4f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c7dec74a680c9be7e0cfeadfa69252190cadf81e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c94803886cb8c495b3c8fbcf60974470817b340b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc616153ecbc018d4f9d2856d269ca928a98862a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/ccfd9a2e973ff8a5d76cc2a54b69c53666472622" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd0315d03cc5de3abb25212d237d6a6f88f6861f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce9dd59aabdcda3e2c336b9ac29dc94378ff2d80" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf36ccc461d56780fd76b93aeebb4fe10e7745b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d40cf55ff1cb0426e58c9ea0828e58356a79f6f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/7/d728026e695dd77e5fba665c2154fbe5be6a26c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d92ac9ab497846c89f99974670ba59033d613bd3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da7c237b85a69c00a9ab8c189bf63e22070fcac3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc177e6fac830a1435de587943247965aa4f6952" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df0fffb11a1ff48c45fab749ba8bc8fd578cc593" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df5b11f2d4964fc508bc6f4a20a0f24db65c291c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e850cdce2e0c7272c7aa38bdced2a3a72b860202" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e8ead750fee7342ae0f8e23962e34a5c8f3a4755" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eac2b936e1448bf533ac93163f1dc3397d3d0c14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec75d957f18fb371db6664f1929dc6759c837160" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec95fa9024043ebbf881a1417fe203a6da3a1eb2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ecc18825a41c160b486d882ec6207676b5f56f71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f032e9c0a428a708010286bc1fdab2edc1cba7e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f05706b431b979fb36512751916164ff80932c49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3a57fe9979d471db25666ebcecc5ec652960bb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4bcdb44f32ac530137b54ad692844559be1d3f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f53b5f040dd4e6c7a7b88252996ec380ad68c216" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f58eea22d3c45c3b46a080d3d8a75c2aa8b6c458" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fd711ce7e4b366ff6cc83ac91e811e3590c0e393" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/synopsys_code_sight_state.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/synopsys_code_sight_state.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
     </list>
->>>>>>> efeda67e78a1d8525213d7d76e974f4284ec9c50
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="JupyterTrust" id="9de9bd79-b557-49fd-af5a-84d76098c77c" />
-  <component name="ProjectId" id="1WXgXx2B3pt3jJmxqcdwb8iiwV9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1dTGVTpwZdqIuZPV3CX1nDRAb9U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\adepeter\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PyCharm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\categories\fixtures" />
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyforum_project" />
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps" />
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\messages\_partials" />
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\flyapps\miscs\utils" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Django Server.pekpage">
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pekpage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pekpage" type="Python.DjangoServer" factoryName="Django server">
-      <module name="pekpage" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.scratch" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d57c384-773e-4f50-8d3a-73a568a737e4" name="Default Changelist" comment="" />
-      <created>1579301396403</created>
+      <changelist id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="" />
+      <created>1592441693051</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1579301396403</updated>
-      <workItem from="1579301400406" duration="3778000" />
-      <workItem from="1579340892364" duration="15881000" />
-      <workItem from="1579369539106" duration="331000" />
-      <workItem from="1579370713592" duration="13272000" />
-      <workItem from="1579419473885" duration="5848000" />
-      <workItem from="1579425633987" duration="133000" />
-      <workItem from="1579425857084" duration="15942000" />
-      <workItem from="1579453162626" duration="2189000" />
-      <workItem from="1579458369262" duration="12163000" />
-      <workItem from="1579540533699" duration="630000" />
-      <workItem from="1579551350383" duration="11477000" />
-      <workItem from="1579620406669" duration="146000" />
-      <workItem from="1579622416711" duration="2298000" />
-      <workItem from="1579636698492" duration="1819000" />
-      <workItem from="1579727090455" duration="6319000" />
-      <workItem from="1579810564028" duration="2979000" />
-      <workItem from="1579973626592" duration="4958000" />
-      <workItem from="1579986019499" duration="4987000" />
-      <workItem from="1580031042265" duration="11417000" />
-      <workItem from="1580045814422" duration="300000" />
-      <workItem from="1580056267535" duration="2625000" />
-      <workItem from="1580163085185" duration="665000" />
-      <workItem from="1580250843595" duration="4381000" />
-      <workItem from="1580398024274" duration="614000" />
-      <workItem from="1580588001533" duration="5940000" />
-      <workItem from="1580611106617" duration="179000" />
-      <workItem from="1580681090231" duration="636000" />
-      <workItem from="1580758431495" duration="4051000" />
-      <workItem from="1580820925535" duration="9577000" />
-      <workItem from="1580932688583" duration="8501000" />
-      <workItem from="1581033366936" duration="21315000" />
-      <workItem from="1581207270613" duration="46548000" />
-      <workItem from="1581466200573" duration="101000" />
-      <workItem from="1581530947842" duration="7088000" />
-      <workItem from="1581542555750" duration="379000" />
-      <workItem from="1581543360939" duration="25000" />
-      <workItem from="1581543414718" duration="31000" />
-      <workItem from="1581543475059" duration="8000" />
-      <workItem from="1581544319821" duration="177000" />
-      <workItem from="1581544521740" duration="59000" />
-      <workItem from="1581544600198" duration="199000" />
-      <workItem from="1581544828545" duration="12000" />
-      <workItem from="1581545101011" duration="59000" />
-      <workItem from="1581546314956" duration="289000" />
-      <workItem from="1581546621818" duration="404000" />
-      <workItem from="1581547046486" duration="110000" />
-      <workItem from="1581547173175" duration="1346000" />
-      <workItem from="1581548982354" duration="22000" />
-      <workItem from="1581554337446" duration="1533000" />
-      <workItem from="1581708042430" duration="15162000" />
-      <workItem from="1581792979152" duration="15166000" />
-      <workItem from="1581979363063" duration="31000" />
-      <workItem from="1582065209833" duration="1293000" />
-      <workItem from="1582068587547" duration="1511000" />
-      <workItem from="1582389044846" duration="395000" />
-      <workItem from="1582401466260" duration="5174000" />
-      <workItem from="1582446393915" duration="4612000" />
-      <workItem from="1582458631842" duration="91000" />
-      <workItem from="1582458935529" duration="1373000" />
-      <workItem from="1583013286232" duration="851000" />
-      <workItem from="1583087139538" duration="22627000" />
-      <workItem from="1583194802153" duration="247000" />
-      <workItem from="1583440808145" duration="7296000" />
-      <workItem from="1583448397651" duration="457000" />
-      <workItem from="1583448871055" duration="17663000" />
-      <workItem from="1583585347947" duration="3680000" />
-      <workItem from="1583590617011" duration="173000" />
-      <workItem from="1583590806827" duration="1055000" />
-      <workItem from="1583702111879" duration="21639000" />
-      <workItem from="1583800759332" duration="1664000" />
-      <workItem from="1584042154017" duration="9255000" />
-      <workItem from="1584404718023" duration="43000" />
-      <workItem from="1584404780358" duration="1915000" />
-      <workItem from="1584489844478" duration="509000" />
-      <workItem from="1584723240203" duration="6968000" />
-      <workItem from="1584730309525" duration="3366000" />
-      <workItem from="1584839139107" duration="34000" />
-      <workItem from="1584839210320" duration="42000" />
-      <workItem from="1584839425209" duration="19000" />
-      <workItem from="1584839628838" duration="242000" />
-      <workItem from="1584839950566" duration="108000" />
-      <workItem from="1584840086291" duration="134000" />
-      <workItem from="1584840235858" duration="249000" />
-      <workItem from="1584840498661" duration="7000" />
-      <workItem from="1584841953965" duration="291000" />
-      <workItem from="1584842358329" duration="37000" />
-      <workItem from="1584842423823" duration="69000" />
-      <workItem from="1584857478597" duration="2564000" />
-      <workItem from="1584860074770" duration="81000" />
-      <workItem from="1584860175811" duration="12578000" />
-      <workItem from="1585596019074" duration="760000" />
-      <workItem from="1585600155892" duration="6472000" />
-      <workItem from="1585606663450" duration="849000" />
-      <workItem from="1585607922945" duration="6923000" />
-      <workItem from="1585690897597" duration="101000" />
-      <workItem from="1585691096805" duration="1045000" />
-      <workItem from="1585694139968" duration="42000" />
-      <workItem from="1585780997239" duration="1184000" />
-      <workItem from="1585782199564" duration="10172000" />
-      <workItem from="1585868871245" duration="2100000" />
-      <workItem from="1585915913495" duration="3637000" />
-      <workItem from="1585924419946" duration="30000" />
-      <workItem from="1585924465383" duration="1192000" />
-      <workItem from="1585946122279" duration="12611000" />
-      <workItem from="1586030595109" duration="16179000" />
-      <workItem from="1586280487121" duration="1945000" />
-      <workItem from="1586305924941" duration="1513000" />
-      <workItem from="1586330639090" duration="216000" />
-      <workItem from="1586330992774" duration="521000" />
-      <workItem from="1586331695558" duration="1232000" />
-      <workItem from="1586333027209" duration="189000" />
-      <workItem from="1586335448014" duration="872000" />
-      <workItem from="1586449553031" duration="72000" />
-      <workItem from="1586464196636" duration="1458000" />
-      <workItem from="1586468880400" duration="805000" />
-      <workItem from="1586548648538" duration="770000" />
-      <workItem from="1586552318325" duration="1982000" />
-      <workItem from="1586616469119" duration="7000" />
-      <workItem from="1586625910060" duration="23000" />
-      <workItem from="1586633545074" duration="1851000" />
-      <workItem from="1586644777175" duration="26240000" />
-      <workItem from="1586738178735" duration="238000" />
-      <workItem from="1586738429486" duration="92000" />
-      <workItem from="1586738536634" duration="49000" />
-      <workItem from="1586738599410" duration="372000" />
-      <workItem from="1586738986611" duration="233000" />
-      <workItem from="1586739233421" duration="795000" />
-      <workItem from="1586740052889" duration="848000" />
-      <workItem from="1586740983243" duration="978000" />
-      <workItem from="1586741981540" duration="70000" />
-      <workItem from="1586742073343" duration="174000" />
-      <workItem from="1586742265796" duration="14104000" />
-      <workItem from="1587048223517" duration="355000" />
-      <workItem from="1587061090253" duration="8290000" />
-      <workItem from="1587200870662" duration="370000" />
-      <workItem from="1587201264287" duration="1033000" />
-      <workItem from="1587202342746" duration="13590000" />
-      <workItem from="1587251134859" duration="56502000" />
-      <workItem from="1587637809749" duration="366000" />
-      <workItem from="1587638200981" duration="18451000" />
-      <workItem from="1587716565060" duration="44993000" />
-      <workItem from="1587972759376" duration="897000" />
-      <workItem from="1587994906869" duration="369000" />
-      <workItem from="1588155792664" duration="11109000" />
-      <workItem from="1588711864363" duration="23315000" />
-      <workItem from="1588788911948" duration="18694000" />
-      <workItem from="1588842090733" duration="3000" />
-      <workItem from="1588862148901" duration="1683000" />
-      <workItem from="1588864672586" duration="15853000" />
-      <workItem from="1588938262680" duration="194000" />
-      <workItem from="1588938508991" duration="9166000" />
-      <workItem from="1588967742380" duration="1077000" />
-      <workItem from="1589019973498" duration="9283000" />
-      <workItem from="1589200643416" duration="129000" />
-      <workItem from="1589202155316" duration="4013000" />
-      <workItem from="1589206190934" duration="6908000" />
-      <workItem from="1589223541068" duration="811000" />
-      <workItem from="1589226709006" duration="3807000" />
-      <workItem from="1589302574078" duration="393000" />
-      <workItem from="1589308487743" duration="6000" />
-      <workItem from="1589559997033" duration="11999000" />
-      <workItem from="1589573067816" duration="2588000" />
-      <workItem from="1589575827340" duration="2895000" />
-      <workItem from="1589584691591" duration="18483000" />
-      <workItem from="1589716367124" duration="6025000" />
-      <workItem from="1589739920033" duration="23634000" />
-      <workItem from="1589799037336" duration="10890000" />
-      <workItem from="1589895232971" duration="44000" />
-      <workItem from="1589897055106" duration="55000" />
-      <workItem from="1589993125170" duration="28723000" />
-      <workItem from="1590112479825" duration="309000" />
-      <workItem from="1590112991461" duration="89000" />
-      <workItem from="1590184884520" duration="888000" />
-      <workItem from="1590226138788" duration="36000" />
-      <workItem from="1590226633001" duration="82000" />
-      <workItem from="1590227582490" duration="13000" />
-      <workItem from="1590242529375" duration="65000" />
-      <workItem from="1590244669838" duration="94000" />
-      <workItem from="1590481708926" duration="21097000" />
-      <workItem from="1590753561563" duration="259000" />
-      <workItem from="1590758628673" duration="2514000" />
-      <workItem from="1590831179919" duration="664000" />
-      <workItem from="1590832226538" duration="7592000" />
-      <workItem from="1590951600834" duration="3730000" />
-      <workItem from="1590955409238" duration="11769000" />
-      <workItem from="1591041555326" duration="1217000" />
-      <workItem from="1591042966476" duration="2910000" />
-      <workItem from="1591098380118" duration="47000" />
-      <workItem from="1591098518150" duration="172000" />
-      <workItem from="1591130190696" duration="57000" />
-      <workItem from="1591190818089" duration="81000" />
-      <workItem from="1591303290737" duration="1390000" />
-      <workItem from="1591306633011" duration="6000" />
-      <workItem from="1591306680652" duration="8000" />
-      <workItem from="1591306838121" duration="40000" />
-      <workItem from="1591367944708" duration="115000" />
-      <workItem from="1591373816909" duration="396000" />
-      <workItem from="1591526585609" duration="9412000" />
-      <workItem from="1591607927002" duration="4000" />
-      <workItem from="1591608007368" duration="36299000" />
-      <workItem from="1591788578801" duration="10798000" />
-      <workItem from="1591973221922" duration="177000" />
-      <workItem from="1591973448788" duration="12052000" />
-      <workItem from="1591985959143" duration="2908000" />
-      <workItem from="1592225269914" duration="32000" />
-      <workItem from="1592225561090" duration="711000" />
+      <updated>1592441693051</updated>
+      <workItem from="1592441697428" duration="396000" />
+      <workItem from="1592556969247" duration="4450000" />
     </task>
-    <task id="LOCAL-00001" summary="Gitignore added">
-      <created>1583590747455</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1583590747455</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Gitignore added">
-      <created>1583590825803</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1583590825803</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Gitignore added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gitignore added" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586034239060">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586034239060" />
-    <state x="540" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591086626547">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="540" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1591086626547" />
-    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1586279776837">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1586279776837" />
-    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588777613700">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588777613700" />
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1583590821301">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583590821301" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1589223291957">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589223291957" />
-    <state width="1492" height="190" key="GridCell.Tab.0.bottom" timestamp="1583586485096">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
-    <state width="1492" height="190" key="GridCell.Tab.0.center" timestamp="1583586485096">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
-    <state width="1492" height="190" key="GridCell.Tab.0.left" timestamp="1583586485095">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583586485095" />
-    <state width="1492" height="190" key="GridCell.Tab.0.right" timestamp="1583586485096">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1492" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583586485096" />
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1591985808891">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1591985808891" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1591985937314">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591985937314" />
-    <state x="337" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1586333028029">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="337" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586333028029" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586734405972">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586734405972" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pekpage$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1581235276355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
 </project>
