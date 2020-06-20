@@ -2,9 +2,7 @@ FROM archlinux
 MAINTAINER Oluwaseun Peter "adepeter26@gmail.com"
 LABEL version="0.0.1"
 LABEL location="Sokoto, Nigeria"
-RUN pacman -Syu --noconfirm && \
-pacman -Scc --noconfirm && \
-pacman -S python python-pipenv --noconfirm && \
+pacman -Syu python python-pipenv --noconfirm && \
 pacman -Scc --noconfirm
 COPY . home/sleekforum
 RUN pip install --upgrade pip pipenv
