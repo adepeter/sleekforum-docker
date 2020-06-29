@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/views/thread/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum_project/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum_project/settings/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum_project/settings/local.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum_project/settings/local.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyforum_project/settings/production.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyforum_project/settings/production.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,20 @@
       <workItem from="1592556969247" duration="6627000" />
       <workItem from="1592567392914" duration="33000" />
       <workItem from="1592595498090" duration="1746000" />
-      <workItem from="1592681421703" duration="2196000" />
+      <workItem from="1592681421703" duration="8747000" />
+      <workItem from="1592733044916" duration="1040000" />
+      <workItem from="1592747465021" duration="685000" />
+      <workItem from="1592750508811" duration="7593000" />
+      <workItem from="1592909341268" duration="2301000" />
+      <workItem from="1592926382633" duration="17000" />
+      <workItem from="1592933006760" duration="1168000" />
+      <workItem from="1592940434586" duration="3089000" />
+      <workItem from="1593053084179" duration="803000" />
+      <workItem from="1593076235744" duration="49000" />
+      <workItem from="1593080516994" duration="274000" />
+      <workItem from="1593176930525" duration="176000" />
+      <workItem from="1593200883757" duration="64000" />
+      <workItem from="1593453058822" duration="567000" />
     </task>
     <servers />
   </component>
