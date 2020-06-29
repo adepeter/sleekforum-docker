@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     # Flyapps 3rd party django apps
     'graphene_django',
     'mptt',
+    'rest_framework',
 
     # FlyForum apps
     'flyapps.categories',
@@ -152,10 +153,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
-
 
 # To load media files
 MEDIA_URL = '/media/'

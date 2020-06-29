@@ -103,10 +103,8 @@ class ReadThread(MultipleObjectMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(ReadThread, self).get_context_data(**kwargs)
         context['thread'] = self.thread
-        context['liked_by'] = [liked_by.user for liked_by in \
-                               self.thread.actions.filter_action_by('LIK')]
-        context['disliked_by'] = [disliked_by.user for disliked_by in \
-                                  self.thread.actions.filter_action_by('DSL')]
+        context['liked_by'] = [liked_by.user for liked_by in self.thread.actions.filter_action_by('LIK')]
+        context['disliked_by'] = [disliked_by.user for disliked_by in self.thread.actions.filter_action_by('DSL')]
         context['frequent_posters'] = User.objects.filter(
             post__in=self.object_list,
             post__is_hidden=False
@@ -129,9 +127,7 @@ class ReadThread(MultipleObjectMixin, CreateView):
             context = self.get_context_data()
             paginator = context['paginator']
             num_pages = paginator.num_pages
-            return reverse(
-                'flyapps:threads:read_thread',
-                kwargs=kwargs) + '?%(page_kwargs)s=%(last_page)d' % {
+            return reverse('flyapps:threads:read_thread', kwargs=kwargs) + '?%(page_kwargs)s=%(last_page)d' % {
                 'page_kwargs': self.page_kwarg,
                 'last_page': num_pages
             }
@@ -180,10 +176,8 @@ class ListNewestThread(ListView):
     def get(self, request, *args, **kwargs):
         messages.info(
             self.request,
-            _('Dear %(login)s, you are viewing newest \
-            threads that were created 7days ago') % {
-                'login': self.request.user.username if \
-                    self.request.user.is_authenticated else 'guest'
+            _('Dear %(login)s, you are viewing newest threads that were created 7days ago') % {
+                'login': self.request.user.username if self.request.user.is_authenticated else 'guest'
             }
         )
         return super().get(request, *args, **kwargs)

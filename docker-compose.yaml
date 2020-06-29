@@ -1,172 +1,28 @@
-#version: "3.8"
-#services:
-#  postgresql:
-#    image: postgre:12
-#    environment:
-#      # POSTGRESQL logins
-#      - DJANGO_DB_ENGINE=django.db.backends.postgresql_psycopg2
-#      - DJANGO_DB_NAME=flyforum
-#      - DJANGO_DB_USER=flyuser
-#      - DJANGO_DB_PASSWORD=flyuser
-#      - DJANGO_DB_HOST=localhost
-#      - DJANGO_DB_PORT=5432
-#
-#
-#  sleekforum:
-#    build:
-#      command: python manage.py runserver --settings=flyforum_project.settings.local
-#      environment:
-#        # ENV Secret key
-#        - SECRET_KEY=)=zp-!70xva+-0s((aw_hm(ib5rc5_5t03r41q8+1pe1egl*-c
-#        # Superuser login credentials
-#        - SUPERUSER_EMAIL=test@test.com
-#        - SUPERUSER_USERNAME=test
-#        - SUPERUSER_PASSWORD=test
-#      port:
-#        - "127.0.0.1:8000"
-#      depends_on:
-#        - postgresql
-#
-#version: "3.8"
-#services:
-#
-#  redis:
-#    image: redis
-#    ports:
-#      - "6379"
-#    networks:
-#      - frontend
-#    deploy:
-#      replicas: 2
-#      update_config:
-#        parallelism: 2
-#        delay: 10s
-#      restart_policy:
-#        condition: on-failure
-#
-#  db:
-#    image: postgres
-#    volumes:
-#      - db-data:/var/lib/postgresql/data
-#    networks:
-#      - backend
-#    deploy:
-#      placement:
-#        max_replicas_per_node: 1
-#        constraints:
-#          - "node.role==manager"
-#
-#  vote:
-#    image: dockersamples/examplevotingapp_vote:before
-#    ports:
-#      - "5000:80"
-#    networks:
-#      - frontend
-#    depends_on:
-#      - redis
-#    deploy:
-#      replicas: 2
-#      update_config:
-#        parallelism: 2
-#      restart_policy:
-#        condition: on-failure
-#
-#  result:
-#    image: dockersamples/examplevotingapp_result:before
-#    ports:
-#      - "5001:80"
-#    networks:
-#      - backend
-#    depends_on:
-#      - db
-#    deploy:
-#      replicas: 1
-#      update_config:
-#        parallelism: 2
-#        delay: 10s
-#      restart_policy:
-#        condition: on-failure
-#
-#  worker:
-#    image: dockersamples/examplevotingapp_worker
-#    networks:
-#      - frontend
-#      - backend
-#    deploy:
-#      mode: replicated
-#      replicas: 1
-#      labels: [APP=VOTING]
-#      restart_policy:
-#        condition: on-failure
-#        delay: 10s
-#        max_attempts: 3
-#        window: 120s
-#      placement:
-#        constraints:
-#          - "node.role==manager"
-#
-#  visualizer:
-#    image: dockersamples/visualizer:stable
-#    ports:
-#      - "8080:8080"
-#    stop_grace_period: 1m30s
-#    volumes:
-#      - "/var/run/docker.sock:/var/run/docker.sock"
-#    deploy:
-#      placement:
-#        constraints:
-#          - "node.role==manager"
-#
-#networks:
-#  frontend:
-#  backend:
-#
-#volumes:
-#  db-data:
-
 version: "3.8"
 services:
+  postgresql:
+    image: postgre:12
+    environment:
+      # POSTGRESQL logins
+      - DJANGO_DB_ENGINE=django.db.backends.postgresql_psycopg2
+      - DJANGO_DB_NAME=flyforum
+      - DJANGO_DB_USER=flyuser
+      - DJANGO_DB_PASSWORD=flyuser
+      - DJANGO_DB_HOST=localhost
+      - DJANGO_DB_PORT=5432
+
+
   sleekforum:
     build:
-      context: .
-      labels:
-        - "version=0.0.1"
-        - "maintainer=Oluwaseun Peter"
-        - "location=Sokoto, Nigeria"
-        - "description=This is a full fledge forum image build"
-      networks:
-        - sleeknet
+      command: python manage.py runserver --settings=flyforum_project.settings.local
+      environment:
+        # ENV Secret key
+        - SECRET_KEY=)=zp-!70xva+-0s((aw_hm(ib5rc5_5t03r41q8+1pe1egl*-c
+        # Superuser login credentials
+        - SUPERUSER_EMAIL=test@test.com
+        - SUPERUSER_USERNAME=test
+        - SUPERUSER_PASSWORD=test
+      port:
+        - "127.0.0.1:8000"
       depends_on:
-        - db
-        - redis
-      deploy:
-        labels:
-          description: "Web service is just starting"
-        restart_policy:
-          condition: on_failure
-          delay: 5s
-          max_attempts: 3
-          window: 60s
-      ports:
-        - "8000"
-        - "7000"
-      expose:
-        - "8000:8000"
-        - "7000:8000"
-
-  redis:
-    image: redis
-
-  db:
-    image: postgres
-    ports:
-      - "5432"
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    networks:
-      - sleeknet
-
-networks:
-  sleeknet:
+        - postgresql
