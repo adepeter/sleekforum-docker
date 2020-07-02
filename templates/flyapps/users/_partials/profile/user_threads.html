@@ -1,0 +1,71 @@
+{% load activity_tags %}
+{% load miscs_tags %}
+
+<div class="tt-topic-list">
+    <div class="tt-list-header">
+        <div class="tt-col-topic">Topic</div>
+        <div class="tt-col-category">Category</div>
+        <div class="tt-col-value hide-mobile">Likes</div>
+        <div class="tt-col-value hide-mobile">Replies</div>
+        <div class="tt-col-value hide-mobile">Views</div>
+        <div class="tt-col-value">Activity</div>
+    </div>
+    {% for thread in user_obj.threads.all %}
+        <div class="tt-item">
+            <div class="tt-col-avatar">
+                <svg class="tt-icon">
+                    <use xlink:href="#icon-ava-{{ thread.starter.username | first_char }}"></use>
+                </svg>
+            </div>
+            <div class="tt-col-description">
+                <h6 class="tt-title"><a href="{{ thread.get_absolute_url }}">
+                    {% if thread.pin %}
+                        <svg class="tt-icon">
+                            <use xlink:href="#icon-pinned"></use>
+                        </svg>
+                    {% endif %}
+                    {% if thread.is_locked %}
+                        <svg class="tt-icon">
+                            <use xlink:href="#icon-locked"></use>
+                        </svg>
+                    {% endif %}
+                    {{ thread.title }}
+                </a></h6>
+                <div class="row align-items-center no-gutters">
+                    <div class="col-11">
+                        <ul class="tt-list-badge">
+                            <li class="show-mobile"><a href="#"><span class="tt-color01 tt-badge">politics</span></a>
+                            </li>
+                            <li><a href="#"><span class="tt-badge">contests</span></a></li>
+                            <li><a href="#"><span class="tt-badge">authors</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-1 ml-auto show-mobile">
+                        <div class="tt-value">{{ thread.created | time_ago }}</div>
+                    </div>
+                </div>
+            </div>
+            {% activity_action_queryset 'LIK' thread as thread_likes %}
+            <div class="tt-col-category"><span
+                    class="tt-{% cycle 'color01' 'color02' 'color03' 'color04' 'color05' %} tt-badge">{{ thread.category.name }}</span>
+            </div>
+            <div class="tt-col-value hide-mobile">{{ thread_likes | length | pretty_count }}</div>
+            <div class="tt-col-value hide-mobile">{{ thread.posts.all | length | pretty_count }}</div>
+            <div class="tt-col-value hide-mobile">{{ thread.views | pretty_count }}</div>
+            <div class="tt-col-value hide-mobile">{{ thread.created | time_ago }}</div>
+        </div>
+        {% empty %}
+        <div class="tt-info-box">
+            <p class="text-center">{% if request.user == user_obj %}You{% else %}
+                {{ user_obj.get_display_name }}{% endif %} dont have any started thread yet</p>
+        </div>
+    {% endfor %}
+
+    <div class="tt-row-btn">
+        <button type="button" class="btn-icon js-topiclist-showmore">
+            <svg class="tt-icon">
+                <use xlink:href="#icon-load_lore_icon"></use>
+            </svg>
+        </button>
+    </div>
+</div>
