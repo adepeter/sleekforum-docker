@@ -34,22 +34,70 @@ class Thread(models.Model):
         (PIN_GLOBALLY, _('Pin thread globally')),
     )
 
-    starter = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='threads')
-    title = models.CharField(verbose_name=_('title'), max_length=150, unique=True)
+    starter = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('starter'),
+        on_delete=models.SET_NULL,
+        related_name='threads',
+        null=True
+    )
+    category = models.ForeignKey(
+        Category,
+        verbose_name=_('category'),
+        on_delete=models.CASCADE,
+        related_name='threads'
+    )
+    title = models.CharField(
+        verbose_name=_('title'),
+        max_length=150,
+        unique=True
+    )
     tags = ArrayField(models.SlugField(), blank=True, null=True)
-    pin = models.IntegerField(verbose_name=_('pin thread'), choices=PIN_CHOICES, default=PIN_DEFAULT)
-    prefix = models.IntegerField(verbose_name=_('prefix'), choices=PREFIX_CHOICES, default=PREFIX_DEFAULT)
-    slug = models.SlugField(verbose_name=_('slug'), blank=True, editable=False)
-    content = models.TextField(verbose_name=_('content'), unique_for_date='created')
+    pin = models.IntegerField(
+        verbose_name=_('pin thread'),
+        choices=PIN_CHOICES,
+        default=PIN_DEFAULT
+    )
+    prefix = models.IntegerField(
+        verbose_name=_('prefix'),
+        choices=PREFIX_CHOICES,
+        default=PREFIX_DEFAULT
+    )
+    slug = models.SlugField(
+        verbose_name=_('slug'),
+        blank=True,
+        editable=False
+    )
+    content = models.TextField(
+        verbose_name=_('content'),
+        unique_for_date='created'
+    )
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    is_locked = models.BooleanField(verbose_name=_('lock thread'), default=False)
-    is_hidden = models.BooleanField(verbose_name=_('hide thread'), default=False)
-    is_editable = models.BooleanField(verbose_name=_('allow edit'), default=True)
-    likes = models.PositiveIntegerField(verbose_name=_('total likes'), default=0)
-    dislikes = models.PositiveIntegerField(verbose_name=_('total dislikes'), default=0)
-    shares = models.PositiveIntegerField(verbose_name=_('total shares'), default=0)
+    is_locked = models.BooleanField(
+        verbose_name=_('lock thread'),
+        default=False
+    )
+    is_hidden = models.BooleanField(
+        verbose_name=_('hide thread'),
+        default=False
+    )
+    is_editable = models.BooleanField(
+        verbose_name=_('allow edit'),
+        default=True
+    )
+    likes = models.PositiveIntegerField(
+        verbose_name=_('total likes'),
+        default=0
+    )
+    dislikes = models.PositiveIntegerField(
+        verbose_name=_('total dislikes'),
+        default=0
+    )
+    shares = models.PositiveIntegerField(
+        verbose_name=_('total shares'),
+        default=0
+    )
     views = models.PositiveIntegerField(default=0)
 
     actions = GenericRelation(Action, related_query_name='threads')
@@ -73,10 +121,16 @@ class Thread(models.Model):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=['title'], name='unique_title_on_thread')
+            models.UniqueConstraint(
+                fields=['title'],
+                name='unique_title_on_thread'
+            )
         ]
         indexes = [
-            models.Index(fields=['id', 'slug'], name='index_id_slug_on_thread')
+            models.Index(
+                fields=['id', 'slug'],
+                name='index_id_slug_on_thread'
+            )
         ]
         ordering = ['-modified']
 
@@ -89,28 +143,55 @@ class Thread(models.Model):
         return kwargs
 
     def get_absolute_url(self):
-        return reverse('flyapps:threads:read_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:read_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def get_edit_url(self):
-        return reverse('flyapps:threads:edit_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:edit_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def get_delete_url(self):
-        return reverse('flyapps:threads:delete_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:delete_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def get_dislike_url(self):
-        return reverse('flyapps:threads:dislike_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:dislike_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def get_like_url(self):
-        return reverse('flyapps:threads:like_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:like_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def get_report_url(self):
-        return reverse('flyapps:threads:report_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:report_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def get_share_url(self):
-        return reverse('flyapps:threads:share_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:share_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def toggle_hide(self):
-        return reverse('flyapps:threads:toggle_hide_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:toggle_hide_thread',
+            kwargs=self.get_kwargs()
+        )
 
     def toggle_lock(self):
-        return reverse('flyapps:threads:toggle_lock_thread', kwargs=self.get_kwargs())
+        return reverse(
+            'flyapps:threads:toggle_lock_thread',
+            kwargs=self.get_kwargs()
+        )

@@ -8,15 +8,34 @@ from ...models.thread import Thread
 
 
 class Post(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True)
-    thread = models.ForeignKey(Thread, on_delete=models.CASCADE, related_name='posts')
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('post'),
+        on_delete=models.SET_NULL,
+        null=True
+    )
+    thread = models.ForeignKey(
+        Thread,
+        verbose_name=_('thread'),
+        on_delete=models.CASCADE,
+        related_name='posts'
+    )
     content = models.TextField(verbose_name=_('Post content'))
     is_hidden = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     likes = models.PositiveIntegerField(verbose_name=_('likes'), default=0)
-    dislikes = models.PositiveIntegerField(verbose_name=_('dislikes'), default=0)
-    parent = models.ForeignKey('self', on_delete=models.DO_NOTHING, related_name='+', null=True, blank=True)
+    dislikes = models.PositiveIntegerField(
+        verbose_name=_('dislikes'),
+        default=0
+    )
+    parent = models.ForeignKey(
+        'self',
+        on_delete=models.DO_NOTHING,
+        related_name='+',
+        null=True,
+        blank=True
+    )
 
     objects = PostManager()
 
@@ -26,28 +45,40 @@ class Post(models.Model):
             'slug': self.thread.slug,
             'pk': self.thread.id
         }
-        return reverse('flyapps:threads:read_thread', kwargs=kwargs) + '?page=last'
+        return reverse(
+            'flyapps:threads:read_thread',
+            kwargs=kwargs
+        ) + '?page=last'
 
     def get_edit_url(self):
         kwargs = {
             'thread_slug': self.thread.slug,
             'pk': self.id,
         }
-        return reverse('flyapps:threads:post:edit_post', kwargs=kwargs)
+        return reverse(
+            'flyapps:threads:post:edit_post',
+            kwargs=kwargs
+        )
 
     def get_delete_url(self):
         kwargs = {
             'thread_slug': self.thread.slug,
             'pk': self.id,
         }
-        return reverse('flyapps:threads:post:delete_post', kwargs=kwargs)
+        return reverse(
+            'flyapps:threads:post:delete_post',
+            kwargs=kwargs
+        )
 
     def get_reply_to_url(self):
         kwargs = {
             'thread_slug': self.thread.slug,
             'pk': self.id,
         }
-        return reverse('flyapps:threads:post:reply_post', kwargs=kwargs)
+        return reverse(
+            'flyapps:threads:post:reply_post',
+            kwargs=kwargs
+        )
 
     def __str__(self):
         return f'{self.content[:10]} by {self.user.username} to {self.thread.title}'

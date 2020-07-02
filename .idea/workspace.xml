@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/categories/tests/test_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0003_auto_20200702_1127.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0004_auto_20200702_1217.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/threads/migrations/0005_auto_20200702_1219.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flyapps/users/templatetags/user_activities_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/user_categories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/user_logs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/user_replies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/user_threads.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/profile/user_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/categories/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/tests/test_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/categories/tests/test_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/categories/tests/test_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/post/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/post/post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/threads/models/thread/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/read_thread.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/read_thread.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -32,6 +46,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -54,7 +69,8 @@
       <workItem from="1592681421703" duration="2196000" />
       <workItem from="1593461344040" duration="172000" />
       <workItem from="1593461615710" duration="3136000" />
-      <workItem from="1593501720628" duration="6234000" />
+      <workItem from="1593501720628" duration="7015000" />
+      <workItem from="1593643548308" duration="12495000" />
     </task>
     <servers />
   </component>
@@ -65,9 +81,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1592562144356">
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1593644333950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1592562144356" />
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1593644333950" />
   </component>
 </project>

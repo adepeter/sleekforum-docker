@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from ..managers.user import UserManager
 
@@ -62,6 +63,12 @@ class User(PermissionsMixin, AbstractBaseUser):
         if self.first_name or self.last_name:
             return self.get_full_name().rstrip()
         return self.username
+
+    def get_absolute_url(self):
+        kwargs = {
+            'slug': self.slug,
+        }
+        return reverse('flyapps:users:profile:user_profile', kwargs=kwargs)
 
     def __str__(self):
         return '%s - %s' % (self.username, self.email)
