@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 from django.contrib.messages.views import SuccessMessageMixin
+from django.views.decorators.http import require_POST
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import FormMixin, UpdateView, DeleteView
 from django.utils.translation import gettext_lazy as _
@@ -49,3 +50,13 @@ class UserProfileEdit(SuccessMessageMixin, UpdateView):
 class UserProfileDelete(DeleteView):
     model = User
     success_url = reverse_lazy('flyapps:home')
+ 
+@require_POST
+def profile_edit(request, slug):
+    user = get_object_or_404(User, slug__iexact=slug)
+    form = UserProfileEditForm(data=request.POST, file=request.FILES)
+    if form.has_changed():
+        if form.is_valid():
+            pass
+            # Process logic here
+    # process logic again

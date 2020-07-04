@@ -10,8 +10,10 @@ class SexRadioButtonField(forms.ChoiceField):
             ('m', _('Male')),
             ('f', _('Female')),
         )
+        self.label_suffix = ''
         self.widget = forms.RadioSelect(choices=self.choices)
         self.error_message = _('You must select a sex')
+
 
 
 class BirthdayDateField(forms.DateField):
