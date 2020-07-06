@@ -40,6 +40,7 @@ class UserProfile(DetailView):
 
 
 class UserProfileEdit(SuccessMessageMixin, UpdateView):
+    """WOuld implement this view when i get a better template"""
     model = User
     form_class = UserProfileEditForm
     template_name = f'{TEMPLATE_URL}/user_profile_edit.html'
@@ -58,5 +59,3 @@ def profile_edit(request, slug):
     if form.has_changed():
         if form.is_valid():
             pass
-            # Process logic here
-    # process logic again
