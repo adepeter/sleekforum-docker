@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/behaviours/content_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/behaviours/content_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0002_violation_rules.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/migrations/0003_auto_20200616_1410.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/fields.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/urls/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/urls/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/views/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/threads/thread/_partials/_thread_statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/threads/thread/_partials/_thread_statistics.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/edit_profile_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/edit_profile_sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/profile/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/profile/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +72,14 @@
       <workItem from="1593793917205" duration="2935000" />
       <workItem from="1593797185340" duration="18111000" />
       <workItem from="1593947520638" duration="9000" />
-      <workItem from="1594073686512" duration="1358000" />
+      <workItem from="1594073686512" duration="1417000" />
+      <workItem from="1594303502866" duration="85000" />
+      <workItem from="1594398330244" duration="42000" />
+      <workItem from="1594398942867" duration="28000" />
+      <workItem from="1594402557093" duration="1160000" />
+      <workItem from="1594453391180" duration="61000" />
+      <workItem from="1594483232700" duration="91000" />
+      <workItem from="1594825679436" duration="59000" />
     </task>
     <servers />
   </component>
