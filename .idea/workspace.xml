@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/miscs/behaviours/content_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/behaviours/content_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/edit_profile_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/edit_profile_sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -79,7 +82,8 @@
       <workItem from="1594402557093" duration="1160000" />
       <workItem from="1594453391180" duration="61000" />
       <workItem from="1594483232700" duration="91000" />
-      <workItem from="1594825679436" duration="59000" />
+      <workItem from="1594825679436" duration="1930000" />
+      <workItem from="1594840098319" duration="754000" />
     </task>
     <servers />
   </component>

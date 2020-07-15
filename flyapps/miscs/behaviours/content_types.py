@@ -13,7 +13,7 @@ class ContentTypeMixin(models.Model):
         related_name='%(class)ss'
     )
 
-    content_type = models.ForeignKey(ContentType)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     content_object = GenericForeignKey()
     object_id = models.PositiveIntegerField()
 
