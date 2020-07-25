@@ -1,0 +1,111 @@
+{% load miscs_tags %}
+
+<div id="js-popup-settings" class="tt-popup-settings">
+    <div class="tt-btn-col-close">
+        <a href="#">
+			<span class="tt-icon-title">
+				<svg>
+					<use xlink:href="#icon-settings_fill"></use>
+				</svg>
+			</span>
+            <span class="tt-icon-text">
+				Settings
+			</span>
+            <span class="tt-icon-close">
+				<svg>
+					<use xlink:href="#icon-cancel"></use>
+				</svg>
+			</span>
+        </a>
+    </div>
+    {% if request.user.is_authenticated %}
+        <form method="POST" action="{% url 'flyapps:users:profile:user_profile_edit' request.user.slug %}"
+              class="form-default">
+            {% csrf_token %}
+            <div class="tt-form-upload">
+                <div class="row no-gutter">
+                    <div class="col-auto">
+                        <div class="tt-avatar">
+                            {% if not request.user.avatar %}
+                                <svg>
+                                    <use xlink:href="#icon-ava-{{ request.user.username | first_char }}"></use>
+                                </svg>
+                            {% else %}
+                                {{ request.user.avatar.url }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-auto ml-auto">
+                        {{ edit_profile_form.avatar }}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                {{ edit_profile_form.email.label_tag }}
+                {{ edit_profile_form.email }}
+            </div>
+            <div class="form-group">
+                {{ edit_profile_form.first_name.label_tag }}
+                {{ edit_profile_form.first_name }}
+            </div>
+            <div class="form-group">
+                {{ edit_profile_form.last_name.label_tag }}
+                {{ edit_profile_form.last_name }}
+            </div>
+            {% for sex_radio in edit_profile_form.sex %}
+                <div class="custom-control custom-radio custom-control-inline">
+                    {{ sex_radio }}
+                </div>
+            {% endfor %}
+            {% comment %}
+                <div class="form-group">
+                    {{ edit_profile_form.dob.label_tag }}
+                    {{ edit_profile_form.dob }}
+                </div>
+            {% endcomment %}
+            <div class="form-group">
+                {{ edit_profile_form.location.label_tag }}
+                {{ edit_profile_form.location }}
+            </div>
+            <div class="form-group">
+                {{ edit_profile_form.website.label_tag }}
+                {{ edit_profile_form.website }}
+            </div>
+            <div class="form-group">
+                {{ edit_profile_form.about.label_tag }}
+                {{ edit_profile_form.about }}
+            </div>
+            <div class="form-group">
+                <label for="settingsUserAbout">Notify me via Email</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="settingsCheckBox01" name="checkbox">
+                    <label for="settingsCheckBox01">
+                        <span class="check"></span>
+                        <span class="box"></span>
+                        <span class="tt-text">When someone replies to my thread</span>
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="settingsCheckBox02" name="checkbox">
+                    <label for="settingsCheckBox02">
+                        <span class="check"></span>
+                        <span class="box"></span>
+                        <span class="tt-text">When someone likes my thread or reply</span>
+                    </label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="settingsCheckBox03" name="checkbox">
+                    <label for="settingsCheckBox03">
+                        <span class="check"></span>
+                        <span class="box"></span>
+                        <span class="tt-text">When someone mentions me</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-secondary">Update</button>
+            </div>
+
+        </form>
+    {% endif %}
+</div>

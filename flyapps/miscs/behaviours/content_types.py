@@ -14,11 +14,14 @@ class ContentTypeMixin(models.Model):
     )
 
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey()
+    object_id = models.PositiveIntegerField()
 
     class Meta:
         abstract = True
         indexes = [
-            models.Index(fields=['content_type', 'object_id'], name='index_ct_id')
+            models.Index(
+                fields=['content_type', 'object_id'],
+                name='index_ct_id'
+            )
         ]

@@ -14,6 +14,7 @@ class SexRadioButtonField(forms.ChoiceField):
         self.error_message = _('You must select a sex')
 
 
+
 class BirthdayDateField(forms.DateField):
     def __init__(self, *args, **kwargs):
         EMPTY_LABELS = [
@@ -28,4 +29,7 @@ class BirthdayDateField(forms.DateField):
         self.error_messages = {
             'required': _('You must select your birthday'),
         }
-        self.widget = forms.SelectDateWidget(empty_label=EMPTY_LABELS, years=YEARS)
+        self.widget = forms.SelectDateWidget(
+            empty_label=EMPTY_LABELS,
+            years=YEARS
+        )

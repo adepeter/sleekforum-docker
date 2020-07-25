@@ -1,44 +1,56 @@
+{% load user_activities_tags %}
+{% load thread_tags %}
+
+{% categories user_obj as user_activity_categories %}
+
+
 <div class="tt-wrapper-inner">
     <div class="tt-categories-list">
         <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="tt-item">
-                    <div class="tt-item-header">
-                        <ul class="tt-list-badge">
-                            <li><a href="#"><span
-                                    class="tt-color01 tt-badge">politics</span></a></li>
-                        </ul>
-                        <h6 class="tt-title"><a href="#">Threads - 1,245</a></h6>
-                    </div>
-                    <div class="tt-item-layout">
-                        <div class="innerwrapper">
-                            Lets discuss about whats happening around the world politics.
-                        </div>
-                        <div class="innerwrapper">
-                            <h6 class="tt-title">Similar TAGS</h6>
+            {% for category in user_activity_categories %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="tt-item">
+                        <div class="tt-item-header">
                             <ul class="tt-list-badge">
-                                <li><a href="#"><span class="tt-badge">world politics</span></a>
-                                </li>
-                                <li><a href="#"><span class="tt-badge">human rights</span></a>
-                                </li>
-                                <li><a href="#"><span class="tt-badge">trump</span></a></li>
-                                <li><a href="#"><span class="tt-badge">climate change</span></a>
-                                </li>
-                                <li><a href="#"><span class="tt-badge">foreign policy</span></a>
-                                </li>
+                                <li><a href="{% url 'flyapps:categories:list_subcategory' category.id category.slug %}"><span
+                                        class="tt-color01 tt-badge">{{ category.name }}</span></a></li>
                             </ul>
+                            {% category_threads category as category_threads %}
+                            <h6 class="tt-title">
+                                <a href="{% url 'flyapps:categories:list_thread' category.id category.slug %}">Thread{{ category_threads | pluralize }}
+                                            - {{ category_threads | length }}</a></h6>
                         </div>
-                        <a href="#" class="tt-btn-icon">
-                            <i class="tt-icon">
-                                <svg>
-                                    <use xlink:href="#icon-favorite"></use>
-                                </svg>
-                            </i>
-                        </a>
+                        <div class="tt-item-layout">
+                            <div class="innerwrapper">
+                                {{ category.description }}
+                            </div>
+                            {% comment %}
+                            <div class="innerwrapper">
+                                <h6 class="tt-title">Similar TAGS</h6>
+                                <ul class="tt-list-badge">
+                                    <li><a href="#"><span class="tt-badge">world politics</span></a>
+                                    </li>
+                                    <li><a href="#"><span class="tt-badge">human rights</span></a>
+                                    </li>
+                                    <li><a href="#"><span class="tt-badge">trump</span></a></li>
+                                    <li><a href="#"><span class="tt-badge">climate change</span></a>
+                                    </li>
+                                    <li><a href="#"><span class="tt-badge">foreign policy</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            {% endcomment %}
+                            <a href="#" class="tt-btn-icon">
+                                <i class="tt-icon">
+                                    <svg>
+                                        <use xlink:href="#icon-favorite"></use>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            {% endfor %}
             <div class="col-12">
                 <div class="tt-row-btn">
                     <button type="button" class="btn-icon js-topiclist-showmore">

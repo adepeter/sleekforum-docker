@@ -102,6 +102,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # Injects UserProfileEditForm into template
+                'flyapps.users.context_processors.profile.edit_profile_form',
             ],
         },
     },
