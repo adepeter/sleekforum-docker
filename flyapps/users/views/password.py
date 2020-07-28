@@ -1,12 +1,13 @@
 from django.contrib.auth.views import (
     PasswordResetView,
     PasswordResetDoneView,
-    PasswordResetConfirmView
+    PasswordResetConfirmView,
+    PasswordResetCompleteView
 )
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy, reverse
 
-from ..forms.auth import PasswordResetForm
+from ..forms.auth import PasswordResetForm, SetPasswordForm
 
 TEMPLATE_URL = 'flyapps/users/auth/password'
 
@@ -44,4 +45,27 @@ class AuthPasswordResetDone(PasswordResetDoneView):
 
 
 class AuthPasswordResetConfirm(PasswordResetConfirmView):
+    form_class = SetPasswordForm
     template_name = f'{TEMPLATE_URL}/password_reset_confirm.html'
+
+    def form_valid(self, form):
+        self.request.session['pass_reset_complete'] = True
+        return super().form_valid(form)
+
+class AuthPasswordResetComplete(PasswordResetCompleteView):
+    template_name = f'{TEMPLATE_URL}/password_reset_complete.html'
+
+    def get(self, request, *args, **kwargs):
+        self.pass_reset_complete = self.get_session()
+        return super().get(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['password_reset_complete'] = self.pass_reset_complete
+        return context
+
+    def get_session(self):
+        try:
+            return self.request.session.pop('password_reset_complete')
+        except KeyError:
+            return False

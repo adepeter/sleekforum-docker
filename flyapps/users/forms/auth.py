@@ -2,7 +2,8 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import (
     AuthenticationForm as BaseAuthenticationForm,
-    PasswordResetForm as BasePasswordResetForm
+    PasswordResetForm as BasePasswordResetForm,
+    SetPasswordForm as BaseSetPasswordForm
 )
 from django.utils.translation import gettext_lazy as _
 
@@ -53,3 +54,17 @@ class PasswordResetForm(BasePasswordResetForm):
             'email_template_name': email_template_name
         })
         return new_reset
+
+
+class SetPasswordForm(BaseSetPasswordForm):
+
+    def __init__(self, user, *args, **kwargs):
+        self.user = user
+        super().__init__(user, *args, **kwargs)
+        for field in self.fields:
+            password_placeholder = _('Enter new password') if field == 'new_password1' \
+                else _('Repeat new password')
+            self.fields[field].widget.attrs.update({
+                'class': 'form-control',
+                'placeholder': password_placeholder
+            })
