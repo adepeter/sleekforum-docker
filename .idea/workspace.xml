@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/forgot_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/password_reset_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/password_reset_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/password_reset_subject.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/context_processors/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/context_processors/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/users/urls/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/urls/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/auth/forgot_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/password.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +102,8 @@
       <workItem from="1595149654531" duration="172000" />
       <workItem from="1595931640989" duration="410000" />
       <workItem from="1595934472344" duration="802000" />
-      <workItem from="1595935731341" duration="16501000" />
+      <workItem from="1595935731341" duration="20483000" />
+      <workItem from="1595966477093" duration="5342000" />
     </task>
     <servers />
   </component>

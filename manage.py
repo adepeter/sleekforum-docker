@@ -5,7 +5,8 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flyforum_project.settings')
+    flyforum_env = os.environ.get('SETTINGS_ENV', 'flyforum_project.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', flyforum_env)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
