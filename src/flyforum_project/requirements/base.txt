@@ -1,5 +1,4 @@
 Django
-djangorestframework
 psycopg2
 graphene-django
 django-mptt
