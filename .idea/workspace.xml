@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flyapps/miscs/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/forgot_password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/password_reset_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/password/password_reset_subject.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flyapps/miscs/behaviours/content_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/miscs/behaviours/content_types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/edit_profile_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/_partials/profile/edit_profile_sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/context_processors/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/context_processors/profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/forms/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/forms/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flyapps/users/urls/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/urls/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/auth/forgot_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/flyapps/users/views/password.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flyapps/users/auth/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/flyapps/users/auth/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
+        <option value="BashSupport Pro Bash" />
         <option value="Python Script" />
         <option value="HTML File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -46,12 +53,26 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\users\auth\password" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adepeter\Desktop\django\pekpage\static\css" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="hell" type="BashProRunConfiguration" temporary="true">
+      <option name="scriptPath" value="$PROJECT_DIR$/flyapps/graphql/hell" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="BashSupport Pro.hell" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -83,7 +104,14 @@
       <workItem from="1594453391180" duration="61000" />
       <workItem from="1594483232700" duration="91000" />
       <workItem from="1594825679436" duration="1930000" />
-      <workItem from="1594840098319" duration="754000" />
+      <workItem from="1594840098319" duration="2195000" />
+      <workItem from="1595148853984" duration="108000" />
+      <workItem from="1595148986183" duration="120000" />
+      <workItem from="1595149209910" duration="427000" />
+      <workItem from="1595149654531" duration="172000" />
+      <workItem from="1595931640989" duration="410000" />
+      <workItem from="1595934472344" duration="802000" />
+      <workItem from="1595935731341" duration="16501000" />
     </task>
     <servers />
   </component>
@@ -94,13 +122,37 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="592" y="305" key="#Shellcheck" timestamp="1595149773288">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="592" y="305" key="#Shellcheck/0.0.1536.824@0.0.1536.824" timestamp="1595149773288" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1595149771773">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595149771773" />
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom" timestamp="1595149639591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595149639591" />
+    <state width="1493" height="203" key="GridCell.Tab.0.center" timestamp="1595149639591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595149639591" />
+    <state width="1493" height="203" key="GridCell.Tab.0.left" timestamp="1595149639591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595149639591" />
+    <state width="1493" height="203" key="GridCell.Tab.0.right" timestamp="1595149639591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="203" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595149639591" />
     <state x="349" y="147" key="IDE.errors.dialog" timestamp="1593644333950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1593644333950" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1593797283567">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1595932056546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593797283567" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595932056546" />
   </component>
 </project>
