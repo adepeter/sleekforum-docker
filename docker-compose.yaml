@@ -39,8 +39,8 @@ services:
       - "4042:80"
 
 networks:
-  db
-  webserver
+  db:
+  webserver:
 
 volumes:
   pg_data:
