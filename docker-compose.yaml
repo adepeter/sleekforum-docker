@@ -5,11 +5,13 @@ services:
     build:
       context: src
     networks:
-      - backend
+      - db
       - webserver
     env_file:
       - ./configs/env/postgres.env
       - ./configs/env/sleekforum.env
+    environment:
+      - SLEEKFORUM_DB_HOST=postgres
     volumes:
       - ./src:/srv/http/sleekforum
 
@@ -18,23 +20,24 @@ services:
     volumes:
       - pg_data:/var/lib/postgres/data
     networks:
-      - backend
+      - db
     env_file:
       - ./configs/env/postgres.env
     ports:
       - "5432:5432"
 
   nginx:
-    image: nginx
+    build:
+      context: nginx
     volumes:
       - ./configs/nginx/conf.d:/etc/nginx/conf.d
       - ./src/static:/srv/ftp/sleekforum/static
       - ./src/media:/srv/ftp/sleekforum/media
     ports:
-      - "4042:4042"
+      - "4042:80"
 
 networks:
-  backend
+  db
   webserver
 
 volumes:
