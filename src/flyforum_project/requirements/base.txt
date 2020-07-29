@@ -4,3 +4,4 @@ psycopg2
 graphene-django
 django-mptt
 pillow
+markdown

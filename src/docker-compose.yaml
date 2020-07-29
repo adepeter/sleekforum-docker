@@ -27,8 +27,6 @@ services:
       - POSTGRES_USER=flyuser
       - POSTGRES_PASSWORD=flyuser
       - POSTGRES_DB=flyforum
-    ports:
-      - "5432:5432"
 
 networks:
   db:
