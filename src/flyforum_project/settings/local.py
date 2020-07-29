@@ -15,12 +15,12 @@ MIDDLEWARE += [
 
 DATABASES = {
     'default': {
-        'ENGINE': get_secret('DJANGO_DB_ENGINE'),
-        'NAME': get_secret('DJANGO_DB_NAME'),
-        'USER': get_secret('DJANGO_DB_USER'),
-        'PASSWORD': get_secret('DJANGO_DB_PASSWORD'),
-        'HOST': get_secret('DJANGO_DB_HOST'),
-        'PORT': get_secret('DJANGO_DB_PORT'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'flyforum',
+        'USER': 'flyuser',
+        'PASSWORD': 'flyuser',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

@@ -1,28 +1,44 @@
 version: "3.8"
 services:
-  postgresql:
-    image: postgre:12
-    environment:
-      # POSTGRESQL logins
-      - DJANGO_DB_ENGINE=django.db.backends.postgresql_psycopg2
-      - DJANGO_DB_NAME=flyforum
-      - DJANGO_DB_USER=flyuser
-      - DJANGO_DB_PASSWORD=flyuser
-      - DJANGO_DB_HOST=localhost
-      - DJANGO_DB_PORT=5432
-
 
   sleekforum:
     build:
-      command: python manage.py runserver --settings=flyforum_project.settings.local
-      environment:
-        # ENV Secret key
-        - SECRET_KEY=)=zp-!70xva+-0s((aw_hm(ib5rc5_5t03r41q8+1pe1egl*-c
-        # Superuser login credentials
-        - SUPERUSER_EMAIL=test@test.com
-        - SUPERUSER_USERNAME=test
-        - SUPERUSER_PASSWORD=test
-      port:
-        - "127.0.0.1:8000"
-      depends_on:
-        - postgresql
+      context: src
+    networks:
+      - db
+      - webserver
+    env_file:
+      - ./configs/env/postgres.env
+      - ./configs/env/sleekforum.env
+    environment:
+      - SLEEKFORUM_DB_HOST=postgres
+    volumes:
+      - ./src:/srv/http/sleekforum
+
+  postgres:
+    image: postgres
+    volumes:
+      - pg_data:/var/lib/postgres/data
+    networks:
+      - db
+    env_file:
+      - ./configs/env/postgres.env
+    ports:
+      - "5432:5432"
+
+  nginx:
+    build:
+      context: nginx
+    volumes:
+      - ./configs/nginx/conf.d:/etc/nginx/conf.d
+      - ./src/static:/srv/ftp/sleekforum/static
+      - ./src/media:/srv/ftp/sleekforum/media
+    ports:
+      - "4042:80"
+
+networks:
+  db
+  webserver
+
+volumes:
+  pg_data:

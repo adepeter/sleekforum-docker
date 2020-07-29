@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de0cec64-a791-41cd-af54-13ad31a2d890" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/media/readme_me.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
@@ -47,11 +52,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\users\auth\password" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adepeter\Desktop\django\pekpage\static\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage" />
+      <recent name="C:\Users\adepeter\Desktop\django\pekpage\templates\flyapps\users\auth\password" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,7 +109,8 @@
       <workItem from="1595931640989" duration="410000" />
       <workItem from="1595934472344" duration="802000" />
       <workItem from="1595935731341" duration="20483000" />
-      <workItem from="1595966477093" duration="5342000" />
+      <workItem from="1595966477093" duration="11176000" />
+      <workItem from="1596025838600" duration="3594000" />
     </task>
     <servers />
   </component>
