@@ -14,6 +14,7 @@ services:
       - ./configs/env/sleekforum.env
     environment:
       - SLEEKFORUM_DB_HOST=postgres
+    restart: unless-stopped
     volumes:
       - ./src:/srv/http/sleekforum
 
@@ -21,6 +22,7 @@ services:
     image: postgres
     volumes:
       - pg_data:/var/lib/postgres/data
+    restart: always
     networks:
       - db
     env_file:
