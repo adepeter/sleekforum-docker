@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ")=zp-!70xva+-0s((aw_hm(ib5rc5_5t03r41q8+1pe1egl*-c"
+SECRET_KEY = ')=zp-!70xva+-0s((aw_hm(ib5rc5_5t03r41q8+1pe1egl*-c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     # Flyapps 3rd party django apps
     'graphene_django',
     'mptt',
-    'rest_framework',
 
     # FlyForum apps
     'flyapps.categories',
