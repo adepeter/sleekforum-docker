@@ -17,6 +17,8 @@ services:
     restart: unless-stopped
     volumes:
       - ./src:/srv/http/sleekforum
+    depends_on:
+      - postgres
 
   postgres:
     image: postgres
@@ -37,12 +39,15 @@ services:
   nginx:
     build:
       context: nginx
+    restart: always
     volumes:
       - ./configs/nginx/conf.d:/etc/nginx/conf.d
       - ./src/static:/srv/ftp/sleekforum/static
       - ./src/media:/srv/ftp/sleekforum/media
     ports:
       - "4042:80"
+    depends_on:
+      - sleekforum
 
 networks:
   db:
