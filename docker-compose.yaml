@@ -3,9 +3,9 @@ services:
 
   sleekforum:
     build:
+      context: src
       args:
         dev_env: production
-      context: src
     networks:
       - db
       - webserver

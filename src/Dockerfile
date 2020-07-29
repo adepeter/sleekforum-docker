@@ -15,6 +15,6 @@ COPY --chown=$SLEEKFORUM_USER . $SLEEKFORUM_PATH
 WORKDIR $SLEEKFORUM_PATH
 ENV SETTINGS_ENV flyforum_project.settings.$dev_env
 ENV REQUIREMENT_ENV flyforum_project/requirements/$dev_env.txt
-RUN pip install -r $REQUIREMENTS_ENV --no-warn-script-location
+RUN pip install -r $REQUIREMENT_ENV --no-warn-script-location
 EXPOSE 4042
 CMD ["uwsgi", "uwsgi.ini"]
