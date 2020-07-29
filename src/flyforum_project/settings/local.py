@@ -17,7 +17,7 @@ DATABASES = {
         'NAME': 'flyforum',
         'USER': 'flyuser',
         'PASSWORD': 'flyuser',
-        'HOST': 'localhost',
+        'HOST': os.environ.get('SLEEKFORUM_DB_HOST', 'localhost'),
         'PORT': '5432',
     }
 }

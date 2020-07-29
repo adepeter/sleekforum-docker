@@ -1,4 +1,5 @@
-Django
+uwsgi
+django
 psycopg2
 graphene-django
 django-mptt
