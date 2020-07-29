@@ -3,6 +3,8 @@ services:
 
   sleekforum:
     build:
+      args:
+        dev_env: production
       context: src
     networks:
       - db
