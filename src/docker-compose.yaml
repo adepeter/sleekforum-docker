@@ -10,7 +10,7 @@ services:
       - SLEEKFORUM_DB_HOST=postgres
     restart: unless-stopped
     volumes:
-      - .:/srv/http/sleekforum
+      - .:/srv/http/sleekforum:z
     depends_on:
       - postgres
     ports:

@@ -16,7 +16,7 @@ services:
       - SLEEKFORUM_DB_HOST=postgres
     restart: unless-stopped
     volumes:
-      - ./src:/srv/http/sleekforum
+      - ./src:/srv/http/sleekforum:z
     depends_on:
       - postgres
 
@@ -35,13 +35,15 @@ services:
       context: nginx
     restart: always
     volumes:
-      - ./configs/nginx/conf.d:/etc/nginx/conf.d
-      - ./src/static:/srv/ftp/sleekforum/static
-      - ./src/media:/srv/ftp/sleekforum/media
+      - ./configs/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./src/static:/srv/ftp/sleekforum/static:z
+      - ./src/media:/srv/ftp/sleekforum/media:z
     ports:
       - "4042:80"
     depends_on:
       - sleekforum
+    networks:
+      - webserver
 
 networks:
   db:
